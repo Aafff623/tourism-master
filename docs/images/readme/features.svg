@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F0E7"/>
+      <stop offset="0.55" stop-color="#EFE2D4"/>
+      <stop offset="1" stop-color="#E6D3C2"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C45C26"/>
+      <stop offset="1" stop-color="#8F3E20"/>
+    </linearGradient>
+    <linearGradient id="jade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B7C68"/>
+      <stop offset="1" stop-color="#244F45"/>
+    </linearGradient>
+    <filter id="paper" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="2" seed="8" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="gray"/>
+      <feComponentTransfer in="gray" result="fade">
+        <feFuncA type="table" tableValues="0 0.045"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="fade" mode="multiply"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#3B2A22" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .serif { font-family: 'Noto Serif CJK SC','Source Han Serif SC','SimSun',serif; }
+      .sans { font-family: 'Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei',sans-serif; }
+      .muted { fill:#806F63; }
+      .deep { fill:#2C2420; }
+      .ochre { fill:#A94D25; }
+      .jade { fill:#2F6F5E; }
+      .hair { stroke:#9A897B; stroke-width:1.5; fill:none; }
+      .small { font-size:20px; letter-spacing:2px; }
+      .label { font-size:26px; font-weight:600; }
+      .sub { font-size:18px; }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)" filter="url(#paper)"/>
+  <path d="M0 420 C120 330, 230 350, 340 265 C430 195, 515 230, 620 300 C735 375, 810 330, 920 245 C1030 162, 1140 190, 1245 285 C1350 382, 1460 320, 1600 220 L1600 610 L0 610 Z" fill="#B9B0A6" opacity="0.14"/>
+  <path d="M0 520 C150 430, 260 465, 400 380 C530 300, 620 350, 760 425 C900 500, 1010 430, 1120 350 C1240 265, 1390 300, 1600 390 L1600 650 L0 650 Z" fill="#7D8E84" opacity="0.10"/>
+  <g transform="translate(84,72)">
+    <text class="sans muted small" x="0" y="0">TOURISM MASTER · CORE CAPABILITIES</text>
+    <text class="serif deep" x="0" y="70" font-size="58" font-weight="700">功能全景</text>
+    <line x1="0" y1="96" x2="390" y2="96" stroke="#C45C26" stroke-width="3"/>
+    <text class="sans muted" x="0" y="138" font-size="22">围绕“读懂景区”构建双语内容体验，而不是复刻通用 OTA。</text>
+  </g>
+  <g transform="translate(1435,70)">
+    <rect x="0" y="0" width="74" height="74" rx="6" fill="none" stroke="#A94D25" stroke-width="3"/>
+    <text class="serif ochre" x="37" y="31" text-anchor="middle" font-size="22">晋</text>
+    <text class="serif ochre" x="37" y="57" text-anchor="middle" font-size="22">旅</text>
+  </g>
+  <g transform="translate(800,500)" filter="url(#shadow)">
+    <circle r="178" fill="#F8F2EA" stroke="#D2BAA6" stroke-width="2"/>
+    <circle r="145" fill="none" stroke="#C45C26" stroke-width="3" stroke-dasharray="8 12" opacity="0.55"/>
+    <path d="M-125 -70 C-65 -125, 28 -118, 110 -76 C88 -35, 90 8, 128 58 C55 112, -48 120, -128 65 C-95 14, -92 -27, -125 -70Z" fill="#2F6F5E" opacity="0.12"/>
+    <text class="serif deep" x="0" y="-42" text-anchor="middle" font-size="42" font-weight="700">景区内容体验</text>
+    <text class="sans jade" x="0" y="10" text-anchor="middle" font-size="28" font-weight="700">zh  ↔  en</text>
+    <text class="sans muted" x="0" y="57" text-anchor="middle" font-size="20">景区介绍 · 文化解读 · 服务话术</text>
+    <text class="sans muted" x="0" y="91" text-anchor="middle" font-size="18">Locale 驱动壳文案与内容字段同步切换</text>
+  </g>
+  <path d="M230 700 C330 625, 395 590, 420 580 C485 520, 520 455, 570 410 C705 315, 845 340, 1010 275 C1130 225, 1280 235, 1440 340" fill="none" stroke="#B85B2C" stroke-width="5" stroke-linecap="round" opacity="0.62"/>
+  <path d="M230 700 C330 625, 395 590, 420 580 C485 520, 520 455, 570 410 C705 315, 845 340, 1010 275 C1130 225, 1280 235, 1440 340" fill="none" stroke="#F7F0E7" stroke-width="1.5" stroke-dasharray="2 16"/>
+  <g transform="translate(230,700)">
+    <circle r="72" fill="#F7EFE6" stroke="#C45C26" stroke-width="3"/>
+    <text class="serif ochre" x="0" y="-6" text-anchor="middle" font-size="34" font-weight="700">中 / EN</text>
+    <text class="sans deep label" x="0" y="112" text-anchor="middle">全局双语切换</text>
+    <text class="sans muted sub" x="0" y="143" text-anchor="middle">界面与内容同步</text>
+  </g>
+  <g transform="translate(420,580)">
+    <circle r="72" fill="#F7EFE6" stroke="#C45C26" stroke-width="3"/>
+    <path d="M-34 12 L0 -30 L34 12 L28 12 L28 38 L-28 38 L-28 12 Z" fill="none" stroke="#A94D25" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M-18 38 L-18 8 L18 8 L18 38" fill="none" stroke="#A94D25" stroke-width="5"/>
+    <text class="sans deep label" x="0" y="112" text-anchor="middle">景区热点与列表</text>
+    <text class="sans muted sub" x="0" y="143" text-anchor="middle">六个 P0 景区</text>
+  </g>
+  <g transform="translate(570,410)">
+    <circle r="72" fill="#F7EFE6" stroke="#C45C26" stroke-width="3"/>
+    <path d="M-35 -28 H35 V34 H-35 Z" fill="none" stroke="#A94D25" stroke-width="5"/>
+    <path d="M-18 -6 H18 M-18 10 H26 M-18 26 H10" stroke="#A94D25" stroke-width="5" stroke-linecap="round"/>
+    <text class="sans deep label" x="0" y="-112" text-anchor="middle">景点详情</text>
+    <text class="sans muted sub" x="0" y="-82" text-anchor="middle">简介 · 看点 · 交通</text>
+  </g>
+  <g transform="translate(1010,275)">
+    <circle r="72" fill="#EEF2ED" stroke="#2F6F5E" stroke-width="3"/>
+    <path d="M-38 -25 Q-8 -42 0 -12 Q8 -42 38 -25 V31 Q12 18 0 44 Q-12 18 -38 31 Z" fill="none" stroke="#2F6F5E" stroke-width="5"/>
+    <text class="sans deep label" x="0" y="112" text-anchor="middle">文化解读</text>
+    <text class="sans muted sub" x="0" y="143" text-anchor="middle">历史语境 · 礼仪提示</text>
+  </g>
+  <g transform="translate(1230,220)">
+    <circle r="72" fill="#EEF2ED" stroke="#2F6F5E" stroke-width="3"/>
+    <path d="M-38 -20 H18 Q38 -20 38 0 V18 Q38 38 18 38 H0 L-20 54 V38 H-38 Z" fill="none" stroke="#2F6F5E" stroke-width="5" stroke-linejoin="round"/>
+    <text class="serif jade" x="0" y="12" text-anchor="middle" font-size="30" font-weight="700">“ ”</text>
+    <text class="sans deep label" x="0" y="112" text-anchor="middle">景区专属话术</text>
+    <text class="sans muted sub" x="0" y="143" text-anchor="middle">场景化中英对照</text>
+  </g>
+  <g transform="translate(1440,340)">
+    <circle r="72" fill="#EEF2ED" stroke="#2F6F5E" stroke-width="3"/>
+    <path d="M-36 -28 H36 V30 H8 L-8 46 V30 H-36 Z" fill="none" stroke="#2F6F5E" stroke-width="5"/>
+    <path d="M-18 -7 H18 M-18 10 H10" stroke="#2F6F5E" stroke-width="5" stroke-linecap="round"/>
+    <text class="sans deep label" x="0" y="112" text-anchor="middle">通用服务话术</text>
+    <text class="sans muted sub" x="0" y="143" text-anchor="middle">购票 · 礼仪 · 应急</text>
+  </g>
+  <g transform="translate(360,760)">
+    <path d="M0 0 H880" stroke="#2F6F5E" stroke-width="3" opacity="0.48"/>
+    <circle cx="0" cy="0" r="8" fill="#2F6F5E"/>
+    <circle cx="880" cy="0" r="8" fill="#2F6F5E"/>
+    <text class="sans jade" x="440" y="-24" text-anchor="middle" font-size="21" font-weight="700">双模式数据支撑</text>
+    <text class="sans deep" x="440" y="36" text-anchor="middle" font-size="22">Mock Repository（模式 A）  →  API Adapter（模式 B）  →  Spring Boot / MySQL</text>
+    <text class="sans muted" x="440" y="70" text-anchor="middle" font-size="17">同一套 ViewModel 面向当前 Locale 输出；游客主链路可独立演示</text>
+  </g>
+  <g transform="translate(1290,680)">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#2F6F5E" stroke-width="2" stroke-dasharray="8 8"/>
+    <text class="sans jade" x="90" y="34" text-anchor="middle" font-size="18" font-weight="700">旁路能力</text>
+    <text class="sans muted" x="90" y="62" text-anchor="middle" font-size="16">订票 / 评论保留模板鉴权</text>
+  </g>
+  <g opacity="0.2" stroke="#5E4A3F" fill="none" stroke-width="3">
+    <path d="M0 850 H280 M40 850 V812 H240 V850 M22 812 Q140 752 258 812 M72 812 Q140 778 208 812"/>
+    <path d="M1320 850 H1600 M1360 850 V805 H1560 V850 M1335 805 Q1460 742 1585 805 M1390 805 Q1460 770 1530 805"/>
+  </g>
+</svg>
