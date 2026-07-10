@@ -91,7 +91,7 @@ ServiceItem { id, category, title, phrase, note }
 
 ## 7. 引用完整性检查（实施时必跑）
 
-- [ ] `homeRecommendations.spotSlug` ∈ `spots.slug`
-- [ ] `spotServiceLinks.spotSlug` ∈ `spots.slug`
-- [ ] `spots.services[]` ⊆ `serviceItems.id`
-- [ ] 6 个 P0 均有非空 `nameZh/nameEn/summaryZh/summaryEn/introZh/introEn`
+- [x] `homeRecommendations.spotSlug` ∈ `spots.slug`（2026-07-10 Mode A 校验）
+- [x] `spotServiceLinks.spotSlug` ∈ `spots.slug`
+- [x] `spots[].services[]` ⊆ `serviceItems.id` ∪ `spotServiceLinks.id`
+- [x] 6 个 P0 均有非空 `nameZh/nameEn/summaryZh/summaryEn/introZh/introEn`

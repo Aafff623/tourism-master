@@ -1,0 +1,83 @@
+[
+  {
+    "id": "barrier-language-terminology",
+    "nameZh": "语言与专名理解",
+    "nameEn": "Language and Proper-Name Understanding",
+    "manifestationZh": "英文标识覆盖不均，佛教、古建、票号等专名难以靠直译理解。",
+    "manifestationEn": "English signage can be uneven, and terms related to Buddhism, historic architecture and early banking are difficult to understand through literal translation alone.",
+    "mitigationZh": "提供统一术语表、简明英文解释、可播放短句与关键汉字展示。",
+    "mitigationEn": "Provide a consistent glossary, plain-English explanations, playable phrases and key Chinese characters."
+  },
+  {
+    "id": "barrier-booking-payment",
+    "nameZh": "实名预约与数字支付",
+    "nameEn": "Real-Name Booking and Digital Payment",
+    "manifestationZh": "部分景区依赖中文平台、身份证件类型和移动支付，外国护照流程可能不同。",
+    "manifestationEn": "Some attractions rely on Chinese-language platforms, specific identity-document types and mobile payments; passport workflows may differ.",
+    "mitigationZh": "显示护照购票提示、人工窗口备选、可接受支付方式和当日核验入口。",
+    "mitigationEn": "Show passport booking guidance, staffed-counter alternatives, accepted payment methods and same-day verification links."
+  },
+  {
+    "id": "barrier-religious-etiquette",
+    "nameZh": "宗教场所礼仪",
+    "nameEn": "Religious-Site Etiquette",
+    "manifestationZh": "游客可能不了解殿内安静、着装、供奉区域、顺序和拍照限制。",
+    "manifestationEn": "Visitors may be unfamiliar with expectations around quiet behavior, dress, worship areas, movement and photography.",
+    "mitigationZh": "提供“建议做/避免做”卡片，并区分礼貌建议与强制规定。",
+    "mitigationEn": "Provide “Do / Avoid” cards and distinguish courtesy guidance from mandatory rules."
+  },
+  {
+    "id": "barrier-heritage-protection",
+    "nameZh": "文物保护与拍摄限制",
+    "nameEn": "Heritage Protection and Photography Restrictions",
+    "manifestationZh": "洞窟、彩塑、壁画、木构等对闪光灯、触摸、三脚架和拥堵高度敏感。",
+    "manifestationEn": "Grottoes, painted sculpture, murals and timber structures are highly sensitive to flash, touching, tripods and crowding.",
+    "mitigationZh": "按区域展示拍摄规则，解释限制背后的保护原因。",
+    "mitigationEn": "Display zone-specific photography rules and explain the conservation reasons behind them."
+  },
+  {
+    "id": "barrier-transport-wayfinding",
+    "nameZh": "跨城交通与最后一公里",
+    "nameEn": "Intercity Transport and the Last Mile",
+    "manifestationZh": "景区分散，车站名称、景区入口、接驳车和山路交通容易混淆。",
+    "manifestationEn": "Attractions are dispersed, and station names, entrances, shuttle buses and mountain-road access can be confusing.",
+    "mitigationZh": "提供“到哪个站—去哪个门—是否换乘景交”的分步指引。",
+    "mitigationEn": "Provide step-by-step guidance covering arrival station, correct gate and required scenic shuttle."
+  },
+  {
+    "id": "barrier-weather-season",
+    "nameZh": "气候、海拔与季节性变化",
+    "nameEn": "Weather, Elevation and Seasonal Change",
+    "manifestationZh": "五台山寒冷多变，壶口受水情和冰雪影响，悬空寺可能受风雨管控。",
+    "manifestationEn": "Mount Wutai has cold, changeable weather; Hukou is affected by river and ice conditions; Hanging Temple access may be controlled in wind or rain.",
+    "mitigationZh": "设置天气风险、穿衣建议、关闭概率和替代行程提示。",
+    "mitigationEn": "Add weather risk, clothing advice, closure likelihood and alternative-plan prompts."
+  },
+  {
+    "id": "barrier-food-allergy",
+    "nameZh": "饮食、过敏与饮酒文化",
+    "nameEn": "Food, Allergies and Drinking Culture",
+    "manifestationZh": "面食、牛肉、醋、坚果、芝麻和酒类信息不一定有英文过敏原标识。",
+    "manifestationEn": "Noodles, beef, vinegar, nuts, sesame and alcoholic drinks may not have clear English allergen labeling.",
+    "mitigationZh": "提供可直接出示的过敏、素食、清真和拒酒短句。",
+    "mitigationEn": "Provide showable phrases for allergies, vegetarian food, halal needs and declining alcohol."
+  },
+  {
+    "id": "barrier-crowd-queue",
+    "nameZh": "排队、容量与公共空间习惯",
+    "nameEn": "Queues, Capacity and Shared-Space Norms",
+    "manifestationZh": "节假日拥挤，部分狭窄文物点限流，排队位置和二次验票不直观。",
+    "manifestationEn": "Holiday crowds are heavy, some narrow heritage sites use capacity limits, and queue or secondary ticket-check points may be unclear.",
+    "mitigationZh": "提示预约时段、排队入口、预计步行和错峰建议。",
+    "mitigationEn": "Show time-slot rules, queue entrances, expected walking and off-peak suggestions."
+  },
+  {
+    "id": "barrier-historical-context",
+    "nameZh": "历史语境与价值理解",
+    "nameEn": "Historical Context and Significance",
+    "manifestationZh": "仅给年代和人物会让外国游客难以理解“为什么重要”。",
+    "manifestationEn": "Dates and names alone do not explain why a site matters to an international visitor.",
+    "mitigationZh": "用“它改变了什么、连接了哪些文化、今天还能看到什么”组织解释。",
+    "mitigationEn": "Frame interpretation around what the site changed, which cultures it connected and what remains visible today."
+  }
+]

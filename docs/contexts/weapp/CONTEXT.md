@@ -30,6 +30,7 @@
 - 景点详情页的双语正文、文化解读区块
 - 语言切换入口（全局或页内）
 - 山西 Mock 景区列表与详情数据契约与 `api` context 对齐
-- **模式 A（已确认）**：`scenicMock/` + Repository/Adapter；主链路游客可浏览；跳转用 `slug`；首页「景区热点」
+- **模式 A（已确认）**：`tourism_weapp/mock/scenic/` + `services/scenicRepository.js` / `scenicAdapter.js`；主链路游客可浏览；跳转用 `slug`；首页「景区热点」
+- 页面禁止直接散落 `import` 多个 scenic JSON；统一走 Repository
 - 详情保留订票/评论（原 API 鉴权不变）
 - Cursor 斜杠命令：`/deliver`、`/archive`（`.cursor/skills/`）

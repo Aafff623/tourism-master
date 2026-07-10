@@ -4,38 +4,40 @@
 theme: shanxi-scenic-mock-data
 task: weapp-mock-integration
 issue: null
-status: in-progress
+status: awaiting-review
 updated: 2026-07-10
 ```
 
 ## 目标
 
-按模式 A 将调研包 6 个 P0 景区以「前端 Mock 适配层」接入 `tourism_weapp`：列表、详情（`slug`）、首页景区热点、中英切换、服务话术、文化解读、UNVERIFIED 免责声明。游客可浏览主链路。详情保留订票/评论（仍走原 API 鉴权）。
+按模式 A 将调研包 6 个 P0 景区以「前端 Mock 适配层」接入 `tourism_weapp`：拆分 JSON + Adapter/Repository + 引用完整性校验。页面改造在后续 handoff。
 
 ## 已完成
 
-- Phase 0：调研包归位、integration-audit、field-mapping、prd draft
-- 用户拍板：模式 A；首页热点；游客浏览；详情保留订票评论；导航用 slug（ADR-0001）
-- 迁入 Cursor `/deliver`、`/archive` skills；资产文件同步决策
+- 拷贝最小闭环 JSON → `tourism_weapp/mock/scenic/`（7 个拆分文件，无 bundle）
+- `services/locale.js` — 语言读写（供后续壳文案与 Adapter）
+- `services/scenicAdapter.js` — 调研结构 → 稳定 ViewModel（含 `*Zh/*En` 解析、占位封面、文化解读、话术合并）
+- `services/scenicRepository.js` — `getSpotCatalog` / `getSpotDetail(slug)` / `getHomeHotspots` / `getServiceItems` / `getSpotServiceItems` / `validateScenicMockIntegrity`
+- `services/scenicMockSmoke.js` — 控制台冒烟入口
+- 引用完整性：Python 校验 **0 errors**（6 spots、home/links slug、services id 含 spot-svc-*）
 
 ## 待 Review（当前交付）
 
-- 决策文档、ADR-0001、PRD approved、`/deliver`·`/archive` skills 是否齐套
-- handoff 目标是否可进入小程序实施
-- **尚未**改 `tourism_weapp` 业务代码
+- 目录是否接受：`tourism_weapp/mock/scenic` + `tourism_weapp/services/*`
+- Adapter ViewModel 是否够后续列表/详情直接用（含兼容字段 `spotName`/`openingTime`/`description`）
+- `services[]` 同时解析 `serviceItems` + `spotServiceLinks` 是否符合预期
+- **本 phase 未改任何页面**（home/spot/service 仍走旧 API）
 
 ## 阻塞 / 问题
 
-- 无。文档轮 Review 通过后即可改小程序（可与 commit 分开说）。
+- 无
 
-## 下次（仅 Review 通过后填写）
+## 下次（Review 通过并 commit 后）
 
-- 落地 `scenicMock/` + Repository/Adapter（SD-01/02）
-- 改造 home / spot / spot/detail / service（由产品 theme 各 handoff 承接页面）
-- 回归：6 slug、中英、引用完整性、免责声明
+- `weapp-locale-shell` → 再 `weapp-spot-list-detail` / `weapp-home-hotspots` / `weapp-service-phrases`
 
 ## 关联
 
 - 产品 PRD：`docs/output/reports/shanxi-bilingual-mvp/prd.md`
-- 二次开发清单：`.../secondary-dev-feature-list.md`
-- 路线图：`.../implementation-roadmap.md`（本任务为 Wave 1 第 1 步）
+- 二次开发：SD-01 / SD-02
+- 路线图 Wave 1 第 1 步

@@ -98,3 +98,27 @@ docs(mock): lock mode-A decisions, add deliver skills, and approve scenic mock P
 docs(mvp): add product PRD, secondary-dev list, and Wave-1 roadmap
 
 ---
+
+## 6. weapp-mock-integration
+
+### 做了什么
+- Wave 1 Phase 1：接入 Mode A Mock JSON + scenicAdapter/scenicRepository/locale
+- 引用完整性校验通过（6 P0，0 dangling refs）
+- handoff → awaiting-review；**未改页面**
+
+### 改了哪些文件
+- `tourism_weapp/mock/scenic/*`
+- `tourism_weapp/services/locale.js`
+- `tourism_weapp/services/scenicAdapter.js`
+- `tourism_weapp/services/scenicRepository.js`
+- `tourism_weapp/services/scenicMockSmoke.js`
+- `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
+- `docs/output/reports/shanxi-scenic-mock-data/field-mapping.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/contexts/weapp/CONTEXT.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+feat(weapp): add scenic mock adapter layer for Mode A bilingual data
+
+---

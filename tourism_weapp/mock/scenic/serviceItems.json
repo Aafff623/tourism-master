@@ -1,0 +1,182 @@
+[
+  {
+    "id": "svc-ticket-passport",
+    "category": "ticketing",
+    "titleZh": "使用护照购票",
+    "titleEn": "Buying a Ticket with a Passport",
+    "phraseZh": "您好，我使用护照，可以在这里购票或取票吗？",
+    "phraseEn": "Hello. I am using a passport. Can I buy or collect my ticket here?",
+    "noteZh": "适用于自助机不支持护照时。",
+    "noteEn": "Use this when a self-service machine does not accept passports."
+  },
+  {
+    "id": "svc-ticket-reservation",
+    "category": "ticketing",
+    "titleZh": "询问是否需要预约",
+    "titleEn": "Checking Whether a Reservation Is Required",
+    "phraseZh": "今天参观需要提前预约吗？还有可用时段吗？",
+    "phraseEn": "Is an advance reservation required today? Are any time slots still available?",
+    "noteZh": "节假日和限流景点优先使用。",
+    "noteEn": "Especially useful on holidays and at capacity-controlled sites."
+  },
+  {
+    "id": "svc-ticket-counter",
+    "category": "ticketing",
+    "titleZh": "寻找人工窗口",
+    "titleEn": "Finding a Staffed Ticket Counter",
+    "phraseZh": "请问人工售票或外国护照服务窗口在哪里？",
+    "phraseEn": "Where is the staffed ticket counter or the service desk for foreign passports?",
+    "noteZh": "不要默认所有窗口都支持外文服务。",
+    "noteEn": "Do not assume every counter offers foreign-language assistance."
+  },
+  {
+    "id": "svc-route-gate",
+    "category": "transport",
+    "titleZh": "确认正确入口",
+    "titleEn": "Confirming the Correct Entrance",
+    "phraseZh": "请问这个票应该从哪个入口进入？",
+    "phraseEn": "Which entrance should I use with this ticket?",
+    "noteZh": "大型景区可能有多个入口。",
+    "noteEn": "Large attractions may have multiple entrances."
+  },
+  {
+    "id": "svc-route-shuttle",
+    "category": "transport",
+    "titleZh": "询问景区接驳车",
+    "titleEn": "Asking About the Scenic Shuttle",
+    "phraseZh": "去主要参观区需要乘坐接驳车吗？在哪里上车？",
+    "phraseEn": "Do I need a scenic shuttle to reach the main visiting area? Where do I board it?",
+    "noteZh": "确认车票是否另购。",
+    "noteEn": "Also check whether the shuttle ticket is sold separately."
+  },
+  {
+    "id": "svc-route-return",
+    "category": "transport",
+    "titleZh": "确认返程末班车",
+    "titleEn": "Checking the Last Return Service",
+    "phraseZh": "返回车站或市区的末班车几点发车？",
+    "phraseEn": "What time is the last bus back to the station or city center?",
+    "noteZh": "山地和郊区景点建议提前询问。",
+    "noteEn": "Ask early at mountain and rural attractions."
+  },
+  {
+    "id": "svc-food-allergy",
+    "category": "food",
+    "titleZh": "严重食物过敏",
+    "titleEn": "Severe Food Allergy",
+    "phraseZh": "我对这个食物严重过敏。请确认这道菜不含它，也没有交叉接触。",
+    "phraseEn": "I have a severe allergy to this food. Please confirm that the dish does not contain it and has no cross-contact.",
+    "noteZh": "可在手机上同时展示具体过敏原。",
+    "noteEn": "Show the specific allergen on your phone as well."
+  },
+  {
+    "id": "svc-food-vegetarian",
+    "category": "food",
+    "titleZh": "素食需求",
+    "titleEn": "Vegetarian Request",
+    "phraseZh": "我不吃肉、鱼和动物油。请问有合适的菜吗？",
+    "phraseEn": "I do not eat meat, fish or animal fat. Is there a suitable dish?",
+    "noteZh": "“素菜”有时仍可能使用动物油或高汤。",
+    "noteEn": "A dish described as “vegetable” may still use animal fat or stock."
+  },
+  {
+    "id": "svc-food-halal",
+    "category": "food",
+    "titleZh": "清真饮食询问",
+    "titleEn": "Halal Food Inquiry",
+    "phraseZh": "请问附近有清真餐厅吗？这道菜是否含猪肉或料酒？",
+    "phraseEn": "Is there a halal restaurant nearby? Does this dish contain pork or cooking wine?",
+    "noteZh": "不对餐厅资质作默认判断。",
+    "noteEn": "Do not assume a restaurant is certified halal without confirmation."
+  },
+  {
+    "id": "svc-food-no-alcohol",
+    "category": "food",
+    "titleZh": "礼貌拒绝饮酒",
+    "titleEn": "Politely Declining Alcohol",
+    "phraseZh": "谢谢，我不喝酒。用茶或水就可以。",
+    "phraseEn": "Thank you, but I do not drink alcohol. Tea or water is fine.",
+    "noteZh": "适用于聚餐或品鉴场景。",
+    "noteEn": "Useful at group meals or tasting situations."
+  },
+  {
+    "id": "svc-emergency-help",
+    "category": "emergency",
+    "titleZh": "请求工作人员帮助",
+    "titleEn": "Requesting Staff Assistance",
+    "phraseZh": "我需要帮助。请带我去游客中心或联系会说英语的工作人员。",
+    "phraseEn": "I need assistance. Please take me to the visitor center or contact an English-speaking staff member.",
+    "noteZh": "紧急情况优先拨打当地急救或报警电话。",
+    "noteEn": "In an emergency, use the local medical or police emergency number first."
+  },
+  {
+    "id": "svc-emergency-medical",
+    "category": "emergency",
+    "titleZh": "寻求医疗帮助",
+    "titleEn": "Seeking Medical Help",
+    "phraseZh": "我感到不适，需要医疗帮助。最近的医务室在哪里？",
+    "phraseEn": "I feel unwell and need medical assistance. Where is the nearest first-aid room?",
+    "noteZh": "高海拔、寒冷或大量步行时尤其重要。",
+    "noteEn": "Especially important with elevation, cold weather or extensive walking."
+  },
+  {
+    "id": "svc-emergency-lost",
+    "category": "emergency",
+    "titleZh": "与同行者走散",
+    "titleEn": "Separated from a Companion",
+    "phraseZh": "我和同行者走散了。可以在这里广播或联系游客中心吗？",
+    "phraseEn": "I have been separated from my companion. Could you make an announcement or contact the visitor center?",
+    "noteZh": "提前约定集合点。",
+    "noteEn": "Agree on a meeting point before entering crowded areas."
+  },
+  {
+    "id": "svc-rule-photo",
+    "category": "etiquette",
+    "titleZh": "询问拍照规定",
+    "titleEn": "Checking Photography Rules",
+    "phraseZh": "这里可以拍照吗？可以使用闪光灯、三脚架或自拍杆吗？",
+    "phraseEn": "May I take photos here? Are flash, tripods or selfie sticks allowed?",
+    "noteZh": "不同殿堂、洞窟和展区规则可能不同。",
+    "noteEn": "Rules may differ between halls, caves and exhibition zones."
+  },
+  {
+    "id": "svc-rule-touch",
+    "category": "etiquette",
+    "titleZh": "确认可否触摸",
+    "titleEn": "Checking Whether Touching Is Allowed",
+    "phraseZh": "这个展品或建筑构件可以触摸吗？",
+    "phraseEn": "May I touch this exhibit or architectural element?",
+    "noteZh": "默认不要触摸文物。",
+    "noteEn": "As a default, do not touch heritage objects."
+  },
+  {
+    "id": "svc-rule-worship",
+    "category": "etiquette",
+    "titleZh": "询问参观宗教活动",
+    "titleEn": "Observing a Religious Activity",
+    "phraseZh": "这里正在举行宗教活动。我可以在旁边安静参观吗？",
+    "phraseEn": "A religious activity is taking place. May I observe quietly from the side?",
+    "noteZh": "避免近距离拍摄参与者。",
+    "noteEn": "Avoid close-up filming of participants."
+  },
+  {
+    "id": "svc-shopping-price",
+    "category": "shopping",
+    "titleZh": "确认价格与内容",
+    "titleEn": "Confirming Price and What Is Included",
+    "phraseZh": "请问这是最终价格吗？包含包装或配送吗？",
+    "phraseEn": "Is this the final price? Does it include packaging or delivery?",
+    "noteZh": "景区正规商店通常明码标价。",
+    "noteEn": "Formal shops at attractions usually display fixed prices."
+  },
+  {
+    "id": "svc-shopping-receipt",
+    "category": "shopping",
+    "titleZh": "索取收据",
+    "titleEn": "Requesting a Receipt",
+    "phraseZh": "请给我收据或电子付款凭证。",
+    "phraseEn": "Please give me a receipt or electronic proof of payment.",
+    "noteZh": "购买较贵工艺品时保留凭证。",
+    "noteEn": "Keep proof of purchase for higher-value crafts."
+  }
+]

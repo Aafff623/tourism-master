@@ -1,0 +1,38 @@
+[
+  {
+    "rank": 1,
+    "spotSlug": "yungang-grottoes",
+    "reasonZh": "国际认知度最高，视觉冲击和跨文化艺术解释都强，适合作为首页主视觉。",
+    "reasonEn": "The strongest combination of international recognition, visual impact and cross-cultural art interpretation; ideal as the hero feature."
+  },
+  {
+    "rank": 2,
+    "spotSlug": "ancient-city-pingyao",
+    "reasonZh": "页面内容最丰富，可串联景点、住宿、晋商、饮食、步行和文化遗产模块。",
+    "reasonEn": "The richest content ecosystem, linking attractions, accommodation, merchant history, food, walking and heritage modules."
+  },
+  {
+    "rank": 3,
+    "spotSlug": "mount-wutai",
+    "reasonZh": "突出世界遗产、宗教礼仪和山地服务，是课题“跨文化障碍”最典型的场景。",
+    "reasonEn": "A prime case for World Heritage, religious etiquette and mountain services—the clearest expression of cross-cultural visitor barriers."
+  },
+  {
+    "rank": 4,
+    "spotSlug": "hukou-waterfall-shanxi",
+    "reasonZh": "补足自然景观和黄河主题，并可展示动态开放状态。",
+    "reasonEn": "Adds a major natural and Yellow River theme while demonstrating dynamic opening-status data."
+  },
+  {
+    "rank": 5,
+    "spotSlug": "jinci-temple",
+    "reasonZh": "省会可达性好，适合作为古建入门和太原城市落地页。",
+    "reasonEn": "Easy to reach from the provincial capital and ideal as an introduction to historic architecture and a Taiyuan landing page."
+  },
+  {
+    "rank": 6,
+    "spotSlug": "hanging-temple",
+    "reasonZh": "封面辨识度极高，并能突出限流、安全和替代参观路线。",
+    "reasonEn": "Extremely recognizable visually and useful for communicating capacity, safety and alternative-visit routes."
+  }
+]
