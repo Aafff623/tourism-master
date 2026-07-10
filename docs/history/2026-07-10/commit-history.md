@@ -328,3 +328,26 @@ fix(weapp): point DEV_URL to local WLAN API host
 docs: add local backend bootstrap problem brief for research
 
 ---
+
+## 17. readme-premium-images
+
+### 做了什么
+- 按精修仓结构打磨 `README.md`（为什么 / 功能 / 演示 / 快速开始 / 架构 / 路线图 / 文档）
+- 新增配图生成 brief：`docs/output/reports/readme-diagrams/readme-diagram-brief.md`
+- 入库 5 张 README 配图并挂引用：banner / architecture / tech-stack / workflow / structure
+
+### 改了哪些文件
+- `README.md`
+- `docs/README.md`
+- `docs/output/reports/readme-diagrams/readme-diagram-brief.md`
+- `docs/images/readme/banner.png`
+- `docs/images/readme/architecture.png`
+- `docs/images/readme/tech-stack.png`
+- `docs/images/readme/workflow.png`
+- `docs/images/readme/structure.png`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+docs(readme): polish README and add premium diagram assets
+
+---
