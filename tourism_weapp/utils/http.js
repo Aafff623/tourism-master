@@ -4,7 +4,9 @@ import tool from "./tool";
 
 const ENV = 'DEV';
 const PROD_URL = 'http://localhost:82';
-const DEV_URL = 'http://192.168.3.6:86/client/c';
+// 本机联调：改成你电脑的局域网 IP（微信开发者工具不能稳定用 localhost）
+// 当前 WLAN：10.170.248.52 ；后端默认端口 86
+const DEV_URL = 'http://10.170.248.52:86/client/c';
 const BASE_URL = ENV == 'PROD' ? PROD_URL : DEV_URL;
 // 请求白名单（游客可读；Wave 2 双语景区）
 const whiteUrls = [
