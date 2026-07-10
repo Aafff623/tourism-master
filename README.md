@@ -1,8 +1,12 @@
+<div align="center">
+
 # Tourism Master · 山西文旅双语小程序
 
-_少做通用 OTA，把空间留给景区介绍与跨文化双语服务_
+**少做通用 OTA，把空间留给景区介绍与跨文化双语服务**
 
-基于闲鱼「SpringBoot + Vue3 + UniApp」旅游模板二次开发。面向入境游客与中文用户，提供山西重点景区的介绍、文化解读与中英双语服务话术，降低跨文化信息获取成本。课题叙事（产品背景）：入境游客跨文化旅游体验障碍及双语服务体系构建——以山西文旅景区为例。
+面向入境游客与中文用户，提供山西重点景区介绍、文化解读与中英双语服务话术，降低跨文化旅游中的信息理解与现场沟通成本。
+
+</div>
 
 <p align="center">
   <img src="docs/images/readme/banner.png" alt="Tourism Master Banner" width="100%">
@@ -10,7 +14,7 @@ _少做通用 OTA，把空间留给景区介绍与跨文化双语服务_
 
 <p align="center">
   <img src="https://img.shields.io/badge/Wave_1-MVP_Done-brightgreen?style=for-the-badge" alt="Wave 1">
-  <img src="https://img.shields.io/badge/Stack-UniApp_%7C_Vue3_%7C_SpringBoot-blue?style=for-the-badge" alt="Stack">
+  <img src="https://img.shields.io/badge/Stack-UniApp_%7C_Vue3_%7C_Spring_Boot-blue?style=for-the-badge" alt="Stack">
   <img src="https://img.shields.io/badge/Locale-zh_%2B_en-orange?style=for-the-badge" alt="Locale">
   <img src="https://img.shields.io/badge/Mode-A→B-lightgrey?style=for-the-badge" alt="Integration Mode">
   <a href="https://github.com/Aafff623/tourism-master/stargazers"><img src="https://img.shields.io/github/stars/Aafff623/tourism-master?style=for-the-badge" alt="GitHub stars"></a>
@@ -31,45 +35,43 @@ _少做通用 OTA，把空间留给景区介绍与跨文化双语服务_
 
 ## 为什么需要本系统
 
-入境游客在山西景区现场常遇到：
+入境游客在山西景区游览时，通常会遇到以下信息与沟通障碍：
 
-- 介绍与导览以中文为主，英文信息零散或缺失
-- 礼仪、历史语境、禁忌等文化背景难以及时理解
-- 购票问询、应急求助等现场沟通缺少可复用的中英对照话术
-- 通用旅游 App 偏订票成交，弱化「读懂这座景区」
+- 景区介绍与导览内容以中文为主，英文信息分布零散或缺失；
+- 礼仪、历史语境与文化禁忌缺少易理解的跨文化表达；
+- 购票问询、路线咨询与应急求助缺少可复用的中英对照话术；
+- 通用旅游应用更关注交易与行程，对景区文化理解的支持相对有限。
 
-**本产品的核心边界：**
+Tourism Master 因此将产品主线收敛为：**景区介绍、文化解读与双语服务**。
 
-| 组件 | 职责 |
+| 能力 | 产品职责 |
 |---|---|
-| 景区介绍 | 列表 / 详情：名称、简介、看点、开放与交通概要 |
-| 语言偏好 | 全局 `zh` ↔ `en`；壳文案与内容字段同步切换 |
-| 文化解读 | 面向入境游客的礼仪、历史语境、参观提示 |
-| 双语服务 | 通用话术（服务页）+ 景区专属话术（详情） |
-| 首页热点 | 用「景区热点」进入主线，不占用模板美食住宿推荐位 |
-| Mock / API | 模式 A 前端 Mock 可演示；模式 B 后端 Seed + 查询 API 已贯通 |
-
-```
-语言切换 → 首页景区热点 / 列表 → 景点详情（文化解读 + 专属话术）
-  → 服务页通用话术（游客主链路免登录）
-```
+| 景区介绍 | 列表与详情：名称、简介、看点、开放与交通概要 |
+| 语言偏好 | 全局 `zh` ↔ `en`；界面文案与内容字段同步切换 |
+| 文化解读 | 面向入境游客的礼仪、历史语境与参观提示 |
+| 双语服务 | 通用服务话术与景区专属话术 |
+| 首页热点 | 以景区热点进入主线，承接首批推荐景区 |
+| 数据接入 | 模式 A 本地 Mock 可独立演示；模式 B 后端 Seed 与查询 API 已贯通 |
 
 ---
 
 ## 功能
 
+<p align="center">
+  <img src="docs/images/readme/features.png" alt="Tourism Master 核心功能模块" width="100%">
+</p>
+
 | 功能 | 说明 |
 |---|---|
-| **语言切换** | 全局中英切换；Tab / 按钮 / 景区字段同步 |
-| **景区列表** | 6 个 P0：云冈、五台山、平遥、晋祠、壶口（山西侧）、悬空寺 |
-| **景点详情** | 简介、开放/票价/交通概要、看点、文化解读、专属话术；保留订票与评论入口 |
-| **文化解读** | `culturalNotes` + 障碍类型，可读区块展示 |
-| **双语服务** | 购票问询、礼仪、应急等中英对照 |
-| **首页景区热点** | 来自调研 `homeRecommendations`，**不写入** `biz_recommend` |
-| **Mock 适配层** | Repository / Adapter；`slug` 导航；游客可浏览主链路 |
-| **模式 B 贯通** | 后端幂等 Seed + 查询 API；小程序可切 API；管理端双语轻量表单 |
+| **全局双语切换** | 支持中文与英文切换，界面文案和景区内容字段同步更新 |
+| **景区热点与列表** | 首批覆盖云冈石窟、五台山、平遥古城、晋祠、黄河壶口瀑布（山西侧）与悬空寺 |
+| **景点详情** | 展示简介、核心看点、开放与票价说明、交通概要和参观提示 |
+| **文化解读** | 从历史语境、参观礼仪和跨文化差异等角度补充景区背景 |
+| **景区专属话术** | 根据具体景区提供可直接使用的中英双语表达 |
+| **通用服务话术** | 覆盖购票问询、路线咨询、礼仪提示和应急求助等常见场景 |
+| **双模式数据接入** | 支持本地 Mock 独立演示，并可切换后端查询 API |
 
-**业务边界（Out of scope）：** 真实支付 / 库存 / 核销、日韩等多语言、语音讲解 / AR / 深度地图、论文正文进小程序、完整 OTA 行程规划——主线是景区介绍 + 双语服务。
+> **业务边界：** 当前不覆盖真实支付、库存核销、完整行程规划、日韩等多语言、语音讲解、AR 或深度地图。产品主线保持为景区介绍与双语服务。
 
 ---
 
@@ -82,18 +84,34 @@ _少做通用 OTA，把空间留给景区介绍与跨文化双语服务_
   → 服务页浏览通用话术（主链路无需登录）
 ```
 
-动态字段（开放时间、票价等）带 **UNVERIFIED** 免责声明，不伪造成实时官方数据。
+动态字段（开放时间、票价等）带 **UNVERIFIED** 免责声明，避免将演示数据误解为实时官方信息。
 
-### Showcase — 模板界面（演示数据）
+### Showcase
 
-> 下列截图为原模板「黄山旅游助手」演示数据，**非山西正式内容**。Banner / 架构 / 技术栈 / 流程 / 目录配图见 [`docs/images/readme/`](docs/images/readme/)。
+山西主题小程序的真机与管理端截图将在应用启动、内容替换和视觉验收完成后补充，本节暂时保留展示位。
 
-| [管理端登录](images/1.png)**管理端登录**Vue3 后台入口 | [小程序首页](images/shortcut-20250727-095547.png)**小程序首页**模板首页示意 | [文化遗产](images/shortcut-20250727-095606.png)**文化遗产**模板列表示意 |
+<!--
+后续建议使用三列相册：
+
+1. 首页 / 景区热点
+2. 景区详情 / 文化解读
+3. 双语服务 / 管理端表单
+-->
+
+<details>
+<summary>查看原始模板界面参考</summary>
+
+> 以下截图仅用于说明现有工程骨架与基础交互，不代表 Tourism Master 的最终视觉与山西正式内容。
+
+| 管理端登录 | 小程序首页 | 文化遗产列表 |
 |---|---|---|
+| [查看截图](images/1.png) | [查看截图](images/shortcut-20250727-095547.png) | [查看截图](images/shortcut-20250727-095606.png) |
 
-更多模板截图见 [`images/`](images/)。
+更多参考截图见 [`images/`](images/)。
 
-### P0 景区（Mock / Seed）
+</details>
+
+### 首批景区（Mock / Seed）
 
 | Slug | 景区 |
 |---|---|
@@ -132,7 +150,7 @@ pnpm dev
 ### 后端（`tourism_api`）
 
 1. MySQL 8 + Redis（见 [`tourism_api/sql/README.md`](tourism_api/sql/README.md)）  
-2. 按该 README **依序导入** `00` → `01`（Snowy v2.0.0 框架）→ `02`（biz_spot）→ Wave2 Seed → `03`（业务空表）  
+2. 按该 README **依序导入** `00` → `01`（Snowy v2.0.0 框架）→ `02`（biz_spot）→ Wave2 Seed → `03`（业务空表）→ `04`（`sys_resource.visible` 补丁）  
 3. **JDK 8** 下：`tourism_api` → `mvn clean install -DskipTests`，再进入 `snowy-web-app` 执行 `mvn spring-boot:run`（端口 **86**）  
 4. 管理端默认账号：**superAdmin** / **123456**
 
@@ -147,7 +165,7 @@ pnpm dev
 模式 A 下景区主链路走本地 Mock Repository，可不启后端即可演示双语浏览；订票 / 评论仍走原 API 鉴权。
 
 <details>
-<summary>新队友阅读顺序</summary>
+<summary>新成员阅读顺序</summary>
 
 | 顺序 | 路径 | 目的 |
 |---|---|---|
@@ -168,19 +186,10 @@ pnpm dev
   <img src="docs/images/readme/architecture.png" alt="系统架构图" width="100%">
 </p>
 
-```
-tourism_weapp (UniApp 微信小程序)
-  → Locale Store + Mock Repository / API Adapter
-    → 景区列表 · 详情 · 首页热点 · 服务话术
-  →（订票 / 评论）原模板 HTTP + Token 鉴权
-
-tourism_admin (Vue3 + Ant Design Vue)
-  → 景区双语轻量表单（模式 B/C）
-
-tourism_api (Spring Boot / Snowy)
-  → MyBatis-Plus · Sa-Token · MySQL 8 · Redis
-  → 幂等 Seed + 景区双语查询 API（模式 B）
-```
+- **`tourism_weapp`**：UniApp 小程序；Locale 切换、景区浏览、Mock Repository / API Adapter；订票与评论沿用 Token 鉴权
+- **`tourism_admin`**：Vue3 管理端；景区双语内容维护
+- **`tourism_api`**：Spring Boot / Snowy 后端；MyBatis-Plus、Sa-Token、MySQL 8、Redis；模式 B 提供 Seed 与查询 API
+- **数据路径**：模式 A 本地 Mock 可独立演示；模式 B 经 API Adapter 读取后端数据
 
 ### 技术栈
 
@@ -188,7 +197,7 @@ tourism_api (Spring Boot / Snowy)
   <img src="docs/images/readme/tech-stack.png" alt="技术栈分层图" width="100%">
 </p>
 
-| 层 | 技术 | 路径 |
+| 层级 | 技术 | 路径 |
 |---|---|---|
 | 用户端 | UniApp（Vue）、微信小程序 | `tourism_weapp/` |
 | 管理端 | Vue3 · Vite · Ant Design Vue · TypeScript | `tourism_admin/` |
@@ -200,29 +209,17 @@ tourism_api (Spring Boot / Snowy)
   <img src="docs/images/readme/workflow.png" alt="游客主链路流程图" width="100%">
 </p>
 
-**关键原则：**
+**实现要点：**
 
-- 二次开发优先改模板三端，不另起无关栈（除非 ADR）
-- 产品主线：景区介绍 + 双语服务；不主动扩大为通用 OTA
-- 导航键：`slug`（ADR-0001）；双语成对字段经 Adapter 输出当前 locale ViewModel
-- 游客可浏览 Mock / 双语查询主链路；订票评论无 Token 时行为与模板一致
-- 动态字段带 UNVERIFIED；密钥与本地 DB/Redis/微信配置不入库
+- 导航键使用 `slug`（ADR-0001）；双语成对字段经 Adapter 输出当前 Locale 的 ViewModel
+- 游客核心浏览链路免登录；订票与评论无 Token 时行为与模板一致
+- 动态字段标注 **UNVERIFIED**；密钥与本地 DB / Redis / 微信配置不入库
 
 ### 目录结构
 
 <p align="center">
   <img src="docs/images/readme/structure.png" alt="仓库目录结构图" width="100%">
 </p>
-
-```
-tourism-master/
-├── README.md · AGENTS.md · CLAUDE.md · CONTEXT.md · CONTEXT-MAP.md
-├── docs/          # ADR · Agent 规则 · PRD/handoff · knowledge · README 配图
-├── tourism_weapp/ # 小程序
-├── tourism_admin/ # 管理端
-├── tourism_api/   # 后端
-└── images/        # 模板演示截图
-```
 
 ---
 
@@ -251,9 +248,17 @@ tourism-master/
 | [`docs/output/reports/shanxi-bilingual-mvp/prd.md`](docs/output/reports/shanxi-bilingual-mvp/prd.md) | 产品 PRD（approved） |
 | [`docs/adr/0001-bilingual-field-model.md`](docs/adr/0001-bilingual-field-model.md) | 双语字段与导航键 |
 | [`docs/contexts/`](docs/contexts/) | weapp / admin / api 分端 CONTEXT |
-| [`docs/output/reports/readme-diagrams/readme-diagram-brief.md`](docs/output/reports/readme-diagrams/readme-diagram-brief.md) | README 配图（Banner / 架构 / 技术栈 / 流程 / 目录）生成说明 |
+| [`docs/output/reports/readme-diagrams/readme-diagram-brief.md`](docs/output/reports/readme-diagrams/readme-diagram-brief.md) | README 配图生成说明 |
 
 任务流：GitHub Issues + `docs/output/handoff/`；完结归档见 `docs/output/*/archive/`。
+
+---
+
+## 项目来源与说明
+
+本项目基于既有的 Spring Boot + Vue3 + UniApp 旅游系统工程进行二次开发。原工程提供管理端、小程序端、后端以及订票、评论等基础能力；Tourism Master 在此基础上重新聚焦山西景区内容、跨文化解读与中英双语服务。
+
+原始模板仅作为工程基础，不代表本项目最终的产品定位与正式展示内容。
 
 ---
 
