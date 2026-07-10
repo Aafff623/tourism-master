@@ -3,29 +3,25 @@
 		<view class="search">
 			<view class="inputbox">
 				<view class="cuIcon-search"></view>
-				<input type="text" @blur="onSearch" v-model:value="spotName" placeholder="搜索标题" />
+				<input type="text" @confirm="onSearch" @blur="onSearch" v-model="keyword" :placeholder="shell.spotSearchPlaceholder" />
 			</view>
 		</view>
 		
 		<view v-if="dataList.length>0" class="padding-sm">
 			<view class="spot-list">
-				<view class="spot-item" v-for="(item,index) in dataList" :key="index"  @click="toDetail(item.id)"> 
-					<image :src="item.cover.url" style="width: 100%;height: 130px;" />
-					<view class="bg-orange cu-tag sm" style="position: absolute;right: 0;top: 0;">{{item.rate}}分</view>
+				<view class="spot-item" v-for="(item,index) in dataList" :key="item.slug || index" @click="toDetail(item.slug)">
+					<image :src="item.coverUrl || (item.cover && item.cover.url)" style="width: 100%;height: 130px;" mode="aspectFill" />
+					<view class="bg-orange cu-tag sm" style="position: absolute;right: 0;top: 0;" v-if="item.levelLabel">{{ item.levelLabel }}</view>
 					
 					<view class="flex-sub flex flex-direction justify-between padding-sm">
 						<view class="h3 title">
-							<view class="cu-tag sm bg-red margin-right-sm">{{item.startLevel}}A</view>		
-							<text>{{ item.spotName }}</text>
+							<view class="cu-tag sm bg-red margin-right-sm" v-if="item.startLevel">{{item.startLevel}}A</view>
+							<text>{{ item.name || item.spotName }}</text>
 						</view>
-						<view class="margin-top-xs">
-							<text v-for="a in item.spotTags" class="cu-tag sm bg-blue light">{{a}}</text>
+						<view class="margin-top-xs" v-if="item.spotTags && item.spotTags.length">
+							<text v-for="(a, tagIndex) in item.spotTags" :key="tagIndex" class="cu-tag sm bg-blue light">{{a}}</text>
 						</view>
-						<div class="address weaktext margin-top-xs">{{item.address}}</div>
-						<view class="flex justify-between margin-top-xs">
-							<text v-if="item.minPrice!==0" class="text-grey"><text class="price text-xl text-red">￥{{item.minPrice}}</text>起</text>
-							<text v-else class="text-green">免费</text>
-						</view>
+						<view class="address weaktext margin-top-xs">{{ item.summary || item.city || item.address }}</view>
 					</view>
 				</view>
 			</view>
@@ -33,7 +29,6 @@
 		
 		<empty v-else></empty>
 		
-		<!-- 添加按钮 -->
 		<view style="position: fixed; right: 20px; top: 550px;" @click="scrollToTop">
 			<button class="cu-btn cuIcon round bg-green lg">
 			  <text class="cuIcon-upblock text-xxl text-bold"></text>
@@ -44,38 +39,69 @@
 </template>
 
 <script>
-	import indexApi from "@/api/indexApi.js"
+	import { getLocale, LOCALE_CHANGED_EVENT } from "@/services/locale.js"
+	import { getShellCopy } from "@/services/shellCopy.js"
+	import { getSpotCatalog } from "@/services/scenicRepository.js"
 
 	export default {
 		data() {
+			const locale = getLocale()
 			return {
-				spotName: null,
-				dataList: []
+				keyword: '',
+				allList: [],
+				dataList: [],
+				locale,
+				shell: getShellCopy(locale)
 			}
 		},
 		onLoad() {
-			this.getData()
+			uni.$on(LOCALE_CHANGED_EVENT, this.onLocaleChanged)
+			this.reload()
+		},
+		onShow() {
+			this.reload()
+		},
+		onUnload() {
+			uni.$off(LOCALE_CHANGED_EVENT, this.onLocaleChanged)
 		},
 		methods: {
 			scrollToTop() {
 			  uni.pageScrollTo({
-				scrollTop: 0,      // 滚动到顶部
-				duration: 300      // 动画时长（ms），可选
+				scrollTop: 0,
+				duration: 300
 			  });
 			},
-			getData() {
-				indexApi.getspotbook({
-					spotname: this.spotName
-				}).then(res => {
-					this.dataList = res.data
+			reload() {
+				this.locale = getLocale()
+				this.shell = getShellCopy(this.locale)
+				this.allList = getSpotCatalog(this.locale)
+				this.applyFilter()
+			},
+			applyFilter() {
+				const key = (this.keyword || '').trim().toLowerCase()
+				if (!key) {
+					this.dataList = this.allList.slice()
+					return
+				}
+				this.dataList = this.allList.filter((item) => {
+					const name = (item.name || item.spotName || '').toLowerCase()
+					const city = (item.city || item.address || '').toLowerCase()
+					const summary = (item.summary || '').toLowerCase()
+					return name.indexOf(key) !== -1 || city.indexOf(key) !== -1 || summary.indexOf(key) !== -1
 				})
 			},
 			onSearch() {
-				this.getData()
+				this.applyFilter()
 			},
-			toDetail(id){
+			onLocaleChanged() {
+				this.reload()
+			},
+			toDetail(slug){
+				if (!slug) {
+					return
+				}
 				uni.navigateTo({
-					url:'/pages/spot/detail?id='+id
+					url:'/pages/spot/detail?id=' + encodeURIComponent(slug)
 				})
 			}
 		}

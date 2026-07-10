@@ -161,3 +161,22 @@ feat(weapp): add bilingual shell locale switch and tabBar copy
 feat(weapp): show Shanxi home hotspots from scenic mock recommendations
 
 ---
+
+## 9. weapp-spot-list-detail
+
+### 做了什么
+- Wave 1 Phase 4：景点列表/详情接 Mock；文化解读、话术、免责声明；slug 导航
+- 保留订票/评论/历史 API（失败静默）
+
+### 改了哪些文件
+- `tourism_weapp/pages/spot/spot.vue`
+- `tourism_weapp/pages/spot/detail.vue`
+- `docs/output/handoff/shanxi-bilingual-mvp/weapp-spot-list-detail.md`
+- `docs/output/handoff/shanxi-bilingual-mvp/weapp-home-hotspots.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+feat(weapp): wire spot list and detail to bilingual scenic mock
+
+---
