@@ -219,3 +219,23 @@ feat(weapp): show categorized bilingual service phrases on service tab
 test(weapp): record Wave-1 bilingual MVP regression results
 
 ---
+
+## 12. archive-wave1
+
+### 做了什么
+- `/archive` Wave 1：物理移动 5 个产品 handoff + mock-integration 至 `handoff/archive/`
+- `reports/shanxi-bilingual-mvp/` 保留（Wave 2 同 theme）
+- 更新 epic-scratch
+
+### 改了哪些文件
+- `docs/output/handoff/archive/shanxi-bilingual-mvp/*`
+- `docs/output/handoff/archive/shanxi-scenic-mock-data/weapp-mock-integration.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/output/handoff/shanxi-bilingual-mvp/.gitkeep`
+- `docs/output/handoff/shanxi-scenic-mock-data/.gitkeep`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+docs(archive): archive Wave-1 bilingual MVP handoffs
+
+---
