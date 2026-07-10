@@ -59,5 +59,7 @@ docs/
 | `.cursor/skills/deliver/` | Cursor `/deliver` Skill | **已迁入** |
 | `.cursor/skills/archive/` | Cursor `/archive` Skill | **已迁入** |
 | `docs/adr/0001-bilingual-field-model.md` | 双语字段与 slug 导航 | **Accepted** |
-| `docs/output/reports/shanxi-scenic-mock-data/` | 调研包 + 审计 + PRD | **进行中** |
-| `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md` | 模式 A 实施 handoff | **in-progress** |
+| `docs/output/reports/shanxi-bilingual-mvp/` | 产品 PRD、二次开发清单、路线图 | **PRD approved** |
+| `docs/output/handoff/shanxi-bilingual-mvp/` | Wave 1 页面任务 handoff | **已拆分** |
+| `docs/output/reports/shanxi-scenic-mock-data/` | 调研包 + 审计 + 数据 PRD | **进行中** |
+| `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md` | 模式 A 数据层 handoff | **in-progress** |

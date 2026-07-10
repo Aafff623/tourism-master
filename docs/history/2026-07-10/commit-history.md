@@ -75,3 +75,26 @@ docs(mock): ingest scenic research pack and phase-0 integration audit
 docs(mock): lock mode-A decisions, add deliver skills, and approve scenic mock PRD
 
 ---
+
+## 5. bilingual-mvp-prd-plan
+
+### 做了什么
+- 产出产品 PRD（approved）、二次开发功能清单、实施路线图
+- 拆分 Wave 1 handoff（locale / spot / home / service / regression）+ epic-scratch
+- 早期 mvp-feature-list 标为 superseded
+
+### 改了哪些文件
+- `docs/output/reports/shanxi-bilingual-mvp/prd.md`
+- `docs/output/reports/shanxi-bilingual-mvp/secondary-dev-feature-list.md`
+- `docs/output/reports/shanxi-bilingual-mvp/implementation-roadmap.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/output/reports/shanxi-bilingual-mvp/mvp-feature-list.md`
+- `docs/output/handoff/shanxi-bilingual-mvp/*.md`
+- `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
+- `docs/README.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+docs(mvp): add product PRD, secondary-dev list, and Wave-1 roadmap
+
+---

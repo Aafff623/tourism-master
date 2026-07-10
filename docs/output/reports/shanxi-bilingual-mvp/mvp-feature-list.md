@@ -1,8 +1,10 @@
 # MVP 功能清单 — 山西文旅双语小程序
 
 > theme: `shanxi-bilingual-mvp`  
-> status: draft（待你确认后可升为 PRD / 拆 Issue）  
+> status: superseded（以 [`prd.md`](prd.md) 为准）  
 > 依据：产品主线「景区介绍 + 双语服务」；模板能力按需裁剪
+
+> **注意：** 正式需求与验收以 [`prd.md`](prd.md) 为准；二次开发触点见 [`secondary-dev-feature-list.md`](secondary-dev-feature-list.md)；节奏见 [`implementation-roadmap.md`](implementation-roadmap.md)。下文保留作早期草稿对照。
 
 ## 目标（MVP）
 

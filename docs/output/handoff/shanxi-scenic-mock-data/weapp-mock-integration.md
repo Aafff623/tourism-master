@@ -30,6 +30,12 @@ updated: 2026-07-10
 
 ## 下次（仅 Review 通过后填写）
 
-- 落地 `scenicMock/` + Repository/Adapter
-- 改造 home / spot / spot/detail / service
+- 落地 `scenicMock/` + Repository/Adapter（SD-01/02）
+- 改造 home / spot / spot/detail / service（由产品 theme 各 handoff 承接页面）
 - 回归：6 slug、中英、引用完整性、免责声明
+
+## 关联
+
+- 产品 PRD：`docs/output/reports/shanxi-bilingual-mvp/prd.md`
+- 二次开发清单：`.../secondary-dev-feature-list.md`
+- 路线图：`.../implementation-roadmap.md`（本任务为 Wave 1 第 1 步）
