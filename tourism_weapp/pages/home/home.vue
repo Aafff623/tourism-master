@@ -178,7 +178,11 @@
 				this.shell = getShellCopy(this.locale)
 			},
 			loadHotspots() {
-				this.hotspots = getHomeHotspots(this.locale)
+				getHomeHotspots(this.locale).then((list) => {
+					this.hotspots = list || []
+				}).catch(() => {
+					this.hotspots = []
+				})
 			},
 			onLocaleChanged(nextLocale) {
 				this.locale = nextLocale

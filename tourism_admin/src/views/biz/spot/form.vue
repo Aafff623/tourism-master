@@ -9,8 +9,32 @@
 		<a-form ref="formRef" :model="formData" layout="vertical">
 			<a-row :gutter="20">
 				<a-col :span="12">
-					<a-form-item label="景区名称：" name="spotName">
+					<a-form-item label="Slug（业务键）：" name="slug">
+						<a-input style="width: 100%" v-model:value="formData.slug" placeholder="如 yungang-grottoes"/>
+					</a-form-item>
+				</a-col>
+				<a-col :span="12">
+					<a-form-item label="城市（中文）：" name="city">
+						<a-input style="width: 100%" v-model:value="formData.city"/>
+					</a-form-item>
+				</a-col>
+			</a-row>
+			<a-row :gutter="20">
+				<a-col :span="12">
+					<a-form-item label="景区名称（中文）：" name="spotName">
 						<a-input style="width: 100%" v-model:value="formData.spotName"/>
+					</a-form-item>
+				</a-col>
+				<a-col :span="12">
+					<a-form-item label="景区名称（英文）：" name="spotNameEn">
+						<a-input style="width: 100%" v-model:value="formData.spotNameEn"/>
+					</a-form-item>
+				</a-col>
+			</a-row>
+			<a-row :gutter="20">
+				<a-col :span="12">
+					<a-form-item label="城市（英文）：" name="cityEn">
+						<a-input style="width: 100%" v-model:value="formData.cityEn"/>
 					</a-form-item>
 				</a-col>
 				<a-col :span="12">
@@ -21,10 +45,17 @@
 			</a-row>
 			<a-row :gutter="20">
 				<a-col :span="12">
-					<a-form-item label="开放时间段：" name="openingTime">
+					<a-form-item label="开放时间（中文）：" name="openingTime">
 						<a-input style="width: 100%" v-model:value="formData.openingTime"/>
 					</a-form-item>
 				</a-col>
+				<a-col :span="12">
+					<a-form-item label="开放时间（英文）：" name="openingTimeEn">
+						<a-input style="width: 100%" v-model:value="formData.openingTimeEn"/>
+					</a-form-item>
+				</a-col>
+			</a-row>
+			<a-row :gutter="20">
 				<a-col :span="12">
 					<a-form-item label="是否可预约：" name="isPrebook">
             <a-radio-group v-model:value="formData.isPrebook" name="radioGroup">
@@ -79,13 +110,37 @@
 			</a-row>
 			<a-row :gutter="20">
 				<a-col :span="12">
-					<a-form-item label="景区描述：" name="description">
-						<a-textarea style="width: 100%" v-model:value="formData.description" />
+					<a-form-item label="摘要（中文）：" name="summary">
+						<a-textarea style="width: 100%" v-model:value="formData.summary" :rows="3"/>
 					</a-form-item>
 				</a-col>
 				<a-col :span="12">
-					<a-form-item label="交通信息：" name="traffice">
+					<a-form-item label="摘要（英文）：" name="summaryEn">
+						<a-textarea style="width: 100%" v-model:value="formData.summaryEn" :rows="3"/>
+					</a-form-item>
+				</a-col>
+			</a-row>
+			<a-row :gutter="20">
+				<a-col :span="12">
+					<a-form-item label="景区描述（中文）：" name="description">
+						<a-textarea style="width: 100%" v-model:value="formData.description" :rows="4"/>
+					</a-form-item>
+				</a-col>
+				<a-col :span="12">
+					<a-form-item label="景区描述（英文）：" name="descriptionEn">
+						<a-textarea style="width: 100%" v-model:value="formData.descriptionEn" :rows="4"/>
+					</a-form-item>
+				</a-col>
+			</a-row>
+			<a-row :gutter="20">
+				<a-col :span="12">
+					<a-form-item label="交通信息（中文）：" name="traffice">
 						<a-textarea style="width: 100%" v-model:value="formData.traffice"/>
+					</a-form-item>
+				</a-col>
+				<a-col :span="12">
+					<a-form-item label="交通信息（英文）：" name="trafficeEn">
+						<a-textarea style="width: 100%" v-model:value="formData.trafficeEn"/>
 					</a-form-item>
 				</a-col>
 			</a-row>

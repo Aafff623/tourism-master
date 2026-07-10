@@ -270,3 +270,29 @@ docs(archive): archive Wave-1 bilingual MVP handoffs
 feat(api): add bilingual biz_spot seed and guest spot APIs
 
 ---
+
+## 14. weapp-api-switch + admin-bilingual-fields（Wave 2）
+
+### 做了什么
+- 小程序 Repository：双语 API 优先，失败回退 Mock；http 白名单与失败 reject
+- 首页/列表/详情改为异步加载
+- 管理端景区表单：slug + 中英名称/摘要/简介/开放时间/交通
+
+### 改了哪些文件
+- `tourism_weapp/api/scenicBilingualApi.js`
+- `tourism_weapp/utils/http.js`
+- `tourism_weapp/services/scenicRepository.js`
+- `tourism_weapp/services/scenicMockSmoke.js`
+- `tourism_weapp/pages/home/home.vue`
+- `tourism_weapp/pages/spot/spot.vue`
+- `tourism_weapp/pages/spot/detail.vue`
+- `tourism_admin/src/views/biz/spot/form.vue`
+- `docs/output/handoff/shanxi-bilingual-mvp/weapp-api-switch.md`
+- `docs/output/handoff/shanxi-bilingual-mvp/admin-bilingual-fields.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+feat(weapp,admin): switch scenic data to bilingual API with mock fallback
+
+---

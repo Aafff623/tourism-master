@@ -34,5 +34,5 @@ updated: 2026-07-10
 
 ## 下次（Review 通过并 commit 后）
 
-- `weapp-api-switch`：Repository 调双语 API，失败回退 Mock；`http.js` 白名单
-- `admin-bilingual-fields`：slug + 中英名称/简介/摘要表单
+- ~~`weapp-api-switch`~~ / ~~`admin-bilingual-fields`~~ 已交付待 Review
+- Wave 2 通过后归档 handoff；SD-15 另开

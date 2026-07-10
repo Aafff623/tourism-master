@@ -17,9 +17,9 @@
 
 | task | handoff | status |
 |---|---|---|
-| api-seed-integration | `handoff/shanxi-bilingual-mvp/api-seed-integration.md` | review |
-| weapp-api-switch | `handoff/shanxi-bilingual-mvp/weapp-api-switch.md` | pending |
-| admin-bilingual-fields | `handoff/shanxi-bilingual-mvp/admin-bilingual-fields.md` | pending |
+| api-seed-integration | `handoff/shanxi-bilingual-mvp/api-seed-integration.md` | done (committed 9cddc85) |
+| weapp-api-switch | `handoff/shanxi-bilingual-mvp/weapp-api-switch.md` | review |
+| admin-bilingual-fields | `handoff/shanxi-bilingual-mvp/admin-bilingual-fields.md` | review |
 
 PRD：`docs/output/reports/shanxi-bilingual-mvp/prd.md`  
 路线图：`implementation-roadmap.md`

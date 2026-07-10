@@ -6,8 +6,14 @@ const ENV = 'DEV';
 const PROD_URL = 'http://localhost:82';
 const DEV_URL = 'http://192.168.3.6:86/client/c';
 const BASE_URL = ENV == 'PROD' ? PROD_URL : DEV_URL;
-// 请求白名单
-const whiteUrls = ['/user/login','/user/register'];
+// 请求白名单（游客可读；Wave 2 双语景区）
+const whiteUrls = [
+	'/user/login',
+	'/user/register',
+	'/spot/bilingual/catalog',
+	'/spot/bilingual/detail',
+	'/spot/bilingual/hotspots'
+];
 // 以下这些code需要重新登录
 const reloadCodes = [401, 1011007, 1011008];
 // 错误信息表
@@ -29,8 +35,18 @@ export default function http(option) {
         if (option.showLoading){
 					uni.showLoading();
 				}
+        let requestConfig
+        try {
+            requestConfig = requestInterceptor(option)
+        } catch (err) {
+            if (option.showLoading) {
+                uni.hideLoading()
+            }
+            reject(err)
+            return
+        }
         uni.request({
-            ...requestInterceptor(option),
+            ...requestConfig,
             success: (res) => {
                 if (option.showLoading){
 									uni.hideLoading();
@@ -44,6 +60,7 @@ export default function http(option) {
                 if (option.showLoading)
                     uni.hideLoading();
                 errorHandler(err);
+                reject(err);
             },
         });
     });
@@ -54,27 +71,29 @@ export default function http(option) {
  */
 function requestInterceptor(option) {
     let header = option.header || {};
+    const requestData = option.data || {};
     // 过滤属性为null的
-    for (let key in option.data) {
-        if (option.data[key] === null ||
-            option.data[key] === undefined ||
-            option.data[key] === "null" ||
-            option.data[key] === "") {
-            delete option.data[key];
+    for (let key in requestData) {
+        if (requestData[key] === null ||
+            requestData[key] === undefined ||
+            requestData[key] === "null" ||
+            requestData[key] === "") {
+            delete requestData[key];
         }
     }
     if (!whiteUrls.includes(option.url)) {
         let token = tool.data.get('TOKEN');
         if (!token) {
             uni.showToast({ icon: 'none', title: '未登录' });
-            return toLoginPage();
+            toLoginPage();
+            throw new Error('UNAUTHORIZED');
         }
         header['Token'] = token;
     }
     const config = {
         url: BASE_URL + option.url,
         method: option.method,
-        data: option.data,
+        data: requestData,
         header: header,
     };
     return config;

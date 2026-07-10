@@ -73,6 +73,6 @@ SD-16～18；需模式 C 级 ADR/PRD。
 
 ## 下一行动（Agent）
 
-1. Wave 1 已归档；Wave 2 进行中。  
-2. 当前交付：`api-seed-integration` → 等用户 Review。  
-3. Review 通过后 commit，再开 `weapp-api-switch`。
+1. Wave 2 三任务已交付：`api-seed` 已 commit；`weapp-api-switch` + `admin-bilingual-fields` 待 Review。  
+2. 用户确认后 commit 后两刀，并归档 Wave 2 handoff。  
+3. SD-15（概况/遗产）另开，不默认开工。

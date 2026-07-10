@@ -74,8 +74,13 @@
 			reload() {
 				this.locale = getLocale()
 				this.shell = getShellCopy(this.locale)
-				this.allList = getSpotCatalog(this.locale)
-				this.applyFilter()
+				getSpotCatalog(this.locale).then((list) => {
+					this.allList = list || []
+					this.applyFilter()
+				}).catch(() => {
+					this.allList = []
+					this.applyFilter()
+				})
 			},
 			applyFilter() {
 				const key = (this.keyword || '').trim().toLowerCase()

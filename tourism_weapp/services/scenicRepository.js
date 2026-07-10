@@ -1,6 +1,6 @@
 /**
- * Scenic data access for Mode A (frontend mock).
- * Swap implementation later for API without changing page ViewModels.
+ * Scenic data access: Mode B API first, Mode A mock fallback.
+ * Pages should await async getters; sync mock helpers remain for smoke tests.
  */
 import spotCatalog from '../mock/scenic/spotCatalog.json'
 import spots from '../mock/scenic/spots.json'
@@ -9,6 +9,11 @@ import serviceItems from '../mock/scenic/serviceItems.json'
 import spotServiceLinks from '../mock/scenic/spotServiceLinks.json'
 import barrierTypes from '../mock/scenic/barrierTypes.json'
 import qualityCompliance from '../mock/scenic/qualityCompliance.json'
+import {
+	fetchBilingualCatalog,
+	fetchBilingualDetail,
+	fetchBilingualHotspots
+} from '../api/scenicBilingualApi.js'
 import { getLocale } from './locale.js'
 import {
 	adaptCatalogItem,
@@ -42,8 +47,74 @@ function adapterContext() {
 	}
 }
 
-/** P0 spots only (full detail objects in spots.json). */
-export function getSpotCatalog(locale, options = {}) {
+function unwrapList(response) {
+	if (!response) {
+		return []
+	}
+	if (Array.isArray(response.data)) {
+		return response.data
+	}
+	if (Array.isArray(response)) {
+		return response
+	}
+	return []
+}
+
+function unwrapOne(response) {
+	if (!response) {
+		return null
+	}
+	if (response.data && typeof response.data === 'object') {
+		return response.data
+	}
+	if (response.slug || response.id) {
+		return response
+	}
+	return null
+}
+
+/** Enrich API detail service placeholders with local phrase copy. */
+function enrichApiDetailServices(detail, locale) {
+	if (!detail) {
+		return detail
+	}
+	const lookup = buildServiceLookup(serviceItems, spotServiceLinks)
+	const ids = (detail.serviceItems || [])
+		.map((item) => (typeof item === 'string' ? item : item && item.id))
+		.filter(Boolean)
+	const enriched = ids
+		.map((serviceId) => {
+			const raw = lookup[serviceId]
+			if (!raw) {
+				return {
+					id: serviceId,
+					category: 'spot',
+					title: serviceId,
+					phrase: '',
+					note: '',
+					spotSlug: detail.slug || null
+				}
+			}
+			const loc = resolveLocale(locale)
+			const isEn = loc === 'en'
+			return {
+				id: raw.id,
+				category: raw.category || 'spot',
+				title: isEn ? raw.titleEn || raw.titleZh : raw.titleZh || raw.titleEn,
+				phrase: isEn ? raw.phraseEn || raw.phraseZh : raw.phraseZh || raw.phraseEn,
+				note: isEn ? raw.noteEn || raw.noteZh : raw.noteZh || raw.noteEn,
+				spotSlug: raw.spotSlug || detail.slug || null
+			}
+		})
+		.filter(Boolean)
+	return {
+		...detail,
+		serviceItems: enriched
+	}
+}
+
+/** P0 spots only (full detail objects in spots.json). Sync mock path. */
+export function getSpotCatalogSync(locale, options = {}) {
 	const loc = resolveLocale(locale)
 	const includeP1 = options.includeP1 === true
 	const rows = (spotCatalog || []).filter((row) => {
@@ -55,7 +126,7 @@ export function getSpotCatalog(locale, options = {}) {
 	return rows.map((row) => adaptCatalogItem(row, loc, spotBySlug))
 }
 
-export function getSpotDetail(slug, locale) {
+export function getSpotDetailSync(slug, locale) {
 	const loc = resolveLocale(locale)
 	const spot = spotBySlug[slug]
 	if (!spot) {
@@ -64,8 +135,61 @@ export function getSpotDetail(slug, locale) {
 	return adaptSpotDetail(spot, loc, adapterContext())
 }
 
-/** Alias for pages that still pass option.id (may be slug string). */
-export function getSpotDetailByIdOrSlug(idOrSlug, locale) {
+export function getSpotDetailByIdOrSlugSync(idOrSlug, locale) {
+	if (!idOrSlug) {
+		return null
+	}
+	if (spotBySlug[idOrSlug]) {
+		return getSpotDetailSync(idOrSlug, locale)
+	}
+	const found = (spots || []).find((spot) => spot.id === idOrSlug)
+	if (found) {
+		return getSpotDetailSync(found.slug, locale)
+	}
+	return null
+}
+
+export function getHomeHotspotsSync(locale) {
+	const loc = resolveLocale(locale)
+	return (homeRecommendations || [])
+		.slice()
+		.sort((a, b) => (a.rank || 0) - (b.rank || 0))
+		.map((row) => adaptHomeHotspot(row, loc, spotBySlug))
+}
+
+/** Async: API first, mock fallback. */
+export async function getSpotCatalog(locale, options = {}) {
+	const loc = resolveLocale(locale)
+	try {
+		const response = await fetchBilingualCatalog(loc)
+		const list = unwrapList(response)
+		if (list.length) {
+			return list
+		}
+	} catch (err) {
+		console.warn('[scenicRepository] catalog API failed, using mock', err)
+	}
+	return getSpotCatalogSync(loc, options)
+}
+
+export async function getSpotDetail(slug, locale) {
+	const loc = resolveLocale(locale)
+	if (!slug) {
+		return null
+	}
+	try {
+		const response = await fetchBilingualDetail(slug, loc)
+		const detail = unwrapOne(response)
+		if (detail) {
+			return enrichApiDetailServices(detail, loc)
+		}
+	} catch (err) {
+		console.warn('[scenicRepository] detail API failed, using mock', err)
+	}
+	return getSpotDetailSync(slug, loc)
+}
+
+export async function getSpotDetailByIdOrSlug(idOrSlug, locale) {
 	if (!idOrSlug) {
 		return null
 	}
@@ -76,15 +200,22 @@ export function getSpotDetailByIdOrSlug(idOrSlug, locale) {
 	if (found) {
 		return getSpotDetail(found.slug, locale)
 	}
-	return null
+	// May be a DB numeric/string id unknown to mock — try API with value as slug first
+	return getSpotDetail(idOrSlug, locale)
 }
 
-export function getHomeHotspots(locale) {
+export async function getHomeHotspots(locale) {
 	const loc = resolveLocale(locale)
-	return (homeRecommendations || [])
-		.slice()
-		.sort((a, b) => (a.rank || 0) - (b.rank || 0))
-		.map((row) => adaptHomeHotspot(row, loc, spotBySlug))
+	try {
+		const response = await fetchBilingualHotspots(loc)
+		const list = unwrapList(response)
+		if (list.length) {
+			return list
+		}
+	} catch (err) {
+		console.warn('[scenicRepository] hotspots API failed, using mock', err)
+	}
+	return getHomeHotspotsSync(loc)
 }
 
 export function getServiceItems(locale, category) {
@@ -171,6 +302,10 @@ export default {
 	getSpotDetail,
 	getSpotDetailByIdOrSlug,
 	getHomeHotspots,
+	getSpotCatalogSync,
+	getSpotDetailSync,
+	getSpotDetailByIdOrSlugSync,
+	getHomeHotspotsSync,
 	getServiceItems,
 	getSpotServiceItems,
 	getBarrierTypes,

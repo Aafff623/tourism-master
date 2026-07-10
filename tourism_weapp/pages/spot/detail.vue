@@ -200,8 +200,11 @@
 			loadMockDetail() {
 				this.locale = getLocale()
 				this.shell = getShellCopy(this.locale)
-				const detail = getSpotDetailByIdOrSlug(this.spotIdOrSlug, this.locale)
-				this.spot = detail || {}
+				getSpotDetailByIdOrSlug(this.spotIdOrSlug, this.locale).then((detail) => {
+					this.spot = detail || {}
+				}).catch(() => {
+					this.spot = {}
+				})
 			},
 			loadLegacySideData() {
 				// 订票/评论/历史：保留模板能力；slug 场景下 API 失败则静默为空
