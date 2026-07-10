@@ -2,9 +2,14 @@
 
 # Tourism Master · 山西文旅双语小程序
 
-**少做通用 OTA，把空间留给景区介绍与跨文化双语服务**
+*"欲穷千里目，更上一层楼。"* —— 王之涣《登鹳雀楼》（山西永济）
 
-面向入境游客与中文用户，提供山西重点景区介绍、文化解读与中英双语服务话术，降低跨文化旅游中的信息理解与现场沟通成本。
+🏔️ 三晋纵贯千年古建与黄河风物：云冈佛影、平遥城垣、壶口雷响、悬空寺悬。  
+面向入境游客与中文用户，用中英双语讲清**景区故事**与**跨文化现场话术**——先读懂山西，再走进山西。
+
+<p>
+  <strong>中文</strong> · <a href="README.en.md">English</a>
+</p>
 
 </div>
 
@@ -16,18 +21,19 @@
   <img src="https://img.shields.io/badge/Wave_1-MVP_Done-brightgreen?style=for-the-badge" alt="Wave 1">
   <img src="https://img.shields.io/badge/Stack-UniApp_%7C_Vue3_%7C_Spring_Boot-blue?style=for-the-badge" alt="Stack">
   <img src="https://img.shields.io/badge/Locale-zh_%2B_en-orange?style=for-the-badge" alt="Locale">
-  <img src="https://img.shields.io/badge/Mode-A→B-lightgrey?style=for-the-badge" alt="Integration Mode">
+  <img src="https://img.shields.io/badge/Demo-Mock_only-brightgreen?style=for-the-badge" alt="Demo Mock">
+  <img src="https://img.shields.io/badge/Mode_B-Deferred_branch-lightgrey?style=for-the-badge" alt="Mode B deferred">
   <a href="https://github.com/Aafff623/tourism-master/stargazers"><img src="https://img.shields.io/github/stars/Aafff623/tourism-master?style=for-the-badge" alt="GitHub stars"></a>
 </p>
 
 <p align="center">
-  <a href="#为什么需要本系统">为什么</a> ·
-  <a href="#功能">功能</a> ·
-  <a href="#演示">演示</a> ·
-  <a href="#快速开始">快速开始</a> ·
-  <a href="#架构">架构</a> ·
-  <a href="#路线图">路线图</a> ·
-  <a href="#文档">文档</a> ·
+  <a href="#为什么需要本系统">🏯 为什么</a> ·
+  <a href="#功能">✨ 功能</a> ·
+  <a href="#演示">📱 演示</a> ·
+  <a href="#快速开始">🚀 快速开始</a> ·
+  <a href="#架构">🏗️ 架构</a> ·
+  <a href="#路线图">🗺️ 路线图</a> ·
+  <a href="#文档">📚 文档</a> ·
   <a href="#license">License</a>
 </p>
 
@@ -51,14 +57,14 @@ Tourism Master 因此将产品主线收敛为：**景区介绍、文化解读与
 | 文化解读 | 面向入境游客的礼仪、历史语境与参观提示 |
 | 双语服务 | 通用服务话术与景区专属话术 |
 | 首页热点 | 以景区热点进入主线，承接首批推荐景区 |
-| 数据接入 | 模式 A 本地 Mock 可独立演示；模式 B 后端 Seed 与查询 API 已贯通 |
+| 数据接入 | **演示默认模式 A（Mock-only）**；模式 B 代码已保留，真数据换接另开分支（ADR-0003） |
 
 ---
 
 ## 功能
 
 <p align="center">
-  <img src="docs/images/readme/features.png" alt="Tourism Master 核心功能模块" width="100%">
+  <img src="docs/images/readme/features.png" alt="Tourism Master 核心功能模块" width="80%">
 </p>
 
 | 功能 | 说明 |
@@ -88,7 +94,7 @@ Tourism Master 因此将产品主线收敛为：**景区介绍、文化解读与
 
 ### Showcase
 
-山西主题小程序的真机与管理端截图将在应用启动、内容替换和视觉验收完成后补充，本节暂时保留展示位。
+山西主题小程序的真机与管理端截图将在应用启动、内容替换和视觉验收完成后补充 📸，本节暂时保留展示位。
 
 <!--
 后续建议使用三列相册：
@@ -126,19 +132,29 @@ Tourism Master 因此将产品主线收敛为：**景区介绍、文化解读与
 
 ## 快速开始
 
-### 前置环境
+### 同学演示（推荐，只需小程序）
+
+当前交付默认 **Mock-only**（[ADR-0003](docs/adr/0003-mock-first-demo-freeze.md)）：**不必**启动 MySQL / Redis / 后端。
+
+1. HBuilderX 打开 `tourism_weapp` → 运行到微信开发者工具  
+2. 勾选「不校验合法域名」（若工具提示）  
+3. 演示：语言切换、首页热点、景区列表/详情、服务话术、概况、遗产  
+
+真 API / 管理端 / 云部署见下方「本机全栈（后置）」；策略 PRD：[`docs/output/reports/mock-demo-freeze/prd.md`](docs/output/reports/mock-demo-freeze/prd.md)。
+
+### 前置环境（全栈后置时才需要齐）
 
 | 组件 | 版本建议 | 备注 |
 |---|---|---|
-| JDK | 8+ | 后端 Spring Boot |
+| JDK | 8+ | 后端 Spring Boot（演示可不装） |
 | Node.js | 18+ | 管理端 / 小程序工具链 |
-| Maven | 3.6+ | 后端构建 |
-| MySQL | 8 | 后端库 |
-| Redis | 任意近期 | 会话 / 缓存 |
+| Maven | 3.6+ | 后端构建（演示可不装） |
+| MySQL | 8 | 后端库（演示可不装） |
+| Redis | 任意近期 | 会话 / 缓存（演示可不装） |
 | HBuilderX | 近期版 | 打开 `tourism_weapp` |
 | 微信开发者工具 | 近期版 | 小程序预览 |
 
-### 管理端（`tourism_admin`）
+### 管理端（`tourism_admin`，演示不强制）
 
 ```bash
 git clone https://github.com/Aafff623/tourism-master.git
@@ -147,12 +163,16 @@ pnpm install   # 或 npm / yarn
 pnpm dev
 ```
 
+### 本机全栈（后置，个人 Mode B 积累）
+
+> 同学演示**不需要**本节。Mode B 代码与 SQL 已保留，启用时机见 ADR-0003。
+
 ### 后端（`tourism_api`）
 
 1. MySQL 8 + Redis（见 [`tourism_api/sql/README.md`](tourism_api/sql/README.md)）  
-2. 按该 README **依序导入** `00` → `01`（Snowy v2.0.0 框架）→ `02`（biz_spot）→ Wave2 Seed → `03`（业务空表）→ `04`（`sys_resource.visible` 补丁）  
+2. 按该 README **依序导入** `00` → `01`（Snowy v2.0.0 框架）→ `02`（biz_spot）→ Wave2 Seed → `03`（业务空表）→ `04`（`sys_resource.visible` 补丁）→ `05`（登录账号改为 admin）  
 3. **JDK 8** 下：`tourism_api` → `mvn clean install -DskipTests`，再进入 `snowy-web-app` 执行 `mvn spring-boot:run`（端口 **86**）  
-4. 管理端默认账号：**superAdmin** / **123456**
+4. 管理端默认账号：**admin** / **123456**（见 `05_local_admin_account.sql`）
 
 库名与账号见：`tourism_api/snowy-web-app/src/main/resources/application.properties`（本地示例，勿提交真实生产密钥）。
 
@@ -162,7 +182,7 @@ pnpm dev
 
 用 HBuilderX 打开 `tourism_weapp`，依赖就绪后运行到微信开发者工具预览。
 
-模式 A 下景区主链路走本地 Mock Repository，可不启后端即可演示双语浏览；订票 / 评论仍走原 API 鉴权。
+**演示默认**：景区主链路走本地 Mock（ADR-0003）。订票 / 评论等模板入口可保留，不纳入演示验收。
 
 <details>
 <summary>新成员阅读顺序</summary>
@@ -183,7 +203,7 @@ pnpm dev
 ## 架构
 
 <p align="center">
-  <img src="docs/images/readme/architecture.png" alt="系统架构图" width="100%">
+  <img src="docs/images/readme/architecture.png" alt="系统架构图" width="80%">
 </p>
 
 - **`tourism_weapp`**：UniApp 小程序；Locale 切换、景区浏览、Mock Repository / API Adapter；订票与评论沿用 Token 鉴权
@@ -194,7 +214,7 @@ pnpm dev
 ### 技术栈
 
 <p align="center">
-  <img src="docs/images/readme/tech-stack.png" alt="技术栈分层图" width="100%">
+  <img src="docs/images/readme/tech-stack.png" alt="技术栈分层图" width="80%">
 </p>
 
 | 层级 | 技术 | 路径 |
@@ -206,7 +226,7 @@ pnpm dev
 ### 游客主链路
 
 <p align="center">
-  <img src="docs/images/readme/workflow.png" alt="游客主链路流程图" width="100%">
+  <img src="docs/images/readme/workflow.png" alt="游客主链路流程图" width="80%">
 </p>
 
 **实现要点：**
@@ -218,7 +238,7 @@ pnpm dev
 ### 目录结构
 
 <p align="center">
-  <img src="docs/images/readme/structure.png" alt="仓库目录结构图" width="100%">
+  <img src="docs/images/readme/structure.png" alt="仓库目录结构图" width="80%">
 </p>
 
 ---

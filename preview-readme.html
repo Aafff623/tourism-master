@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tourism Master — README Preview (中文)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.5.1/github-markdown-light.min.css" />
+  <link rel="stylesheet" href="preview-readme.css" />
+</head>
+<body>
+  <div class="toolbar">
+    <h1 id="toolbar-title">Tourism Master · README Preview</h1>
+    <div class="lang-switch" aria-label="Language">
+      <a id="lang-zh" href="preview-readme.html">中文</a>
+      <a id="lang-en" href="preview-readme-en.html">English</a>
+    </div>
+    <span id="toolbar-hint" class="hint">本地预览 <code>README.md</code>，改完刷新即可，无需频繁 commit</span>
+    <button type="button" id="reload-btn">重新加载 README</button>
+    <a id="open-readme-link" href="./README.md" target="_blank" rel="noopener">打开 README.md</a>
+    <a href="https://github.com/Aafff623/tourism-master" target="_blank" rel="noopener">GitHub 仓库</a>
+  </div>
+  <div id="status" class="status">正在加载 README…</div>
+  <div class="page">
+    <article id="content" class="markdown-body"></article>
+    <p id="footer-note" class="footer-note"></p>
+  </div>
+
+  <script>
+    window.__PREVIEW_README__ = {
+      readmeFile: 'README.md',
+      pageLang: 'zh-CN',
+      title: 'Tourism Master — README Preview (中文)',
+      toolbarTitle: 'Tourism Master · README Preview',
+      hint: '本地预览 <code>README.md</code>，改完点「重新加载」即可，无需频繁 commit',
+      reloadLabel: '重新加载 README',
+      openLabel: '打开 README.md',
+      loading: '正在加载 README…',
+      loadedPrefix: '已加载',
+      fileProtocolError:
+        '请用本地 HTTP 服务打开（file:// 无法 fetch README）。在仓库根目录执行：python -m http.server 8080，然后访问 http://localhost:8080/preview-readme.html',
+      fetchError: '加载失败：',
+      footerNote:
+        '预览页：preview-readme.html · 英文版：preview-readme-en.html · 配图：docs/images/readme/ · GitHub 裂图请先 push 对应文件。',
+      activeLang: 'zh',
+      zhPage: 'preview-readme.html',
+      enPage: 'preview-readme-en.html',
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="preview-readme.js"></script>
+</body>
+</html>

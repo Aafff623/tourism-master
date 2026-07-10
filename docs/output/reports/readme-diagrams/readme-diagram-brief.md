@@ -313,3 +313,25 @@ Style: clean tree infographic, terracotta #C45C26 accents, jade highlights on st
 - [ ] `docs/images/readme/structure.png`
 
 全部就位后告诉 Agent，会把 README「架构」等章节挂上配图引用并进入 Review。
+
+---
+
+## 12. 本地 README 预览（改 README 前先看）
+
+为避免每次小改都 commit，仓库根目录提供双语预览页（风格参照 [Aafff623/preview-profile.html](https://github.com/Aafff623/Aafff623/blob/main/preview-profile.html)）。
+
+```bash
+# 在仓库根目录
+python -m http.server 8080
+```
+
+| 页面 | 加载文件 |
+|---|---|
+| [preview-readme.html](preview-readme.html) | `README.md`（中文） |
+| [preview-readme-en.html](preview-readme-en.html) | `README.en.md`（英文） |
+
+- 工具栏 **中文 / English** 按钮可切换预览页
+- 改完 README 后点「重新加载」即可，无需 push
+- 共享样式与脚本：`preview-readme.css` · `preview-readme.js`
+
+> **GitHub 裂图排查：** 若线上 README 图片不显示，先 `git ls-files docs/images/readme/` 确认文件已跟踪，再 `git push` 到远端。

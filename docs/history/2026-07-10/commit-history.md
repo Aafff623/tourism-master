@@ -365,3 +365,28 @@ docs(readme): polish README and add premium diagram assets
 docs(readme): add features module diagram asset
 
 ---
+
+## 19. readme-bilingual-preview
+
+### 做了什么
+- 打磨中文版 README：鹳雀楼诗引、emoji 导航、信息图 80% 宽、Mock-only 演示说明
+- 新增 `README.en.md` 专业英文版与中英切换链接
+- 新增双语 preview：`preview-readme.html` / `preview-readme-en.html` + 共享 `css` / `js`
+- 补充 README 引用的 ADR-0003 与 mock-demo-freeze PRD
+
+### 改了哪些文件
+- `README.md`
+- `README.en.md`
+- `preview-readme.html`
+- `preview-readme-en.html`
+- `preview-readme.css`
+- `preview-readme.js`
+- `docs/output/reports/readme-diagrams/readme-diagram-brief.md`
+- `docs/adr/0003-mock-first-demo-freeze.md`
+- `docs/output/reports/mock-demo-freeze/prd.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+docs(readme): add English README and bilingual preview pages
+
+---

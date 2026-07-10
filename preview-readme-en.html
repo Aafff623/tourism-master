@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tourism Master — README Preview (English)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.5.1/github-markdown-light.min.css" />
+  <link rel="stylesheet" href="preview-readme.css" />
+</head>
+<body>
+  <div class="toolbar">
+    <h1 id="toolbar-title">Tourism Master · README Preview</h1>
+    <div class="lang-switch" aria-label="Language">
+      <a id="lang-zh" href="preview-readme.html">中文</a>
+      <a id="lang-en" href="preview-readme-en.html">English</a>
+    </div>
+    <span id="toolbar-hint" class="hint">Preview <code>README.en.md</code> locally — reload after edits, no commit needed</span>
+    <button type="button" id="reload-btn">Reload README</button>
+    <a id="open-readme-link" href="./README.en.md" target="_blank" rel="noopener">Open README.en.md</a>
+    <a href="https://github.com/Aafff623/tourism-master" target="_blank" rel="noopener">GitHub repo</a>
+  </div>
+  <div id="status" class="status">Loading README…</div>
+  <div class="page">
+    <article id="content" class="markdown-body"></article>
+    <p id="footer-note" class="footer-note"></p>
+  </div>
+
+  <script>
+    window.__PREVIEW_README__ = {
+      readmeFile: 'README.en.md',
+      pageLang: 'en',
+      title: 'Tourism Master — README Preview (English)',
+      toolbarTitle: 'Tourism Master · README Preview',
+      hint: 'Preview <code>README.en.md</code> locally — click Reload after edits, no commit needed',
+      reloadLabel: 'Reload README',
+      openLabel: 'Open README.en.md',
+      loading: 'Loading README…',
+      loadedPrefix: 'Loaded',
+      fileProtocolError:
+        'Open via local HTTP server (file:// cannot fetch README). From repo root: python -m http.server 8080, then visit http://localhost:8080/preview-readme-en.html',
+      fetchError: 'Failed to load:',
+      footerNote:
+        'Preview: preview-readme-en.html · Chinese: preview-readme.html · Assets: docs/images/readme/ · Push missing files if GitHub images break.',
+      activeLang: 'en',
+      zhPage: 'preview-readme.html',
+      enPage: 'preview-readme-en.html',
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="preview-readme.js"></script>
+</body>
+</html>
