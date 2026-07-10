@@ -4,7 +4,7 @@
 theme: shanxi-scenic-mock-data
 task: weapp-mock-integration
 issue: null
-status: awaiting-review
+status: done
 updated: 2026-07-10
 ```
 

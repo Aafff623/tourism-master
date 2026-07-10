@@ -4,9 +4,8 @@
 theme: shanxi-bilingual-mvp
 task: weapp-service-phrases
 issue: null
-status: awaiting-review
+status: done
 updated: 2026-07-10
-depends-on: weapp-mock-integration, weapp-locale-shell
 ```
 
 ## 目标

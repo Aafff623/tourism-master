@@ -47,15 +47,15 @@ date: 2026-07-10
 
 - [x] `integration-audit.md` / `field-mapping.md` 决策已锁定  
 - [x] 接入模式 A 已拍板  
-- [ ] 实施后：6 个 slug 可打开详情；中英核心字段非空；推荐/话术无悬空引用；UNVERIFIED 提示可见  
-- [ ] 未经确认不 commit；不破坏性迁库  
+- [x] 实施后：6 个 slug 可打开详情；中英核心字段非空；推荐/话术无悬空引用；UNVERIFIED 提示可见（`wave1-regression-check.py` OK）  
+- [x] 破坏性迁库未执行；commit 均经用户确认后推送  
 
 ## 任务拆分
 
 | task | Issue | handoff | 状态 |
 |---|---|---|---|
 | phase0-audit | — | （并入 reports） | done |
-| weapp-mock-integration | TBD | `handoff/shanxi-scenic-mock-data/weapp-mock-integration.md` | in-progress |
+| weapp-mock-integration | — | `handoff/shanxi-scenic-mock-data/weapp-mock-integration.md` | done |
 | api-seed | — | 后置 | deferred |
 | admin-bilingual-fields | — | 后置 | deferred |
 

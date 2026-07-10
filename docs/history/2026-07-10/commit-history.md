@@ -198,3 +198,24 @@ feat(weapp): wire spot list and detail to bilingual scenic mock
 feat(weapp): show categorized bilingual service phrases on service tab
 
 ---
+
+## 11. weapp-mvp-regression
+
+### 做了什么
+- Wave 1 Phase 6：跑 `wave1-regression-check.py`，ERRORS=0
+- 勾选产品 PRD 验收标准；输出回归 handoff
+
+### 改了哪些文件
+- `docs/output/reports/shanxi-bilingual-mvp/wave1-regression-check.py`
+- `docs/output/reports/shanxi-bilingual-mvp/prd.md`
+- `docs/output/reports/shanxi-scenic-mock-data/prd.md`
+- `docs/output/handoff/shanxi-bilingual-mvp/weapp-mvp-regression.md`
+- `docs/output/handoff/shanxi-bilingual-mvp/weapp-service-phrases.md`
+- `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+test(weapp): record Wave-1 bilingual MVP regression results
+
+---

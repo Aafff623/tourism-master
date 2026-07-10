@@ -6,8 +6,8 @@
 | weapp-locale-shell | `weapp-locale-shell.md` | done |
 | weapp-spot-list-detail | `weapp-spot-list-detail.md` | done |
 | weapp-home-hotspots | `weapp-home-hotspots.md` | done |
-| weapp-service-phrases | `weapp-service-phrases.md` | awaiting-review |
-| weapp-mvp-regression | `weapp-mvp-regression.md` | in-progress（占位） |
+| weapp-service-phrases | `weapp-service-phrases.md` | done |
+| weapp-mvp-regression | `weapp-mvp-regression.md` | done |
 
 PRD：`docs/output/reports/shanxi-bilingual-mvp/prd.md`  
 路线图：`implementation-roadmap.md`
