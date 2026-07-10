@@ -1,10 +1,10 @@
-# weapp-api-switch
+﻿# weapp-api-switch
 
 ```yaml
 theme: shanxi-bilingual-mvp
 task: weapp-api-switch
 issue: null
-status: review
+status: done
 updated: 2026-07-10
 ```
 

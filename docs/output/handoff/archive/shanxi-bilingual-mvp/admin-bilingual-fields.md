@@ -1,10 +1,10 @@
-# admin-bilingual-fields
+﻿# admin-bilingual-fields
 
 ```yaml
 theme: shanxi-bilingual-mvp
 task: admin-bilingual-fields
 issue: null
-status: review
+status: done
 updated: 2026-07-10
 ```
 

@@ -296,3 +296,21 @@ feat(api): add bilingual biz_spot seed and guest spot APIs
 feat(weapp,admin): switch scenic data to bilingual API with mock fallback
 
 ---
+
+## 15. archive-wave2-core
+
+### 做了什么
+- Review 通过后归档 Wave 2 三任务 handoff → `handoff/archive/shanxi-bilingual-mvp/`
+- `reports/shanxi-bilingual-mvp/` 保留（SD-15 可选）
+
+### 改了哪些文件
+- `docs/output/handoff/archive/shanxi-bilingual-mvp/api-seed-integration.md`
+- `docs/output/handoff/archive/shanxi-bilingual-mvp/weapp-api-switch.md`
+- `docs/output/handoff/archive/shanxi-bilingual-mvp/admin-bilingual-fields.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+docs(archive): archive Wave-2 bilingual Mode B handoffs
+
+---

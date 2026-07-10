@@ -1,10 +1,10 @@
-# api-seed-integration
+﻿# api-seed-integration
 
 ```yaml
 theme: shanxi-bilingual-mvp
 task: api-seed-integration
 issue: null
-status: review
+status: done
 updated: 2026-07-10
 ```
 

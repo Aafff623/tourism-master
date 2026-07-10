@@ -73,6 +73,6 @@ SD-16～18；需模式 C 级 ADR/PRD。
 
 ## 下一行动（Agent）
 
-1. Wave 2 三任务已交付：`api-seed` 已 commit；`weapp-api-switch` + `admin-bilingual-fields` 待 Review。  
-2. 用户确认后 commit 后两刀，并归档 Wave 2 handoff。  
-3. SD-15（概况/遗产）另开，不默认开工。
+1. Wave 2 核心三任务已 commit 并归档 handoff。  
+2. `reports/shanxi-bilingual-mvp/` 保留；SD-15（概况/遗产）另开任务。  
+3. 有库环境执行 DDL → Seed 后联调小程序双语 API。

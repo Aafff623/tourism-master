@@ -11,15 +11,15 @@
 | weapp-service-phrases | `handoff/archive/shanxi-bilingual-mvp/weapp-service-phrases.md` | archived |
 | weapp-mvp-regression | `handoff/archive/shanxi-bilingual-mvp/weapp-mvp-regression.md` | archived |
 
-> `reports/shanxi-bilingual-mvp/` **未整夹归档**：Wave 2 仍沿用同 theme PRD。
-
-## Wave 2（进行中）
+## Wave 2（已归档核心三任务）
 
 | task | handoff | status |
 |---|---|---|
-| api-seed-integration | `handoff/shanxi-bilingual-mvp/api-seed-integration.md` | done (committed 9cddc85) |
-| weapp-api-switch | `handoff/shanxi-bilingual-mvp/weapp-api-switch.md` | review |
-| admin-bilingual-fields | `handoff/shanxi-bilingual-mvp/admin-bilingual-fields.md` | review |
+| api-seed-integration | `handoff/archive/shanxi-bilingual-mvp/api-seed-integration.md` | archived |
+| weapp-api-switch | `handoff/archive/shanxi-bilingual-mvp/weapp-api-switch.md` | archived |
+| admin-bilingual-fields | `handoff/archive/shanxi-bilingual-mvp/admin-bilingual-fields.md` | archived |
+
+> `reports/shanxi-bilingual-mvp/` **未整夹归档**：SD-15（概况/遗产）仍可沿用同 theme。
 
 PRD：`docs/output/reports/shanxi-bilingual-mvp/prd.md`  
 路线图：`implementation-roadmap.md`
