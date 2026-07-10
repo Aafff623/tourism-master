@@ -351,3 +351,17 @@ docs: add local backend bootstrap problem brief for research
 docs(readme): polish README and add premium diagram assets
 
 ---
+
+## 18. readme-features-module
+
+### 做了什么
+- 入库功能模块图 `docs/images/readme/features.png`，配合 README「功能」章节引用
+
+### 改了哪些文件
+- `docs/images/readme/features.png`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+docs(readme): add features module diagram asset
+
+---
