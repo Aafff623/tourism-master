@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shanxi Scenic Spot Mock Object",
+  "type": "object",
+  "required": [
+    "id",
+    "slug",
+    "nameZh",
+    "nameEn",
+    "cityZh",
+    "cityEn",
+    "level",
+    "tags",
+    "summaryZh",
+    "summaryEn",
+    "introZh",
+    "introEn",
+    "highlights",
+    "openTimeZh",
+    "openTimeEn",
+    "ticketZh",
+    "ticketEn",
+    "transportZh",
+    "transportEn",
+    "bestSeasonZh",
+    "bestSeasonEn",
+    "visitTipsZh",
+    "visitTipsEn",
+    "culturalNotes",
+    "services",
+    "geo",
+    "coverImageHint",
+    "sources"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "nameZh": {
+      "type": "string"
+    },
+    "nameEn": {
+      "type": "string"
+    },
+    "cityZh": {
+      "type": "string"
+    },
+    "cityEn": {
+      "type": "string"
+    },
+    "level": {
+      "type": "object",
+      "required": [
+        "zh",
+        "en",
+        "verification"
+      ],
+      "properties": {
+        "zh": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        },
+        "verification": {
+          "type": "string"
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "zh",
+          "en"
+        ],
+        "properties": {
+          "zh": {
+            "type": "string"
+          },
+          "en": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "summaryZh": {
+      "type": "string"
+    },
+    "summaryEn": {
+      "type": "string"
+    },
+    "introZh": {
+      "type": "string"
+    },
+    "introEn": {
+      "type": "string"
+    },
+    "highlights": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "zh",
+          "en"
+        ],
+        "properties": {
+          "zh": {
+            "type": "string"
+          },
+          "en": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "openTimeZh": {
+      "type": "string"
+    },
+    "openTimeEn": {
+      "type": "string"
+    },
+    "ticketZh": {
+      "type": "string"
+    },
+    "ticketEn": {
+      "type": "string"
+    },
+    "transportZh": {
+      "type": "string"
+    },
+    "transportEn": {
+      "type": "string"
+    },
+    "bestSeasonZh": {
+      "type": "string"
+    },
+    "bestSeasonEn": {
+      "type": "string"
+    },
+    "visitTipsZh": {
+      "type": "string"
+    },
+    "visitTipsEn": {
+      "type": "string"
+    },
+    "culturalNotes": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object"
+      }
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "geo": {
+      "type": "object",
+      "required": [
+        "lat",
+        "lng",
+        "precision"
+      ],
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lng": {
+          "type": "number"
+        },
+        "precision": {
+          "type": "string"
+        }
+      }
+    },
+    "coverImageHint": {
+      "type": "object"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    }
+  }
+}

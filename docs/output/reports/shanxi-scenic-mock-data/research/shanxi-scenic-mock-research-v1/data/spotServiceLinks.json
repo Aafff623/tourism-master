@@ -1,0 +1,146 @@
+[
+  {
+    "id": "spot-svc-yungang-photo",
+    "spotSlug": "yungang-grottoes",
+    "titleZh": "确认洞窟拍摄分区",
+    "titleEn": "Checking Cave Photography Zones",
+    "phraseZh": "请问哪些洞窟允许拍照？我不会使用闪光灯。",
+    "phraseEn": "Which caves allow photography? I will not use flash."
+  },
+  {
+    "id": "spot-svc-yungang-route",
+    "spotSlug": "yungang-grottoes",
+    "titleZh": "询问核心洞窟路线",
+    "titleEn": "Asking for the Main Cave Route",
+    "phraseZh": "时间有限时，参观昙曜五窟和主要洞窟应该走哪条路线？",
+    "phraseEn": "If I have limited time, which route covers the Tanyao Five Caves and the main grottoes?"
+  },
+  {
+    "id": "spot-svc-yungang-guide",
+    "spotSlug": "yungang-grottoes",
+    "titleZh": "询问英文讲解",
+    "titleEn": "Requesting English Interpretation",
+    "phraseZh": "有英文讲解、英文导览器或官方英文小程序吗？",
+    "phraseEn": "Is an English guide, audio guide or official English mini-program available?"
+  },
+  {
+    "id": "spot-svc-wutai-temple",
+    "spotSlug": "mount-wutai",
+    "titleZh": "确认寺院开放",
+    "titleEn": "Checking Monastery Access",
+    "phraseZh": "这座寺院今天对游客开放吗？有正在进行的法会吗？",
+    "phraseEn": "Is this monastery open to visitors today? Is a religious ceremony in progress?"
+  },
+  {
+    "id": "spot-svc-wutai-shuttle",
+    "spotSlug": "mount-wutai",
+    "titleZh": "确认台怀镇交通",
+    "titleEn": "Checking Transport in Taihuai",
+    "phraseZh": "去塔院寺和菩萨顶应该乘哪一段接驳车，还是步行更合适？",
+    "phraseEn": "Which shuttle should I take for Tayuan Temple and Pusa Ding, or is walking more practical?"
+  },
+  {
+    "id": "spot-svc-wutai-weather",
+    "spotSlug": "mount-wutai",
+    "titleZh": "询问台顶天气",
+    "titleEn": "Checking Summit Weather",
+    "phraseZh": "今天台顶道路和天气是否安全？需要额外保暖衣物吗？",
+    "phraseEn": "Are the summit roads and weather safe today? Do I need additional warm clothing?"
+  },
+  {
+    "id": "spot-svc-pingyao-pass",
+    "spotSlug": "ancient-city-pingyao",
+    "titleZh": "确认古城通票范围",
+    "titleEn": "Checking the Joint Pass",
+    "phraseZh": "这张通票包含城墙、县衙和日昇昌吗？有效期到什么时候？",
+    "phraseEn": "Does this joint pass include the city wall, county government office and Rishengchang? When does it expire?"
+  },
+  {
+    "id": "spot-svc-pingyao-cart",
+    "spotSlug": "ancient-city-pingyao",
+    "titleZh": "询问古城交通车",
+    "titleEn": "Asking About Electric Carts",
+    "phraseZh": "古城内的电瓶车在哪里乘坐？哪些街道只能步行？",
+    "phraseEn": "Where can I board an electric cart inside the old city? Which streets are pedestrian-only?"
+  },
+  {
+    "id": "spot-svc-pingyao-temples",
+    "spotSlug": "ancient-city-pingyao",
+    "titleZh": "前往双林寺或镇国寺",
+    "titleEn": "Reaching Shuanglin or Zhenguo Temple",
+    "phraseZh": "去双林寺或镇国寺需要另外购票和乘车吗？",
+    "phraseEn": "Do I need a separate ticket and transport to visit Shuanglin or Zhenguo Temple?"
+  },
+  {
+    "id": "spot-svc-jinci-area",
+    "spotSlug": "jinci-temple",
+    "titleZh": "区分晋祠与天龙山票务",
+    "titleEn": "Separating Jinci and Tianlongshan Tickets",
+    "phraseZh": "这张票只包含晋祠，还是也包含天龙山和接驳交通？",
+    "phraseEn": "Does this ticket cover only Jinci, or does it also include Tianlongshan and shuttle transport?"
+  },
+  {
+    "id": "spot-svc-jinci-hall",
+    "spotSlug": "jinci-temple",
+    "titleZh": "确认殿内拍照",
+    "titleEn": "Checking Indoor Photography",
+    "phraseZh": "圣母殿内可以拍照吗？哪些区域禁止使用闪光灯？",
+    "phraseEn": "May I take photos inside the Hall of the Holy Mother? Which areas prohibit flash?"
+  },
+  {
+    "id": "spot-svc-jinci-water",
+    "spotSlug": "jinci-temple",
+    "titleZh": "寻找主要古建与水景",
+    "titleEn": "Finding the Main Architecture and Springs",
+    "phraseZh": "参观圣母殿、鱼沼飞梁和难老泉的推荐顺序是什么？",
+    "phraseEn": "What is the recommended order for the Hall of the Holy Mother, Fish-Pond Flying Bridge and Never-Aging Spring?"
+  },
+  {
+    "id": "spot-svc-hukou-open",
+    "spotSlug": "hukou-waterfall-shanxi",
+    "titleZh": "确认当日开放状态",
+    "titleEn": "Checking Same-Day Opening Status",
+    "phraseZh": "受水情、风力或结冰影响，今天观瀑区是否全部开放？",
+    "phraseEn": "Because of river flow, wind or ice, is the full viewing area open today?"
+  },
+  {
+    "id": "spot-svc-hukou-shuttle",
+    "spotSlug": "hukou-waterfall-shanxi",
+    "titleZh": "确认景交与步行距离",
+    "titleEn": "Checking Shuttle and Walking Distance",
+    "phraseZh": "从游客中心到观瀑区必须乘景交车吗？下车后要步行多远？",
+    "phraseEn": "Is the scenic shuttle required from the visitor center to the waterfall? How far is the walk after getting off?"
+  },
+  {
+    "id": "spot-svc-hukou-side",
+    "spotSlug": "hukou-waterfall-shanxi",
+    "titleZh": "确认山西侧入口",
+    "titleEn": "Confirming the Shanxi Entrance",
+    "phraseZh": "这是壶口瀑布山西侧入口吗？我的票可以在这里使用吗？",
+    "phraseEn": "Is this the Shanxi-side entrance to Hukou Waterfall? Is my ticket valid here?"
+  },
+  {
+    "id": "spot-svc-hanging-climb",
+    "spotSlug": "hanging-temple",
+    "titleZh": "确认登临名额",
+    "titleEn": "Checking Climbing Availability",
+    "phraseZh": "我已经有景区门票，还需要单独购买悬空寺登临票吗？今天还有名额吗？",
+    "phraseEn": "I already have an admission ticket. Do I need a separate ticket to climb the Hanging Temple, and are places still available today?"
+  },
+  {
+    "id": "spot-svc-hanging-safety",
+    "spotSlug": "hanging-temple",
+    "titleZh": "询问天气与安全管控",
+    "titleEn": "Checking Weather and Safety Controls",
+    "phraseZh": "今天受大风、降雨或落石风险影响，栈道是否开放？",
+    "phraseEn": "Are the walkways open today, considering wind, rain or rockfall risk?"
+  },
+  {
+    "id": "spot-svc-hanging-access",
+    "spotSlug": "hanging-temple",
+    "titleZh": "询问不登临参观方案",
+    "titleEn": "Visiting Without Climbing",
+    "phraseZh": "如果不登临，在哪里可以看到最佳全景并参观地面展区？",
+    "phraseEn": "If I do not climb, where can I get the best overall view and visit the ground-level area?"
+  }
+]

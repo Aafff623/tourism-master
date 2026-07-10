@@ -58,6 +58,11 @@ Issues 以 GitHub issue 的形式跟踪。详见 `docs/agents/issue-tracker.md`�
 
 多上下文布局：根目录 `CONTEXT.md` + `CONTEXT-MAP.md` + `docs/contexts/*/CONTEXT.md` + `docs/adr/`。消费规则见 `docs/agents/domain.md`、`docs/agents/context.md`；命名见 `docs/agents/language.md`。
 
+### 交付 / 归档
+
+- Cursor `/deliver` → [`.cursor/skills/deliver/`](.cursor/skills/deliver/) · [`docs/agents/deliver.md`](docs/agents/deliver.md)
+- Cursor `/archive` → [`.cursor/skills/archive/`](.cursor/skills/archive/) · [`docs/agents/archive.md`](docs/agents/archive.md)
+
 ## 工作纪律
 
 - 二次开发优先改模板三端，不另起无关栈（除非 ADR）
@@ -96,5 +101,6 @@ Issues 以 GitHub issue 的形式跟踪。详见 `docs/agents/issue-tracker.md`�
 - Issue tracker：GitHub Issues（`Aafff623/tourism-master`）。
 - 多上下文：product + weapp / admin / api。
 - 产物 → `docs/output/`；knowledge 写入须用户 Review。
-- 不强制建完整 `.cursor/`；约束以 `AGENTS.md` + `CLAUDE.md` 为准。
+- **`.cursor/` 例外**：仅允许 `skills/deliver` 与 `skills/archive`（自 my-blogs 迁入）；规范正文仍在 `docs/agents/deliver.md` / `archive.md`。
 - `.claude/` 仅作 Claude Code 入口指针，不重复维护第二套规范。
+- **Mock 融合**：模式 A 先行；首页景区热点；游客浏览主链路；详情保留订票评论；导航 `slug`；双语成对字段 → ADR-0001。

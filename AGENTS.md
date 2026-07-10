@@ -99,4 +99,13 @@ Issues 以 GitHub Issues 跟踪（`gh` CLI）。详见 [`docs/agents/issue-track
 
 多上下文布局：根 `CONTEXT.md` + `CONTEXT-MAP.md` + `docs/contexts/*/CONTEXT.md` + `docs/adr/`。见 [`docs/agents/domain.md`](docs/agents/domain.md)。
 
+### 交付 / 归档（Cursor 斜杠命令）
+
+| 命令 | Skill | 规范 |
+|---|---|---|
+| `/deliver` | [`.cursor/skills/deliver/`](.cursor/skills/deliver/) | [`docs/agents/deliver.md`](docs/agents/deliver.md) |
+| `/archive` | [`.cursor/skills/archive/`](.cursor/skills/archive/) | [`docs/agents/archive.md`](docs/agents/archive.md) |
+
+`.cursor/` **仅允许**上述 skills；其它约束写在本文件与 `CLAUDE.md`。
+
 详细维护协议 → [`CLAUDE.md`](CLAUDE.md)。

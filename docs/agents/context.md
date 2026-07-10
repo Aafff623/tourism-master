@@ -19,6 +19,8 @@
 | `docs/agents/workflow.md` | **任务流唯一规范** |
 | `docs/agents/deliver.md` | **交付层**：`/deliver` 维护 handoff + commit-history |
 | `docs/agents/archive.md` | **归档层**：`/archive` 物理移动 handoff/reports |
+| `.cursor/skills/deliver/` | Cursor `/deliver` 入口（指向 deliver.md） |
+| `.cursor/skills/archive/` | Cursor `/archive` 入口（指向 archive.md） |
 | `docs/agents/language.md` | 共享命名词汇 |
 | `docs/agents/domain.md` | 领域文档消费规则 |
 | `docs/agents/issue-tracker.md` | GitHub Issues + `gh` |

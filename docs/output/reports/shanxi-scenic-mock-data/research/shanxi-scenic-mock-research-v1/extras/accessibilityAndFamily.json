@@ -1,0 +1,46 @@
+{
+  "generalZh": [
+    "历史古建常有高门槛、台阶、石板路和狭窄通道，不能仅根据地图距离判断可达性。",
+    "携带婴儿车时优先准备背带或确认寄存点；文物建筑内不一定允许大型婴儿车。",
+    "为老人、儿童和行动不便游客提供“少台阶路线”“最近卫生间”“可休息点”“不进入核心狭窄区的替代看点”。",
+    "无障碍设施属于易变化字段，必须标记 verifiedAt 和 sourceUrl。"
+  ],
+  "generalEn": [
+    "Historic architecture often includes high thresholds, stairs, stone paving and narrow passages; map distance alone does not indicate accessibility.",
+    "For strollers, prepare a carrier or confirm storage. Large strollers may not be allowed inside heritage buildings.",
+    "Offer low-step routes, nearest toilets, rest points and alternative viewpoints that avoid narrow core areas.",
+    "Accessibility data is volatile and must include verifiedAt and sourceUrl."
+  ],
+  "bySpot": [
+    {
+      "spotSlug": "yungang-grottoes",
+      "zh": "主游线相对开阔，但个别洞窟入口、坡道和人流会影响轮椅体验；需向游客中心确认可进入洞窟清单。",
+      "en": "The main route is relatively open, but individual cave entrances, gradients and crowding affect wheelchair access. Confirm the accessible cave list at the visitor center."
+    },
+    {
+      "spotSlug": "mount-wutai",
+      "zh": "寺院台阶、高海拔和分散交通构成主要障碍；不建议把台顶路线作为普通无障碍路线。",
+      "en": "Temple steps, elevation and dispersed transport are the main barriers. Summit routes should not be presented as ordinary accessible routes."
+    },
+    {
+      "spotSlug": "ancient-city-pingyao",
+      "zh": "石板路和院落门槛较多；电瓶车可减少距离但不等同于建筑内部无障碍。",
+      "en": "Stone paving and courtyard thresholds are common. Electric carts reduce distance but do not make building interiors accessible."
+    },
+    {
+      "spotSlug": "jinci-temple",
+      "zh": "园区可设计较平缓路线，但主要古殿仍有门槛和台阶；需核实轮椅入口。",
+      "en": "A gentler garden route may be possible, while major historic halls still have thresholds and steps. Verify wheelchair entrances."
+    },
+    {
+      "spotSlug": "hukou-waterfall-shanxi",
+      "zh": "观景区可能湿滑、坡度大且受水雾影响；需当日确认无障碍观景平台是否开放。",
+      "en": "Viewing areas may be slippery, steep and affected by mist. Confirm same-day availability of accessible platforms."
+    },
+    {
+      "spotSlug": "hanging-temple",
+      "zh": "登临路线不适合轮椅、婴儿车或明显行动受限游客；应提供地面全景替代路线。",
+      "en": "The climbing route is unsuitable for wheelchairs, strollers or visitors with significant mobility limitations. Provide a ground-level panoramic alternative."
+    }
+  ]
+}

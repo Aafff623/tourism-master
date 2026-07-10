@@ -1,0 +1,792 @@
+[
+  {
+    "id": "spot-001",
+    "slug": "yungang-grottoes",
+    "nameZh": "云冈石窟",
+    "nameEn": "Yungang Grottoes",
+    "cityZh": "大同市",
+    "cityEn": "Datong",
+    "level": {
+      "zh": "世界文化遗产（2001）；国家5A级旅游景区；全国重点文物保护单位。5A状态应在上线前用文化和旅游主管部门最新名录复核。",
+      "en": "UNESCO World Heritage Site (2001), national 5A tourist attraction, and a Major Historical and Cultural Site Protected at the National Level. Recheck the latest 5A register before production release.",
+      "verification": "heritage verified; current rating list should be rechecked"
+    },
+    "tags": [
+      {
+        "zh": "石窟",
+        "en": "Grottoes"
+      },
+      {
+        "zh": "佛教艺术",
+        "en": "Buddhist Art"
+      },
+      {
+        "zh": "北魏",
+        "en": "Northern Wei"
+      },
+      {
+        "zh": "世界遗产",
+        "en": "World Heritage"
+      },
+      {
+        "zh": "雕塑",
+        "en": "Sculpture"
+      }
+    ],
+    "summaryZh": "云冈石窟位于大同西郊，是中国早期佛教石窟艺术的重要代表。数百座洞窟与数万尊造像集中展示了5至6世纪佛教艺术由中亚、南亚传播并在中国本土化的过程，昙曜五窟尤具代表性。",
+    "summaryEn": "Located west of Datong, the Yungang Grottoes are a landmark of early Chinese Buddhist cave art. Hundreds of caves and tens of thousands of figures reveal how artistic ideas from South and Central Asia were transformed in China during the fifth and sixth centuries. The Tanyao Five Caves form the best-known core of the site.",
+    "introZh": "云冈石窟开凿于北魏时期，是理解大同作为北魏都城以及佛教艺术跨区域传播的关键遗产。联合国教科文组织资料记载，这里保存有252座洞窟和约5.1万尊造像。大型佛像、窟内浮雕、装饰纹样与建筑式样共同反映了不同文化传统的交流与重构。参观时不应只关注“最大的佛像”，还可以观察造像服饰、面部风格和洞窟布局如何随年代变化。由于石雕长期受到风化、水汽和游客环境影响，现场常按洞窟实施开放、拍摄和客流管理。小程序应把历史解读、保护原因和当日开放提示放在同一页面。",
+    "introEn": "Carved during the Northern Wei period, Yungang is essential for understanding Datong’s role as an imperial capital and the cross-regional movement of Buddhist art. UNESCO records 252 caves and about 51,000 statues. Monumental Buddhas, reliefs, decorative patterns and architectural motifs show how multiple artistic traditions were exchanged and reinterpreted. Visitors should look beyond the largest statues and notice how clothing, facial styles and cave layouts change across periods. Because the sandstone is vulnerable to weathering, moisture and visitor impact, individual caves may have photography, access or crowd restrictions. The app should present historical meaning, conservation reasons and same-day access information together.",
+    "highlights": [
+      {
+        "zh": "昙曜五窟：云冈早期大型洞窟的核心代表。",
+        "en": "Tanyao Five Caves: the defining group of Yungang’s early monumental caves."
+      },
+      {
+        "zh": "第20窟露天大佛：云冈最具辨识度的视觉形象之一。",
+        "en": "The open-air Buddha of Cave 20: one of Yungang’s most recognizable images."
+      },
+      {
+        "zh": "造像风格变化：可观察外来艺术因素与中国传统逐步融合。",
+        "en": "Changing sculptural styles: trace the gradual fusion of imported and Chinese artistic traditions."
+      },
+      {
+        "zh": "云冈博物馆与数字展示：适合补充洞窟保护和考古知识。",
+        "en": "Museum and digital interpretation: useful for understanding archaeology and conservation."
+      }
+    ],
+    "openTimeZh": "UNVERIFIED：通常按日间开放并区分季节，停止入园时间早于闭园时间；部分洞窟可能轮换或临时关闭。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "openTimeEn": "UNVERIFIED: The site normally operates during daytime with seasonal schedules, and last admission is earlier than closing time. Individual caves may rotate or close temporarily. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "ticketZh": "UNVERIFIED：实行收费参观，常见成人票价区间约为人民币100～150元；可能使用实名预约，优惠政策和讲解服务另行计算。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "ticketEn": "UNVERIFIED: Paid admission is required; a typical adult range is approximately RMB 100–150. Real-name booking may be used, and concessions or guide services may follow separate rules. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "transportZh": "可先到大同南站或大同云冈机场，再通过市内公交、出租车或网约车前往大同西部的景区。返程时应提前确认公交末班时间；跨城一日游建议预留安检、取票和步行时间。",
+    "transportEn": "Reach Datong via Datong South Railway Station or Datong Yungang Airport, then continue west by city bus, taxi or ride-hailing service. Check the last public bus in advance and allow time for security checks, ticket verification and walking.",
+    "bestSeasonZh": "春秋温度较舒适；大同冬季寒冷、风大，夏季日照较强。洞窟参观以室内和半室外为主，但景区步行距离仍需考虑。",
+    "bestSeasonEn": "Spring and autumn are generally comfortable. Datong winters are cold and windy, while summer sunlight can be strong. Much of the visit is inside or near caves, but the site still involves substantial outdoor walking.",
+    "visitTipsZh": "禁止触摸造像和岩壁；是否允许拍照以每个洞窟入口标识为准，默认关闭闪光灯。热门洞窟可能排队和限时停留。英文讲解器、人工讲解和无障碍路线应在游客中心再次确认。",
+    "visitTipsEn": "Do not touch statues or rock surfaces. Follow the sign at each cave for photography and keep flash off by default. Popular caves may require queuing and limited viewing time. Reconfirm English audio guides, staffed tours and accessible routes at the visitor center.",
+    "culturalNotes": [
+      {
+        "barrierType": "barrier-historical-context",
+        "titleZh": "为什么云冈具有国际意义",
+        "titleEn": "Why Yungang Matters Internationally",
+        "bodyZh": "云冈不是孤立的地方艺术，而是佛教图像、帝国政治和丝路交流在中国北方汇合的结果。",
+        "bodyEn": "Yungang is not an isolated local style; it reflects the meeting of Buddhist imagery, imperial power and Silk Road exchange in northern China.",
+        "doZh": "比较不同洞窟的服饰、面容和装饰。",
+        "doEn": "Compare clothing, facial styles and ornament across caves.",
+        "dontZh": "不要只用“古老”和“巨大”概括其价值。",
+        "dontEn": "Do not reduce its significance to age and size alone."
+      },
+      {
+        "barrierType": "barrier-heritage-protection",
+        "titleZh": "洞窟内拍摄与保护",
+        "titleEn": "Photography and Conservation Inside Caves",
+        "bodyZh": "光线、拥堵和触摸都会增加脆弱石雕与彩绘的保护压力。",
+        "bodyEn": "Light, crowding and touching add pressure to fragile stone and surviving pigments.",
+        "doZh": "逐窟查看标识，关闭闪光灯并快速通过狭窄区域。",
+        "doEn": "Check each cave sign, keep flash off and move efficiently through narrow spaces.",
+        "dontZh": "不要触摸、倚靠岩壁或为拍照阻塞通道。",
+        "dontEn": "Do not touch or lean on rock surfaces, or block passages for photographs."
+      },
+      {
+        "barrierType": "barrier-crowd-queue",
+        "titleZh": "热门洞窟排队",
+        "titleEn": "Queues at Popular Caves",
+        "bodyZh": "核心洞窟在节假日可能限流，排队位置与开放状态会动态变化。",
+        "bodyEn": "Core caves may use capacity limits on busy days, and queue locations or access can change.",
+        "doZh": "优先查看当日开放清单并错峰参观。",
+        "doEn": "Check the day’s cave-access list and visit outside peak periods.",
+        "dontZh": "不要离队插入狭窄队列。",
+        "dontEn": "Do not leave and re-enter a narrow queue by cutting in."
+      }
+    ],
+    "services": [
+      "svc-ticket-passport",
+      "svc-ticket-reservation",
+      "svc-rule-photo",
+      "svc-rule-touch",
+      "spot-svc-yungang-photo",
+      "spot-svc-yungang-route",
+      "spot-svc-yungang-guide"
+    ],
+    "geo": {
+      "lat": 40.10972,
+      "lng": 113.12222,
+      "precision": "UNESCO property coordinate; visitor entrance may differ"
+    },
+    "coverImageHint": {
+      "zh": "选择能同时看到第20窟露天大佛、岩壁洞窟序列与游客尺度的横幅图。检索词：云冈石窟 第20窟 全景、Yungang Grottoes Cave 20 panorama。",
+      "en": "Use a wide image showing the open-air Buddha of Cave 20, the line of cliff caves and human scale. Search: “Yungang Grottoes Cave 20 panorama”.",
+      "discoveryUrls": [
+        "https://whc.unesco.org/en/list/1039/gallery/",
+        "https://commons.wikimedia.org/wiki/Category:Yungang_Grottoes"
+      ],
+      "licenseNote": "Check the license and attribution requirements for each image before reuse."
+    },
+    "sources": [
+      "https://whc.unesco.org/en/list/1039/",
+      "https://www.yungang.org/",
+      "https://www.ncha.gov.cn/",
+      "https://www.dt.gov.cn/"
+    ]
+  },
+  {
+    "id": "spot-002",
+    "slug": "mount-wutai",
+    "nameZh": "五台山",
+    "nameEn": "Mount Wutai",
+    "cityZh": "忻州市",
+    "cityEn": "Xinzhou",
+    "level": {
+      "zh": "世界文化遗产（2009）；国家5A级旅游景区；国家级风景名胜区。当前门票及车辆预约政策需上线前复核。",
+      "en": "UNESCO World Heritage Site (2009), national 5A tourist attraction and national scenic area. Current ticket and vehicle-booking rules require pre-release verification.",
+      "verification": "heritage verified; dynamic access rules unverified"
+    },
+    "tags": [
+      {
+        "zh": "佛教圣地",
+        "en": "Buddhist Sacred Site"
+      },
+      {
+        "zh": "文化景观",
+        "en": "Cultural Landscape"
+      },
+      {
+        "zh": "寺院群",
+        "en": "Monastery Complex"
+      },
+      {
+        "zh": "山地",
+        "en": "Mountain"
+      },
+      {
+        "zh": "世界遗产",
+        "en": "World Heritage"
+      }
+    ],
+    "summaryZh": "五台山由五座台顶及台怀镇寺院群构成，是文殊信仰的重要中心，也是汉传与藏传佛教传统共同存在的文化景观。这里既是宗教目的地，也是高海拔山地景区，参观需要同时考虑礼仪、气候和交通。",
+    "summaryEn": "Mount Wutai is a cultural landscape formed by five broad summits and a major monastic center around Taihuai. It is closely associated with devotion to Manjusri and includes both Chinese and Tibetan Buddhist traditions. Visitors need to consider religious etiquette, mountain weather and local transport together.",
+    "introZh": "五台山不是单一山峰，而是一组环绕台怀盆地的山地与寺院。联合国教科文组织将其价值概括为佛教建筑、宗教传统与自然地形长期互动形成的文化景观。显通寺、塔院寺、菩萨顶、殊像寺等集中在台怀镇周边，佛光寺则以唐代木构建筑闻名，但与核心游览区距离较远。外国游客应理解，寺院既是文化遗产，也是仍在使用的宗教空间。部分殿堂会举行法会或日常修持，参观行为应服从现场秩序。景区海拔较高，天气变化快，冬季和肩季可能出现冰雪、低温及道路交通管制，因此小程序应把礼仪卡、天气预警、接驳交通和寺院开放状态联动展示。",
+    "introEn": "Mount Wutai is not a single peak but a mountain-and-monastery landscape surrounding the Taihuai basin. UNESCO describes its value through the long interaction of Buddhist architecture, living religious traditions and natural topography. Xiantong Temple, Tayuan Temple, Pusa Ding and Shuxiang Temple cluster around Taihuai, while Foguang Temple—famous for its Tang timber hall—is farther from the main visitor area. International visitors should recognize that the monasteries are both heritage places and active religious spaces. Halls may host ceremonies or daily practice, and visitor behavior must follow on-site arrangements. The high elevation brings rapid weather changes, while winter and shoulder seasons can involve snow, cold and road controls. The app should therefore connect etiquette, weather warnings, shuttles and monastery opening information.",
+    "highlights": [
+      {
+        "zh": "台怀寺院群：步行即可串联多座代表性寺院。",
+        "en": "Taihuai monastery cluster: several major temples can be linked on foot."
+      },
+      {
+        "zh": "塔院寺白塔：五台山最醒目的地标之一。",
+        "en": "The Great White Pagoda at Tayuan Temple: one of Mount Wutai’s defining landmarks."
+      },
+      {
+        "zh": "菩萨顶：体现藏传佛教建筑与朝圣传统。",
+        "en": "Pusa Ding: an important expression of Tibetan Buddhist architecture and pilgrimage."
+      },
+      {
+        "zh": "佛光寺：以唐代东大殿著名，适合古建筑专题，但交通需单独规划。",
+        "en": "Foguang Temple: renowned for its Tang-period East Main Hall; ideal for an architecture-focused visit but requires separate transport planning."
+      }
+    ],
+    "openTimeZh": "UNVERIFIED：景区道路、游客中心与各寺院并非完全统一时段；寺院多在日间开放，宗教活动、维护和天气可能影响进入。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "openTimeEn": "UNVERIFIED: Scenic-area roads, visitor facilities and individual monasteries do not necessarily share one schedule. Temples generally open during daytime, but ceremonies, maintenance and weather may affect access. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "ticketZh": "UNVERIFIED：常见景区门票区间约为人民币100～150元；景交车、部分寺院或特定线路可能另行收费。车辆预约和进山规则可能随客流调整。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "ticketEn": "UNVERIFIED: A typical scenic-area admission range is approximately RMB 100–150. Shuttles, selected monasteries or special routes may be charged separately. Vehicle reservation and mountain-entry rules can change with visitor volume. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "transportZh": "可由太原、忻州方向乘长途客运或包车前往，也可经五台山机场再转公路交通。铁路站点名称容易造成误解，购票前应核对车站与台怀镇的实际距离。进入景区后通常还需步行或使用景交。",
+    "transportEn": "Travel by coach or hired vehicle from Taiyuan or Xinzhou, or continue by road from Wutaishan Airport. Railway station names can be misleading, so verify the actual distance to Taihuai before booking. Within the scenic area, walking or local shuttles are normally still required.",
+    "bestSeasonZh": "5月至10月相对适合普通观光，但早晚仍可能较冷；冬季冰雪、强风和极低温明显。台顶天气与台怀镇可能差异很大。",
+    "bestSeasonEn": "May to October is generally more suitable for ordinary sightseeing, though mornings and evenings can remain cold. Winter brings snow, strong winds and very low temperatures. Summit conditions may differ sharply from Taihuai.",
+    "visitTipsZh": "进入殿堂前查看拍摄和着装标识；不要打断诵经、法会或礼佛。香火和捐赠均自愿。高海拔、台阶和长距离步行对老人及儿童有负担，应提前确认接驳和休息点。",
+    "visitTipsEn": "Check photography and dress signs before entering halls. Do not interrupt chanting, ceremonies or worship. Incense and donations are optional. Elevation, stairs and long walking distances can be demanding for older visitors and children, so confirm shuttles and rest points in advance.",
+    "culturalNotes": [
+      {
+        "barrierType": "barrier-religious-etiquette",
+        "titleZh": "活态寺院不是普通展厅",
+        "titleEn": "A Living Monastery Is Not an Ordinary Exhibition Hall",
+        "bodyZh": "五台山寺院仍承担宗教功能，游客与僧众、信众共享空间。",
+        "bodyEn": "Mount Wutai’s monasteries remain active religious institutions shared by visitors, monastics and worshippers.",
+        "doZh": "在殿外先看标识，安静从侧面观察。",
+        "doEn": "Read signs before entering and observe quietly from the side.",
+        "dontZh": "不要模仿仪式、跨越供桌或近距离拍摄信众。",
+        "dontEn": "Do not imitate rituals, cross altar areas or closely film worshippers."
+      },
+      {
+        "barrierType": "barrier-weather-season",
+        "titleZh": "高海拔与快速变天",
+        "titleEn": "Elevation and Rapid Weather Change",
+        "bodyZh": "台顶与台怀镇温度、风力和道路条件可能明显不同。",
+        "bodyEn": "Temperature, wind and road conditions can differ significantly between the summits and Taihuai.",
+        "doZh": "携带保暖和防雨层，并查看当日道路信息。",
+        "doEn": "Carry warm and waterproof layers and check same-day road information.",
+        "dontZh": "不要按太原市区天气推断台顶条件。",
+        "dontEn": "Do not infer summit conditions from Taiyuan city weather."
+      },
+      {
+        "barrierType": "barrier-transport-wayfinding",
+        "titleZh": "寺院分散与景交换乘",
+        "titleEn": "Dispersed Monasteries and Shuttle Transfers",
+        "bodyZh": "核心寺院较集中，但台顶、佛光寺等需要不同交通计划。",
+        "bodyEn": "Core monasteries cluster together, while the summits and Foguang Temple require different transport plans.",
+        "doZh": "按区域安排半日或一日路线。",
+        "doEn": "Plan half-day or full-day routes by area.",
+        "dontZh": "不要把所有知名寺院都当作步行可达。",
+        "dontEn": "Do not assume every famous monastery is within walking distance."
+      }
+    ],
+    "services": [
+      "svc-ticket-passport",
+      "svc-ticket-reservation",
+      "svc-route-shuttle",
+      "svc-emergency-medical",
+      "svc-rule-worship",
+      "spot-svc-wutai-temple",
+      "spot-svc-wutai-shuttle",
+      "spot-svc-wutai-weather"
+    ],
+    "geo": {
+      "lat": 39.008,
+      "lng": 113.597,
+      "precision": "approximate central cultural landscape; UNVERIFIED for visitor-center routing"
+    },
+    "coverImageHint": {
+      "zh": "选择能同时呈现台怀寺院群、白塔与山地背景的广角图；避免只用单座寺院特写。检索词：五台山 台怀镇 白塔 全景、Mount Wutai Taihuai White Pagoda panorama。",
+      "en": "Use a wide view combining the Taihuai monastery cluster, White Pagoda and mountain setting rather than a single-hall close-up.",
+      "discoveryUrls": [
+        "https://whc.unesco.org/en/list/1279/gallery/",
+        "https://commons.wikimedia.org/wiki/Category:Mount_Wutai"
+      ],
+      "licenseNote": "Check the license and attribution requirements for each image before reuse."
+    },
+    "sources": [
+      "https://whc.unesco.org/en/list/1279/",
+      "https://wts.sxxz.gov.cn/",
+      "https://wlt.shanxi.gov.cn/",
+      "https://www.mct.gov.cn/"
+    ]
+  },
+  {
+    "id": "spot-003",
+    "slug": "ancient-city-pingyao",
+    "nameZh": "平遥古城",
+    "nameEn": "Ancient City of Ping Yao",
+    "cityZh": "晋中市",
+    "cityEn": "Jinzhong",
+    "level": {
+      "zh": "世界文化遗产（1997，遗产范围包含古城、双林寺和镇国寺）；国家5A级旅游景区。最新通票范围需复核。",
+      "en": "UNESCO World Heritage Site (1997, including the ancient city, Shuanglin Temple and Zhenguo Temple) and national 5A tourist attraction. Recheck the latest joint-pass coverage.",
+      "verification": "heritage verified; ticket bundle dynamic"
+    },
+    "tags": [
+      {
+        "zh": "古城",
+        "en": "Historic City"
+      },
+      {
+        "zh": "晋商",
+        "en": "Shanxi Merchants"
+      },
+      {
+        "zh": "票号",
+        "en": "Draft Banks"
+      },
+      {
+        "zh": "明清建筑",
+        "en": "Ming–Qing Architecture"
+      },
+      {
+        "zh": "世界遗产",
+        "en": "World Heritage"
+      }
+    ],
+    "summaryZh": "平遥古城完整保存了明清县城格局，并见证了19世纪中国票号金融网络的兴盛。古城街巷、城墙、县衙、票号和传统院落共同构成可步行体验的历史城市，适合用双语内容解释城市规划与晋商文化。",
+    "summaryEn": "Pingyao preserves the urban form of a Ming–Qing county town and records the rise of China’s nineteenth-century draft-bank network. Its streets, walls, government office, banking houses and courtyard residences create a walkable historic city, ideal for bilingual interpretation of urban planning and Shanxi merchant culture.",
+    "introZh": "平遥古城的价值不只是“保存完好的老街”，而是城墙、街道、公共建筑、商号和居民生活共同延续的历史城市系统。古城以南大街等街巷为骨架，城墙、平遥县衙、文庙、城隍庙和日昇昌票号等展示了传统行政、礼制、商业与社区空间。19世纪票号通过异地汇兑和信用网络服务跨区域贸易，是外国游客理解中国早期金融史的重要切入点。古城街道本身通常可进入，但主要收费景点往往采用联票；双林寺和镇国寺属于世界遗产组成部分，却位于城外，需要额外交通。小程序应将“古城免费步行区域”“通票景点”“城外关联遗产”分层展示，避免游客误以为购买一张票即可覆盖全部地点。",
+    "introEn": "Pingyao is more than a well-preserved old street. Its walls, road network, public institutions, commercial houses and resident life form a continuing historic urban system. South Street and surrounding lanes connect the city wall, county government office, Confucian and City God temples, and the Rishengchang draft bank, revealing how administration, ritual, commerce and community were organized. In the nineteenth century, draft banks supported long-distance trade through remittance and credit networks, giving international visitors an accessible entry into early Chinese financial history. The streets are generally open, while major monuments commonly use a joint pass. Shuanglin and Zhenguo Temples are components of the World Heritage property but lie outside the walled city and require separate transport. The app should clearly separate free walking areas, joint-pass attractions and outlying related heritage.",
+    "highlights": [
+      {
+        "zh": "明清古城墙：可观察完整防御与城市边界。",
+        "en": "Ming–Qing city wall: a clear view of historic defense and urban boundaries."
+      },
+      {
+        "zh": "日昇昌票号：理解中国早期跨区域汇兑。",
+        "en": "Rishengchang Draft Bank: an introduction to early interregional remittance."
+      },
+      {
+        "zh": "平遥县衙：展示传统县级行政与司法空间。",
+        "en": "Pingyao County Government Office: traditional county administration and justice."
+      },
+      {
+        "zh": "南大街与市楼：古城商业轴线和标志性城市景观。",
+        "en": "South Street and Market Tower: the commercial axis and signature cityscape."
+      },
+      {
+        "zh": "双林寺、镇国寺：城外世界遗产组成部分，适合深度路线。",
+        "en": "Shuanglin and Zhenguo Temples: outlying World Heritage components for a deeper route."
+      }
+    ],
+    "openTimeZh": "UNVERIFIED：古城公共街巷通常可步行进入；收费景点按日间时段开放，旺淡季和停止检票时间不同。夜间灯光与商业营业不等于文物景点开放。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "openTimeEn": "UNVERIFIED: Public streets are generally walkable, while ticketed monuments operate during daytime with seasonal schedules and earlier last-entry times. Evening lighting or shop opening does not mean heritage interiors are open. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "ticketZh": "UNVERIFIED：进入公共街区通常不收古城大门票，城墙、县衙、票号等主要景点常使用约人民币100～150元区间的联票；双林寺、镇国寺及演出可能另购。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "ticketEn": "UNVERIFIED: Public streets generally have no city-gate admission fee. Major monuments such as the wall, county office and draft banks commonly use a joint pass in the approximate RMB 100–150 range. Shuanglin Temple, Zhenguo Temple and performances may be separate. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "transportZh": "高铁可到平遥古城站，普通列车可到平遥站；两站与古城入口距离不同，应确认住宿对应城门。古城核心街区以步行为主，电瓶车仅在指定线路运行，车辆通常不能随意进入核心步行区。",
+    "transportEn": "High-speed trains serve Pingyao Gucheng Station, while conventional trains serve Pingyao Station. They are at different distances from the old city, so confirm the gate nearest your accommodation. The core is mainly pedestrian, with electric carts limited to designated routes.",
+    "bestSeasonZh": "春秋适合长时间步行；夏季较热且日照强，冬季寒冷但游客相对少。大型节庆和黄金周客流显著增加。",
+    "bestSeasonEn": "Spring and autumn are best for extended walking. Summer can be hot and sunny; winter is cold but often quieter. Major festivals and national holidays bring heavy crowds.",
+    "visitTipsZh": "穿适合石板路的鞋；区分“古城街区”“联票景点”和“城外寺院”。入住传统院落前确认行李接送、供暖、无障碍和卫生间条件。购买漆器或工艺品时保留付款凭证。",
+    "visitTipsEn": "Wear shoes suitable for stone streets. Distinguish between the old-city public area, joint-pass monuments and outlying temples. Before booking a courtyard stay, check luggage transfer, heating, accessibility and bathroom arrangements. Keep receipts for lacquerware and crafts.",
+    "culturalNotes": [
+      {
+        "barrierType": "barrier-historical-context",
+        "titleZh": "票号不是现代银行的简单复制",
+        "titleEn": "Draft Banks Were Not Simply Modern Banks",
+        "bodyZh": "票号以汇兑和信用网络连接各地商人，是理解晋商组织方式的重要窗口。",
+        "bodyEn": "Draft banks connected merchants through remittance and trust networks and offer insight into how Shanxi commerce was organized.",
+        "doZh": "关注柜台、账房、分号网络与汇票展示。",
+        "doEn": "Look at counters, accounting rooms, branch networks and remittance documents.",
+        "dontZh": "不要直接把所有票号制度等同于今天的商业银行。",
+        "dontEn": "Do not equate every draft-bank practice with a modern commercial bank."
+      },
+      {
+        "barrierType": "barrier-transport-wayfinding",
+        "titleZh": "古城内外不是一个票务空间",
+        "titleEn": "Inside and Outside the Walled City Are Different Ticketing Zones",
+        "bodyZh": "双林寺和镇国寺虽属于世界遗产，但不在城墙内。",
+        "bodyEn": "Shuanglin and Zhenguo Temples belong to the World Heritage property but are outside the walled city.",
+        "doZh": "单独确认交通、票务和闭馆时间。",
+        "doEn": "Confirm transport, ticketing and closing time separately.",
+        "dontZh": "不要在临近闭馆时才从城内出发。",
+        "dontEn": "Do not leave the city for these temples close to closing time."
+      },
+      {
+        "barrierType": "barrier-food-allergy",
+        "titleZh": "地方饮食与原料确认",
+        "titleEn": "Checking Ingredients in Local Food",
+        "bodyZh": "牛肉、面食、醋、芝麻、花生和酒类常见，英文菜单未必标注完整。",
+        "bodyEn": "Beef, wheat noodles, vinegar, sesame, peanuts and alcoholic drinks are common, and English menus may not list every ingredient.",
+        "doZh": "明确说出过敏原和饮食限制。",
+        "doEn": "State allergens and dietary restrictions explicitly.",
+        "dontZh": "不要仅凭菜名判断是否含肉、动物油或料酒。",
+        "dontEn": "Do not rely on the dish name alone to determine meat, animal fat or cooking wine content."
+      }
+    ],
+    "services": [
+      "svc-ticket-passport",
+      "svc-ticket-reservation",
+      "svc-route-gate",
+      "svc-route-return",
+      "svc-food-allergy",
+      "svc-shopping-receipt",
+      "spot-svc-pingyao-pass",
+      "spot-svc-pingyao-cart",
+      "spot-svc-pingyao-temples"
+    ],
+    "geo": {
+      "lat": 37.201,
+      "lng": 112.154,
+      "precision": "approximate old-city center; UNVERIFIED for gate navigation"
+    },
+    "coverImageHint": {
+      "zh": "优先使用城墙或高处俯瞰古城屋顶、街巷与市楼的横幅图，体现“完整城市”而不是单一商铺。检索词：平遥古城 全景 城墙、Ancient City of Ping Yao panorama。",
+      "en": "Prefer a panoramic view from the wall or an elevated point showing roofs, streets and the Market Tower, emphasizing the complete city rather than a single shop.",
+      "discoveryUrls": [
+        "https://whc.unesco.org/en/list/812/gallery/",
+        "https://commons.wikimedia.org/wiki/Category:Pingyao"
+      ],
+      "licenseNote": "Check the license and attribution requirements for each image before reuse."
+    },
+    "sources": [
+      "https://whc.unesco.org/en/list/812/",
+      "http://www.pingyao.gov.cn/",
+      "https://wlt.shanxi.gov.cn/",
+      "https://www.mct.gov.cn/"
+    ]
+  },
+  {
+    "id": "spot-004",
+    "slug": "jinci-temple",
+    "nameZh": "晋祠",
+    "nameEn": "Jinci Temple",
+    "cityZh": "太原市",
+    "cityEn": "Taiyuan",
+    "level": {
+      "zh": "全国重点文物保护单位相关古建筑群；“晋祠—天龙山景区”于2024年进入国家5A级旅游景区名单。晋祠单体与组合景区的票务边界需复核。",
+      "en": "A major nationally protected historic architectural complex. The combined Jinci–Tianlongshan Scenic Area entered the national 5A list in 2024. Recheck the ticketing boundary between Jinci itself and the combined scenic area.",
+      "verification": "combined 5A status to be checked against latest official register"
+    },
+    "tags": [
+      {
+        "zh": "古建筑",
+        "en": "Historic Architecture"
+      },
+      {
+        "zh": "祠庙",
+        "en": "Ancestral Temple"
+      },
+      {
+        "zh": "园林",
+        "en": "Classical Garden"
+      },
+      {
+        "zh": "宋代建筑",
+        "en": "Song Architecture"
+      },
+      {
+        "zh": "太原",
+        "en": "Taiyuan"
+      }
+    ],
+    "summaryZh": "晋祠位于太原西南，是集祠庙、古建筑、雕塑、古树和泉水景观于一体的历史园林。圣母殿、鱼沼飞梁与宋代彩塑等内容，可帮助游客从结构、礼制和空间关系理解山西古建筑。",
+    "summaryEn": "Jinci, southwest of Taiyuan, combines ancestral-temple architecture, sculpture, ancient trees and spring-fed garden scenery. The Hall of the Holy Mother, the Fish-Pond Flying Bridge and historic painted sculpture help visitors understand Shanxi architecture through structure, ritual and spatial relationships.",
+    "introZh": "晋祠最适合作为外国游客进入山西古建筑世界的第一站。它不是单一寺庙，而是围绕祭祀、泉水与园林逐步形成的建筑群。圣母殿以宋代木构和彩塑著称，鱼沼飞梁展现独特的十字形桥梁空间，难老泉及古树则使建筑与自然水系相互联系。参观时，应避免把“祠”简单翻译成普通寺庙；其核心与纪念、祭祀和地方历史有关。如今晋祠常与天龙山组合进行景区宣传和评级，但两者地理位置、游览时长与交通方式不同。Mock 数据应保留单独的晋祠对象，并通过 relatedSpots 或 packageNotice 关联天龙山，防止票务和路线描述混乱。",
+    "introEn": "Jinci is an excellent first stop for international visitors entering the world of Shanxi’s historic architecture. It is not a single temple but a complex shaped over time by commemoration, ritual, springs and garden design. The Hall of the Holy Mother is celebrated for its Song timber structure and painted sculptures; the Fish-Pond Flying Bridge creates an unusual cross-shaped spatial form; and the Never-Aging Spring and old trees connect architecture with a living water system. The Chinese term ci is better understood as an ancestral or commemorative shrine than as an ordinary Buddhist temple. Jinci is now promoted and rated together with Tianlongshan, but the two locations differ in geography, visit length and transport. The mock should keep Jinci as a separate object and connect Tianlongshan through related-site or package notices.",
+    "highlights": [
+      {
+        "zh": "圣母殿：宋代木构与彩塑的核心看点。",
+        "en": "Hall of the Holy Mother: the central highlight for Song timber architecture and painted sculpture."
+      },
+      {
+        "zh": "鱼沼飞梁：独特的十字形桥梁空间。",
+        "en": "Fish-Pond Flying Bridge: a distinctive cross-shaped bridge structure."
+      },
+      {
+        "zh": "难老泉与水系：理解园林形成与地方水文化。",
+        "en": "Never-Aging Spring and water system: key to the garden’s development and local water culture."
+      },
+      {
+        "zh": "古树与碑刻：补充时间层次和书法信息。",
+        "en": "Ancient trees and inscriptions: additional layers of chronology and calligraphy."
+      }
+    ],
+    "openTimeZh": "UNVERIFIED：博物馆式日间开放，通常有季节性闭馆和停止检票时间；特殊维护可能关闭个别殿堂。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "openTimeEn": "UNVERIFIED: Jinci generally follows daytime museum-style opening with seasonal closing and last-entry times. Individual halls may close for conservation. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "ticketZh": "UNVERIFIED：晋祠通常为收费参观，常见成人票价低于人民币100元；与天龙山的联票、接驳车和优惠政策可能另行设置。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "ticketEn": "UNVERIFIED: Jinci normally requires paid admission, commonly below RMB 100 for an adult ticket. Combined Tianlongshan tickets, shuttles and concessions may be separate. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "transportZh": "从太原南站、太原站或机场出发，可乘城市公交、出租车或网约车前往晋源区。若同日安排天龙山，必须额外核对景区接驳、山路时间和末班车。",
+    "transportEn": "From Taiyuan South Station, Taiyuan Station or the airport, continue to Jinyuan District by city bus, taxi or ride-hailing service. If combining Jinci with Tianlongshan, separately check scenic shuttles, mountain-road travel time and the last return service.",
+    "bestSeasonZh": "春秋最适合园林和古建步行；夏季树荫较多但可能炎热，冬季寒冷且水景体验不同。",
+    "bestSeasonEn": "Spring and autumn are best for walking through the architecture and gardens. Summer has shade but can be hot; winter is cold and the water landscape feels different.",
+    "visitTipsZh": "古殿和彩塑区域默认不触摸、不使用闪光灯；观察木构时不要跨越护栏。应区分晋祠博物馆、晋祠公园及晋祠—天龙山组合景区的不同范围。",
+    "visitTipsEn": "Do not touch historic halls or painted sculpture and keep flash off unless clearly permitted. Do not cross barriers to inspect timber details. Distinguish among Jinci Museum, surrounding park areas and the wider Jinci–Tianlongshan scenic-area package.",
+    "culturalNotes": [
+      {
+        "barrierType": "barrier-historical-context",
+        "titleZh": "“祠”与“寺”并不相同",
+        "titleEn": "A Ci Is Not the Same as a Buddhist Temple",
+        "bodyZh": "晋祠主要与纪念和祭祀传统相关，不能简单理解为佛教寺院。",
+        "bodyEn": "Jinci is rooted mainly in commemoration and ritual tradition and should not be treated simply as a Buddhist monastery.",
+        "doZh": "使用“ancestral or commemorative shrine”理解其功能。",
+        "doEn": "Understand ci as an ancestral or commemorative shrine.",
+        "dontZh": "不要默认所有殿堂都对应佛教礼仪。",
+        "dontEn": "Do not assume every hall follows Buddhist ritual."
+      },
+      {
+        "barrierType": "barrier-heritage-protection",
+        "titleZh": "木构和彩塑的脆弱性",
+        "titleEn": "Fragility of Timber and Painted Sculpture",
+        "bodyZh": "古木构、彩塑和碑刻对触摸、闪光和环境变化敏感。",
+        "bodyEn": "Historic timber, painted sculpture and inscriptions are sensitive to touching, flash and environmental change.",
+        "doZh": "在护栏外观察细节，遵守殿内摄影标识。",
+        "doEn": "Observe details from outside barriers and follow indoor photography signs.",
+        "dontZh": "不要用手扶古柱或靠在栏杆内侧拍照。",
+        "dontEn": "Do not hold historic columns or lean inside barriers for photographs."
+      },
+      {
+        "barrierType": "barrier-booking-payment",
+        "titleZh": "组合景区名称造成误解",
+        "titleEn": "Combined Scenic-Area Names Can Cause Confusion",
+        "bodyZh": "“晋祠—天龙山”评级或联票不代表两处在同一入口。",
+        "bodyEn": "The Jinci–Tianlongshan rating or package does not mean both sites share one entrance.",
+        "doZh": "购票前确认包含项目、交通和有效期。",
+        "doEn": "Confirm inclusions, transport and validity before purchase.",
+        "dontZh": "不要看到5A名称就默认一张票覆盖全部。",
+        "dontEn": "Do not assume the 5A name means one ticket covers everything."
+      }
+    ],
+    "services": [
+      "svc-ticket-passport",
+      "svc-route-gate",
+      "svc-rule-photo",
+      "svc-rule-touch",
+      "spot-svc-jinci-area",
+      "spot-svc-jinci-hall",
+      "spot-svc-jinci-water"
+    ],
+    "geo": {
+      "lat": 37.707,
+      "lng": 112.443,
+      "precision": "approximate Jinci complex; UNVERIFIED"
+    },
+    "coverImageHint": {
+      "zh": "使用圣母殿、鱼沼飞梁与水面或古树同框的横图，突出建筑与园林关系。检索词：晋祠 圣母殿 鱼沼飞梁、Jinci Temple Flying Bridge。",
+      "en": "Use a horizontal image combining the Hall of the Holy Mother, Fish-Pond Flying Bridge and water or old trees to show architecture within the garden.",
+      "discoveryUrls": [
+        "https://commons.wikimedia.org/wiki/Category:Jinci_Temple"
+      ],
+      "licenseNote": "Check the license and attribution requirements for each image before reuse."
+    },
+    "sources": [
+      "https://www.taiyuan.gov.cn/",
+      "https://wlt.shanxi.gov.cn/",
+      "https://www.mct.gov.cn/",
+      "https://www.ncha.gov.cn/"
+    ]
+  },
+  {
+    "id": "spot-005",
+    "slug": "hukou-waterfall-shanxi",
+    "nameZh": "黄河壶口瀑布（山西侧）",
+    "nameEn": "Hukou Waterfall of the Yellow River (Shanxi Side)",
+    "cityZh": "临汾市",
+    "cityEn": "Linfen",
+    "level": {
+      "zh": "黄河壶口瀑布旅游区为国家5A级旅游景区；山西侧位于临汾市吉县。水情和开放状态必须动态核验。",
+      "en": "The Hukou Waterfall tourist area is a national 5A attraction; the Shanxi-side entrance is in Ji County, Linfen. River conditions and opening status require dynamic verification.",
+      "verification": "location stable; current operations dynamic"
+    },
+    "tags": [
+      {
+        "zh": "黄河",
+        "en": "Yellow River"
+      },
+      {
+        "zh": "瀑布",
+        "en": "Waterfall"
+      },
+      {
+        "zh": "峡谷",
+        "en": "Gorge"
+      },
+      {
+        "zh": "地质景观",
+        "en": "Geological Landscape"
+      },
+      {
+        "zh": "自然景观",
+        "en": "Natural Attraction"
+      }
+    ],
+    "summaryZh": "壶口瀑布位于晋陕峡谷，宽阔黄河在此骤然收束，形成声势强烈的瀑布景观。山西侧入口位于临汾市吉县，水量、冰凌、风力与安全管控会显著改变现场体验。",
+    "summaryEn": "At Hukou, the broad Yellow River is suddenly compressed within the Jin–Shaanxi Gorge, producing a powerful waterfall landscape. The Shanxi entrance lies in Ji County, Linfen. River volume, ice, wind and safety controls can substantially change the experience.",
+    "introZh": "壶口瀑布的核心价值来自黄河水流在峡谷地形中的急剧收束。不同季节的景观差异很大：丰水期水势壮阔但安全距离和开放区域可能调整；冬季可能形成冰凌与冰瀑，同时道路和步道更湿滑；极端天气或特殊水情下景区可能临时关闭。由于黄河两岸分别属于山西和陕西，游客常把两侧入口、门票和交通混为一谈。Mock 数据必须在名称、地图和购票提示中持续标记“山西侧”，并禁止生成“跨桥步行到另一侧”的误导信息。首页卡片应展示当日状态标签，例如“正常开放 / 部分区域关闭 / 暂停开放 / 需核验”，而不是只给固定营业时间。",
+    "introEn": "Hukou’s defining feature is the sudden compression of Yellow River flow within a narrow gorge. The landscape changes dramatically by season. High-flow periods can be spectacular but may alter safety distances and accessible zones; winter can produce ice formations while making roads and paths slippery; extreme weather or unusual river conditions can trigger temporary closure. Because the two banks belong to Shanxi and Shaanxi, visitors often confuse entrances, tickets and transport. The mock must consistently label this object as the “Shanxi Side” in its name, map and booking notes, and must not imply that visitors can casually walk across to the opposite bank. The home card should support live-style states such as Open, Partially Open, Temporarily Closed or Verify Today rather than relying only on fixed hours.",
+    "highlights": [
+      {
+        "zh": "主瀑布观景：观察黄河由宽变窄的地形过程。",
+        "en": "Main waterfall viewpoint: see how the Yellow River narrows through the gorge."
+      },
+      {
+        "zh": "水雾与声景：现场感受与普通静态瀑布不同。",
+        "en": "Mist and soundscape: a more physical experience than a static scenic view."
+      },
+      {
+        "zh": "季节性冰景：冬季可能出现冰凌，但开放与安全条件不固定。",
+        "en": "Seasonal ice formations: possible in winter, with variable access and safety conditions."
+      },
+      {
+        "zh": "黄河文化解释：把自然地貌与区域历史、交通和民间叙事联系起来。",
+        "en": "Yellow River interpretation: connect geology with regional history, travel and local narratives."
+      }
+    ],
+    "openTimeZh": "UNVERIFIED：通常为日间开放，但水情、冰雪、强风、暴雨和安全检查可能导致延迟开放、部分关闭或临时闭园。必须优先展示当日状态。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "openTimeEn": "UNVERIFIED: Normally open during daytime, but river flow, ice, strong wind, heavy rain and safety inspections may delay opening, close sections or suspend operations. Same-day status must take priority. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "ticketZh": "UNVERIFIED：通常包含景区门票，并可能另收景交车费用；常见组合支出约在人民币100～150元区间。山西侧和陕西侧票务通常不可混用。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "ticketEn": "UNVERIFIED: Admission and a scenic shuttle may be charged separately, with a typical combined spend around RMB 100–150. Tickets for the Shanxi and Shaanxi sides are generally not interchangeable. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "transportZh": "通常从临汾西站、临汾市区或吉县经公路前往，最后一段以旅游巴士、包车或自驾为主。公共交通班次有限，应提前确认返程。导航时必须选择山西吉县入口。",
+    "transportEn": "The Shanxi side is commonly reached by road from Linfen West Station, central Linfen or Ji County, using a tourist bus, hired vehicle or private car for the last section. Public services can be limited, so confirm the return trip. Navigation must be set to the Ji County, Shanxi entrance.",
+    "bestSeasonZh": "不同季节各有景观，但不存在绝对稳定的“最佳水量”。春秋体感相对舒适；夏季需关注暴雨和涨水；冬季需关注冰雪、低温和道路结冰。",
+    "bestSeasonEn": "Each season offers different scenery, and there is no permanently reliable “best flow.” Spring and autumn are generally comfortable; summer requires attention to storms and rising water; winter requires caution for cold, snow and road ice.",
+    "visitTipsZh": "不要跨越护栏、靠近湿滑崖边或在风大时使用大型自拍设备。水雾可能损伤电子设备。确认儿童、老人和行动不便游客是否适合进入主观景区，并准备防滑鞋。",
+    "visitTipsEn": "Do not cross barriers, approach slippery edges or use large selfie equipment in strong wind. Mist can affect electronics. Check whether the main viewing area is suitable for children, older visitors or people with limited mobility, and wear slip-resistant shoes.",
+    "culturalNotes": [
+      {
+        "barrierType": "barrier-weather-season",
+        "titleZh": "水情决定体验与开放",
+        "titleEn": "River Conditions Determine Access",
+        "bodyZh": "瀑布景观和可进入区域会随水量、冰情和天气快速变化。",
+        "bodyEn": "The view and accessible area can change quickly with flow, ice and weather.",
+        "doZh": "出发前和到达游客中心后各核验一次状态。",
+        "doEn": "Verify status before departure and again at the visitor center.",
+        "dontZh": "不要把历史照片中的水量当作当天保证。",
+        "dontEn": "Do not treat water levels shown in old photos as a same-day guarantee."
+      },
+      {
+        "barrierType": "barrier-transport-wayfinding",
+        "titleZh": "山西侧与陕西侧入口",
+        "titleEn": "Shanxi and Shaanxi Entrances",
+        "bodyZh": "两侧属于不同省份，入口、票务与公路路线不同。",
+        "bodyEn": "The two banks are in different provinces and use different entrances, tickets and road routes.",
+        "doZh": "在名称和导航中确认“山西吉县”。",
+        "doEn": "Confirm “Ji County, Shanxi” in the name and navigation.",
+        "dontZh": "不要购买另一侧门票后再到本侧入口。",
+        "dontEn": "Do not buy a ticket for the opposite bank and arrive at this entrance."
+      },
+      {
+        "barrierType": "barrier-heritage-protection",
+        "titleZh": "自然景区也有边界规则",
+        "titleEn": "Natural Sites Also Require Boundary Discipline",
+        "bodyZh": "护栏和关闭线会随风险调整，不只是为了维持秩序。",
+        "bodyEn": "Barriers and closure lines change with risk and are not merely crowd-control devices.",
+        "doZh": "服从工作人员和临时封闭标识。",
+        "doEn": "Follow staff instructions and temporary closure signs.",
+        "dontZh": "不要翻越护栏追求更近的照片。",
+        "dontEn": "Do not cross barriers for a closer photograph."
+      }
+    ],
+    "services": [
+      "svc-ticket-reservation",
+      "svc-route-gate",
+      "svc-route-shuttle",
+      "svc-route-return",
+      "svc-emergency-help",
+      "spot-svc-hukou-open",
+      "spot-svc-hukou-shuttle",
+      "spot-svc-hukou-side"
+    ],
+    "geo": {
+      "lat": 36.1361,
+      "lng": 110.4444,
+      "precision": "approximate Shanxi-side waterfall area; UNVERIFIED for visitor entrance"
+    },
+    "coverImageHint": {
+      "zh": "使用从山西侧能清楚看到黄河收束、主瀑与峡谷的横图；避免无法判断拍摄岸侧的图片。检索词：山西 吉县 壶口瀑布 全景、Hukou Waterfall Shanxi side panorama。",
+      "en": "Use a wide Shanxi-side image clearly showing the narrowing river, main fall and gorge. Avoid images whose bank cannot be identified.",
+      "discoveryUrls": [
+        "https://commons.wikimedia.org/wiki/Category:Hukou_Waterfall"
+      ],
+      "licenseNote": "Check the bank, license and attribution requirements before reuse."
+    },
+    "sources": [
+      "https://www.linfen.gov.cn/",
+      "https://wlt.shanxi.gov.cn/",
+      "https://www.mct.gov.cn/"
+    ]
+  },
+  {
+    "id": "spot-006",
+    "slug": "hanging-temple",
+    "nameZh": "悬空寺",
+    "nameEn": "Hanging Temple",
+    "cityZh": "大同市",
+    "cityEn": "Datong",
+    "level": {
+      "zh": "全国重点文物保护单位；恒山相关旅游区的重要组成部分。当前A级景区归属和登临政策需复核。",
+      "en": "A Major Historical and Cultural Site Protected at the National Level and an important component of the Mount Heng visitor area. Recheck current attraction-rating scope and climbing policy.",
+      "verification": "national heritage status stable; tourist-rating scope unverified"
+    },
+    "tags": [
+      {
+        "zh": "悬崖古建",
+        "en": "Cliff Architecture"
+      },
+      {
+        "zh": "木构",
+        "en": "Timber Structure"
+      },
+      {
+        "zh": "儒释道",
+        "en": "Confucian–Buddhist–Daoist Traditions"
+      },
+      {
+        "zh": "栈道",
+        "en": "Cliff Walkway"
+      },
+      {
+        "zh": "大同",
+        "en": "Datong"
+      }
+    ],
+    "summaryZh": "悬空寺依山崖而建，以木构楼阁、栈道和嵌入岩壁的承重结构闻名。寺内同时呈现佛、道、儒相关空间，登临容量有限，强风、降雨、落石风险和拥挤都会影响开放。",
+    "summaryEn": "Built into a cliff, the Hanging Temple is known for timber pavilions, narrow walkways and beams anchored into the rock. Its spaces reference Buddhist, Daoist and Confucian traditions. Climbing capacity is limited, and wind, rain, rockfall risk or crowding can affect access.",
+    "introZh": "悬空寺最震撼的地方不只是“看起来悬在空中”，而是建筑如何利用岩壁凹槽、横梁、柱架和紧凑空间适应山谷环境。现存建筑经过历代修缮，游客在狭窄廊道中会感受到尺度、结构和地形的紧密关系。寺内有与佛教、道教和儒家传统相关的殿堂，因此英文介绍应使用“multiple religious and philosophical traditions”，避免把它误写成三种宗教完全等量、同一时期一次性建成。由于登临通道非常狭窄，景区可能把地面参观票与登临票分开，并使用时段或名额管理。小程序必须为“不登临游客”提供替代视角、地面路线和摄影点，而不是把登临视为唯一体验。",
+    "introEn": "The Hanging Temple is remarkable not only because it appears suspended, but because its buildings use cliff recesses, embedded beams, posts and compact spaces to adapt to the valley. The surviving complex has been repaired across different periods, and its narrow corridors make the relationship between scale, structure and terrain immediately tangible. Halls refer to Buddhist, Daoist and Confucian traditions; English interpretation should describe “multiple religious and philosophical traditions” rather than implying that three equal religions were established simultaneously in one construction phase. Because the climbing route is extremely narrow, ground admission and climbing access may be separated and managed by time slot or quota. The app must provide alternative viewpoints, ground routes and photography options for visitors who do not climb.",
+    "highlights": [
+      {
+        "zh": "崖壁整体远观：理解建筑与山体的比例。",
+        "en": "Overall cliff view: understand the scale of the buildings against the mountain."
+      },
+      {
+        "zh": "嵌岩横梁与木构：观察“悬空”效果的结构基础。",
+        "en": "Rock-anchored beams and timber framing: the structural basis of the suspended appearance."
+      },
+      {
+        "zh": "狭窄栈道与楼阁：体验空间组织，但需服从单向和限流规则。",
+        "en": "Narrow walkways and pavilions: experience the spatial organization while following one-way and capacity rules."
+      },
+      {
+        "zh": "三教殿：用于解释多种传统在后世空间中的并置。",
+        "en": "Hall of the Three Teachings: a place to explain the later coexistence of multiple traditions."
+      }
+    ],
+    "openTimeZh": "UNVERIFIED：仅日间开放；地面区与登临区可能执行不同停止售票、限流和临时关闭规则。大风、降雨、落石检查或维护会影响登临。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "openTimeEn": "UNVERIFIED: Daytime opening only. Ground-level and climbing areas may have different last-sale, capacity and temporary-closure rules. Wind, rain, rockfall inspection or maintenance can affect climbing access. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "ticketZh": "UNVERIFIED：景区基础门票与悬空寺登临票可能分开，组合支出常见在人民币150元以内或附近；登临名额可能比入园名额更少。以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+    "ticketEn": "UNVERIFIED: General admission and the Hanging Temple climbing ticket may be separate, with combined spending commonly around or below RMB 150. Climbing places may be fewer than general-entry places. The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+    "transportZh": "从大同市区、大同南站或机场经公路前往浑源县，再到恒山—悬空寺区域。公共班次和返程时间有限，建议提前核对。若同日安排云冈石窟，两地分处大同不同方向，不宜低估车程。",
+    "transportEn": "Travel by road from central Datong, Datong South Station or the airport to Hunyuan County and then the Mount Heng–Hanging Temple area. Public departures and return times can be limited. If combining with Yungang on the same day, remember that the two sites lie in different directions from Datong.",
+    "bestSeasonZh": "春秋通常更适合户外排队和登临；夏季需注意雷雨，冬季需注意冰雪和强风。是否开放应以当天安全评估为准。",
+    "bestSeasonEn": "Spring and autumn are generally more comfortable for outdoor queuing and climbing. Summer brings storm risk; winter brings ice and strong wind. Same-day safety assessment determines access.",
+    "visitTipsZh": "恐高、行动不便、携带幼童或大型背包的游客应谨慎选择登临。狭窄处不要停留自拍、逆行或触摸构件。即使无法登临，地面区仍可获得完整的建筑外观体验。",
+    "visitTipsEn": "Visitors with a fear of heights, limited mobility, young children or large backpacks should consider avoiding the climbing route. Do not stop for selfies, move against the flow or touch structural elements in narrow sections. The ground area still provides a complete external architectural view.",
+    "culturalNotes": [
+      {
+        "barrierType": "barrier-crowd-queue",
+        "titleZh": "登临票不等于普通入园票",
+        "titleEn": "Climbing Access Is Not the Same as General Entry",
+        "bodyZh": "狭窄栈道容量有限，登临名额可能单独管理。",
+        "bodyEn": "The narrow walkways have limited capacity, so climbing places may be managed separately.",
+        "doZh": "到达后立即确认票种和时段。",
+        "doEn": "Confirm ticket type and time slot immediately on arrival.",
+        "dontZh": "不要认为进入景区后必然可以登临。",
+        "dontEn": "Do not assume general entry guarantees climbing access."
+      },
+      {
+        "barrierType": "barrier-heritage-protection",
+        "titleZh": "在狭窄木构中减少接触",
+        "titleEn": "Minimize Contact in Narrow Timber Spaces",
+        "bodyZh": "抓扶、倚靠和拥堵会增加古建筑构件压力。",
+        "bodyEn": "Grabbing, leaning and crowding place additional stress on historic timber elements.",
+        "doZh": "使用现代扶手并持续向前移动。",
+        "doEn": "Use modern handrails and keep moving.",
+        "dontZh": "不要触摸古柱、探身越过栏杆或架设三脚架。",
+        "dontEn": "Do not touch historic columns, lean over barriers or set up tripods."
+      },
+      {
+        "barrierType": "barrier-religious-etiquette",
+        "titleZh": "“三教合一”需要谨慎解释",
+        "titleEn": "Explain the Three Teachings Carefully",
+        "bodyZh": "寺内多种传统的并置反映长期历史变化，不宜理解为简单混合成一种宗教。",
+        "bodyEn": "The coexistence of multiple traditions reflects historical development and should not be presented as one blended religion.",
+        "doZh": "用儒、释、道相关人物和空间分别解释。",
+        "doEn": "Explain the figures and spaces associated with Confucian, Buddhist and Daoist traditions separately.",
+        "dontZh": "不要用娱乐化方式模仿神像或仪式。",
+        "dontEn": "Do not mimic sacred figures or rituals for entertainment."
+      }
+    ],
+    "services": [
+      "svc-ticket-passport",
+      "svc-ticket-reservation",
+      "svc-route-return",
+      "svc-rule-photo",
+      "svc-emergency-help",
+      "spot-svc-hanging-climb",
+      "spot-svc-hanging-safety",
+      "spot-svc-hanging-access"
+    ],
+    "geo": {
+      "lat": 39.667,
+      "lng": 113.707,
+      "precision": "approximate Hanging Temple area; UNVERIFIED"
+    },
+    "coverImageHint": {
+      "zh": "使用从谷底斜向拍摄、能显示悬空寺完整楼阁与峭壁关系的横图，并保留山体尺度。检索词：悬空寺 全景 峭壁、Hanging Temple Datong cliff panorama。",
+      "en": "Use an oblique valley-floor view showing the full complex against the cliff and preserving the scale of the mountain.",
+      "discoveryUrls": [
+        "https://commons.wikimedia.org/wiki/Category:Hanging_Temple"
+      ],
+      "licenseNote": "Check the license and attribution requirements for each image before reuse."
+    },
+    "sources": [
+      "https://www.dt.gov.cn/",
+      "https://wlt.shanxi.gov.cn/",
+      "https://www.ncha.gov.cn/"
+    ]
+  }
+]

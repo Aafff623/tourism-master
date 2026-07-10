@@ -1,0 +1,82 @@
+[
+  {
+    "id": "oq-01",
+    "field": "all.openTime",
+    "questionZh": "六个P0景区在准备演示或上线当天的旺淡季开放时间、停止售票和停止入园时间分别是什么？",
+    "questionEn": "What are the peak/off-season opening, last-ticket and last-entry times for all six P0 sites on the demo or release date?",
+    "owner": "Agent should check official same-day notice",
+    "severity": "high"
+  },
+  {
+    "id": "oq-02",
+    "field": "all.ticket",
+    "questionZh": "外国护照能否在官方小程序完成实名预约？若不能，人工窗口和取票流程是什么？",
+    "questionEn": "Can foreign-passport holders complete real-name booking in the official mini-program? If not, what is the staffed-counter workflow?",
+    "owner": "manual official-channel verification",
+    "severity": "high"
+  },
+  {
+    "id": "oq-03",
+    "field": "mount-wutai.transport",
+    "questionZh": "当前私家车预约、进山检查、景交和核心区限行政策是什么？",
+    "questionEn": "What are the current private-car reservation, mountain-entry check, shuttle and core-zone traffic-control rules?",
+    "owner": "Wutai official notice",
+    "severity": "high"
+  },
+  {
+    "id": "oq-04",
+    "field": "hanging-temple.ticket",
+    "questionZh": "基础景区票与登临票是否分售？登临名额和外籍证件购买方式是什么？",
+    "questionEn": "Are general admission and climbing access sold separately, and how can foreign-document holders obtain a climbing place?",
+    "owner": "Hengshan/Hanging Temple official channel",
+    "severity": "high"
+  },
+  {
+    "id": "oq-05",
+    "field": "hukou-waterfall-shanxi.status",
+    "questionZh": "是否存在可公开调用的当日开放、水情或临时关闭接口？",
+    "questionEn": "Is there a public same-day opening, river-condition or closure feed that the app can consume?",
+    "owner": "Linfen/Ji County attraction operator",
+    "severity": "medium"
+  },
+  {
+    "id": "oq-06",
+    "field": "jinci-temple.level",
+    "questionZh": "晋祠单独票务对象与“晋祠—天龙山景区”5A组合对象的官方边界如何定义？",
+    "questionEn": "How is the official boundary defined between the Jinci ticket object and the combined Jinci–Tianlongshan 5A scenic area?",
+    "owner": "Taiyuan/Jinci official source",
+    "severity": "medium"
+  },
+  {
+    "id": "oq-07",
+    "field": "ancient-city-pingyao.ticket",
+    "questionZh": "当前古城联票包含哪些景点、有效期多长，双林寺和镇国寺是否单独购票？",
+    "questionEn": "Which monuments are in the current Pingyao joint pass, how long is it valid, and are Shuanglin and Zhenguo Temples separate?",
+    "owner": "Pingyao official ticket channel",
+    "severity": "high"
+  },
+  {
+    "id": "oq-08",
+    "field": "accessibility",
+    "questionZh": "各景区可公开确认的轮椅路线、无障碍卫生间、坡道和轮椅借用点在哪里？",
+    "questionEn": "What wheelchair routes, accessible toilets, ramps and wheelchair-loan points can be officially confirmed at each site?",
+    "owner": "visitor centers",
+    "severity": "medium"
+  },
+  {
+    "id": "oq-09",
+    "field": "images",
+    "questionZh": "项目最终采用的封面图片是否满足商业展示、署名和二次分发许可？",
+    "questionEn": "Do final cover images permit project display, attribution and redistribution?",
+    "owner": "developer/content owner",
+    "severity": "high"
+  },
+  {
+    "id": "oq-10",
+    "field": "emergency",
+    "questionZh": "各景区游客中心、医疗点和紧急联系电话是否可公开写入演示数据？",
+    "questionEn": "Can visitor-center, first-aid and emergency contact numbers be safely included in public demo data?",
+    "owner": "manual official verification",
+    "severity": "medium"
+  }
+]

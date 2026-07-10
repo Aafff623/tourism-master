@@ -12,11 +12,9 @@ Accepted
 
 采用 Architecture Decision Records，存放于 `docs/adr/`，编号 `000N-kebab-title.md`。
 
-后续候选决策（尚未裁定，勿当作已定事实）：
+后续已裁定决策：
 
-- 双语字段存储模型（并列列 vs JSON）
-- Mock 数据放置位置（SQL seed vs 静态 JSON vs 管理端录入）
-- 小程序 i18n 方案（自研字典 vs 第三方库）
+- ADR-0001：双语成对字段 + `slug` 导航；模式 A 先行
 
 ## Consequences
 

@@ -1,0 +1,51 @@
+{
+  "volatileFields": [
+    "openTimeZh/openTimeEn",
+    "ticketZh/ticketEn",
+    "reservationUrl",
+    "acceptedIdentityDocuments",
+    "shuttleRules",
+    "privateVehicleRules",
+    "temporaryClosures",
+    "photographyRules",
+    "accessibleRoutes",
+    "emergencyContacts",
+    "performanceSchedules"
+  ],
+  "disclaimerZh": "以下为演示用典型公开信息，开放时间、票价、预约、交通管制和可进入区域可能临时调整，请以景区当日官方公告及现场指引为准。",
+  "disclaimerEn": "The following is typical public information for demonstration purposes. Opening hours, prices, reservation rules, traffic controls and accessible areas may change. Check the attraction’s official same-day notice and on-site instructions before visiting.",
+  "sensitiveWritingRules": [
+    {
+      "topicZh": "宗教信仰",
+      "topicEn": "Religious belief",
+      "avoidZh": "把传说写成经过证实的历史事实，或评价宗教真伪。",
+      "avoidEn": "Presenting legends as verified history or judging the validity of a belief.",
+      "preferredZh": "使用“传统认为”“与……信仰相关”“现场仍有宗教活动”等中性表述。",
+      "preferredEn": "Use neutral wording such as “traditionally associated with”, “connected with devotion to”, or “remains an active religious space”."
+    },
+    {
+      "topicZh": "族群与文化传播",
+      "topicEn": "Ethnicity and cultural transmission",
+      "avoidZh": "使用单一来源、征服或纯血统式叙事概括复杂文化融合。",
+      "avoidEn": "Reducing complex cultural exchange to a single-source, conquest-only or purity narrative.",
+      "preferredZh": "描述艺术因素、技术和宗教观念在不同地区之间传播、吸收和重构。",
+      "preferredEn": "Describe how artistic forms, techniques and religious ideas moved, were adopted and were reinterpreted."
+    },
+    {
+      "topicZh": "黄河“母亲河”表述",
+      "topicEn": "“Mother River” language for the Yellow River",
+      "avoidZh": "把象征性文化称谓当作排他的科学结论。",
+      "avoidEn": "Treating a symbolic cultural title as an exclusive scientific conclusion.",
+      "preferredZh": "写为“中国文化叙事中常被称为母亲河”，并补充地理和历史事实。",
+      "preferredEn": "Write that it is “often called the Mother River in Chinese cultural narratives”, alongside geographic and historical facts."
+    },
+    {
+      "topicZh": "古建筑“世界第一”",
+      "topicEn": "“World’s first/best” claims for architecture",
+      "avoidZh": "未经权威来源支持的绝对化排名。",
+      "avoidEn": "Absolute rankings without authoritative support.",
+      "preferredZh": "使用“现存最早之一”“以……著名”，并保留来源和限定条件。",
+      "preferredEn": "Use qualified wording such as “among the oldest surviving” or “noted for”, with a source and scope."
+    }
+  ]
+}

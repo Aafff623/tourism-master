@@ -1,0 +1,32 @@
+[
+  {
+    "id": "route-datong-one-day",
+    "duration": "1 day",
+    "startZh": "大同市区",
+    "startEn": "Central Datong",
+    "nodes": [
+      "yungang-grottoes"
+    ],
+    "optionalNodes": [
+      "hanging-temple"
+    ],
+    "titleZh": "大同世界遗产一日核心线",
+    "titleEn": "Datong World Heritage Core Day",
+    "summaryZh": "上午优先参观云冈石窟，下午返回市区参观古城或博物馆。悬空寺与云冈分处不同方向，不建议在公共交通条件不明确时强行压缩到同一天；若包车且预约明确，可将悬空寺作为早出晚归的替代组合。",
+    "summaryEn": "Prioritize Yungang in the morning, then return to Datong for the old city or a museum. Yungang and Hanging Temple lie in different directions, so do not force both into one day when transport is uncertain. With a hired vehicle and confirmed reservations, Hanging Temple can be added as an early-start, late-return alternative."
+  },
+  {
+    "id": "route-taiyuan-pingyao-two-day",
+    "duration": "2 days",
+    "startZh": "太原",
+    "startEn": "Taiyuan",
+    "nodes": [
+      "jinci-temple",
+      "ancient-city-pingyao"
+    ],
+    "titleZh": "太原古建—平遥晋商两日线",
+    "titleEn": "Taiyuan Architecture and Pingyao Merchant Heritage — Two Days",
+    "summaryZh": "第一天在太原参观晋祠，理解山西木构、祠庙和园林；第二天乘铁路前往平遥，步行游览古城、城墙、县衙与票号。若增加双林寺或镇国寺，应减少城内景点并单独安排车辆。",
+    "summaryEn": "Visit Jinci on day one for an introduction to Shanxi timber architecture, commemorative shrines and garden design. Travel by rail to Pingyao on day two for the old city, wall, county office and draft banks. If adding Shuanglin or Zhenguo Temple, reduce the number of inner-city monuments and arrange separate transport."
+  }
+]

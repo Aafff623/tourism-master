@@ -1,0 +1,264 @@
+[
+  {
+    "slug": "yungang-grottoes",
+    "nameZh": "云冈石窟",
+    "nameEn": "Yungang Grottoes",
+    "cityZh": "大同市",
+    "cityEn": "Datong",
+    "priority": "P0",
+    "typeZh": [
+      "石窟艺术",
+      "世界文化遗产",
+      "佛教艺术"
+    ],
+    "typeEn": [
+      "Grotto Art",
+      "World Heritage",
+      "Buddhist Art"
+    ],
+    "reasonZh": "国际辨识度最高的山西文化遗产之一，适合展示佛教艺术传播、跨文化融合与文物保护。",
+    "reasonEn": "One of Shanxi’s most internationally recognizable heritage sites, ideal for explaining Buddhist art, cultural exchange and conservation.",
+    "standaloneDecisionZh": "单独成条。洞窟群本身就是完整目的地。",
+    "standaloneDecisionEn": "Standalone entry. The grotto complex is a complete destination in its own right."
+  },
+  {
+    "slug": "mount-wutai",
+    "nameZh": "五台山",
+    "nameEn": "Mount Wutai",
+    "cityZh": "忻州市",
+    "cityEn": "Xinzhou",
+    "priority": "P0",
+    "typeZh": [
+      "佛教圣地",
+      "文化景观",
+      "世界文化遗产"
+    ],
+    "typeEn": [
+      "Buddhist Sacred Site",
+      "Cultural Landscape",
+      "World Heritage"
+    ],
+    "reasonZh": "兼具宗教礼仪、山地气候与文化景观，最能体现入境游客需要的礼仪和实用服务。",
+    "reasonEn": "Combines religious etiquette, mountain conditions and cultural landscape, making it highly relevant to inbound visitor guidance.",
+    "standaloneDecisionZh": "单独成条；寺院作为子景点。",
+    "standaloneDecisionEn": "Standalone entry, with major monasteries represented as sub-attractions."
+  },
+  {
+    "slug": "ancient-city-pingyao",
+    "nameZh": "平遥古城",
+    "nameEn": "Ancient City of Ping Yao",
+    "cityZh": "晋中市",
+    "cityEn": "Jinzhong",
+    "priority": "P0",
+    "typeZh": [
+      "古城",
+      "世界文化遗产",
+      "晋商文化"
+    ],
+    "typeEn": [
+      "Historic City",
+      "World Heritage",
+      "Shanxi Merchant Culture"
+    ],
+    "reasonZh": "可同时承载古城导览、票号金融史、民居住宿、饮食和慢行交通等多种功能模块。",
+    "reasonEn": "Supports multiple app modules at once: historic-city interpretation, early banking history, courtyard stays, food and low-speed transport.",
+    "standaloneDecisionZh": "单独成条；城墙、县衙、日昇昌等作为看点，双林寺和镇国寺可作关联子条目。",
+    "standaloneDecisionEn": "Standalone entry; the wall, county government office and Rishengchang are highlights, while Shuanglin and Zhenguo Temples may be linked sub-entries."
+  },
+  {
+    "slug": "jinci-temple",
+    "nameZh": "晋祠",
+    "nameEn": "Jinci Temple",
+    "cityZh": "太原市",
+    "cityEn": "Taiyuan",
+    "priority": "P0",
+    "typeZh": [
+      "古建筑",
+      "园林",
+      "祭祀文化"
+    ],
+    "typeEn": [
+      "Historic Architecture",
+      "Classical Garden",
+      "Ritual Heritage"
+    ],
+    "reasonZh": "位于省会、交通便利，可作为理解山西古建筑、祠庙文化和水景园林的入门站。",
+    "reasonEn": "A convenient Taiyuan gateway to Shanxi’s historic architecture, ancestral-temple culture and water-focused garden design.",
+    "standaloneDecisionZh": "单独成条；评级可关联“晋祠—天龙山景区”，但数据对象不要与天龙山混为一体。",
+    "standaloneDecisionEn": "Standalone entry. It may reference the Jinci–Tianlongshan scenic-area rating, but should not merge Jinci and Tianlongshan into one data object."
+  },
+  {
+    "slug": "hukou-waterfall-shanxi",
+    "nameZh": "黄河壶口瀑布（山西侧）",
+    "nameEn": "Hukou Waterfall of the Yellow River (Shanxi Side)",
+    "cityZh": "临汾市",
+    "cityEn": "Linfen",
+    "priority": "P0",
+    "typeZh": [
+      "黄河景观",
+      "瀑布",
+      "地质景观"
+    ],
+    "typeEn": [
+      "Yellow River Landscape",
+      "Waterfall",
+      "Geological Landscape"
+    ],
+    "reasonZh": "补足自然景观与黄河文化，适合展示天气、流量、临时关闭和安全提醒等动态信息。",
+    "reasonEn": "Adds a major natural and Yellow River experience, well suited to weather, flow conditions, temporary closure and safety modules.",
+    "standaloneDecisionZh": "单独成条，并明确“山西侧”，避免与陕西侧入口、票务和交通混淆。",
+    "standaloneDecisionEn": "Standalone entry explicitly labeled “Shanxi Side” to avoid confusion with the Shaanxi entrance, tickets and transport."
+  },
+  {
+    "slug": "hanging-temple",
+    "nameZh": "悬空寺",
+    "nameEn": "Hanging Temple",
+    "cityZh": "大同市",
+    "cityEn": "Datong",
+    "priority": "P0",
+    "typeZh": [
+      "悬崖古建",
+      "宗教建筑",
+      "木构建筑"
+    ],
+    "typeEn": [
+      "Cliff Architecture",
+      "Religious Architecture",
+      "Timber Structure"
+    ],
+    "reasonZh": "视觉识别度极高，且容量限制、登临票、狭窄栈道和天气管控非常适合做精细化游客提示。",
+    "reasonEn": "Highly distinctive visually, with capacity limits, separate climbing access, narrow walkways and weather controls that benefit from precise visitor guidance.",
+    "standaloneDecisionZh": "建议单独成条，同时关联恒山景区。",
+    "standaloneDecisionEn": "Recommended as a standalone entry with a related link to the Mount Heng scenic area."
+  },
+  {
+    "slug": "qiao-family-compound",
+    "nameZh": "乔家大院",
+    "nameEn": "Qiao Family Compound",
+    "cityZh": "晋中市",
+    "cityEn": "Jinzhong",
+    "priority": "P1",
+    "typeZh": [
+      "晋商文化",
+      "民居建筑"
+    ],
+    "typeEn": [
+      "Shanxi Merchant Culture",
+      "Vernacular Architecture"
+    ],
+    "reasonZh": "适合补充晋商家庭、院落空间和民俗展陈，但与平遥在主题上部分重叠。",
+    "reasonEn": "A strong supplement for merchant-family life, courtyard planning and folk displays, though it overlaps thematically with Pingyao.",
+    "standaloneDecisionZh": "单独成条。",
+    "standaloneDecisionEn": "Standalone entry."
+  },
+  {
+    "slug": "wang-family-compound",
+    "nameZh": "王家大院",
+    "nameEn": "Wang Family Compound",
+    "cityZh": "晋中市",
+    "cityEn": "Jinzhong",
+    "priority": "P1",
+    "typeZh": [
+      "民居建筑",
+      "晋商文化",
+      "雕刻艺术"
+    ],
+    "typeEn": [
+      "Vernacular Architecture",
+      "Shanxi Merchant Culture",
+      "Decorative Carving"
+    ],
+    "reasonZh": "建筑规模和雕刻细节丰富，适合作为深度古建内容，但首版可由平遥和晋祠覆盖主要叙事。",
+    "reasonEn": "Rich in architectural scale and decorative detail, but its core story can be deferred after Pingyao and Jinci in an MVP.",
+    "standaloneDecisionZh": "单独成条。",
+    "standaloneDecisionEn": "Standalone entry."
+  },
+  {
+    "slug": "yingxian-wooden-pagoda",
+    "nameZh": "应县木塔",
+    "nameEn": "Wooden Pagoda of Yingxian",
+    "cityZh": "朔州市",
+    "cityEn": "Shuozhou",
+    "priority": "P1",
+    "typeZh": [
+      "木构建筑",
+      "古塔",
+      "辽代建筑"
+    ],
+    "typeEn": [
+      "Timber Architecture",
+      "Ancient Pagoda",
+      "Liao Architecture"
+    ],
+    "reasonZh": "世界级木构奇迹，适合古建专题；但与大同北线联动后再加入更利于行程设计。",
+    "reasonEn": "A world-class timber landmark suited to an architecture-focused module, best added with a broader northern Shanxi route.",
+    "standaloneDecisionZh": "单独成条。",
+    "standaloneDecisionEn": "Standalone entry."
+  },
+  {
+    "slug": "yanmen-pass",
+    "nameZh": "雁门关",
+    "nameEn": "Yanmen Pass",
+    "cityZh": "忻州市",
+    "cityEn": "Xinzhou",
+    "priority": "P1",
+    "typeZh": [
+      "长城关隘",
+      "军事历史",
+      "山地景观"
+    ],
+    "typeEn": [
+      "Great Wall Pass",
+      "Military History",
+      "Mountain Landscape"
+    ],
+    "reasonZh": "可补充边塞和长城叙事，但对英文历史语境要求较高，适合第二阶段。",
+    "reasonEn": "Adds frontier and Great Wall history, but needs careful English historical framing and is better suited to a second phase.",
+    "standaloneDecisionZh": "单独成条。",
+    "standaloneDecisionEn": "Standalone entry."
+  },
+  {
+    "slug": "imperial-city-xiangfu",
+    "nameZh": "皇城相府",
+    "nameEn": "Imperial City of the Xiangfu",
+    "cityZh": "晋城市",
+    "cityEn": "Jincheng",
+    "priority": "P1",
+    "typeZh": [
+      "城堡式民居",
+      "明清建筑",
+      "官宦文化"
+    ],
+    "typeEn": [
+      "Fortified Residence",
+      "Ming–Qing Architecture",
+      "Scholar-Official Culture"
+    ],
+    "reasonZh": "有独特的官宦住宅与防御聚落价值，但地理上远离首版主线路。",
+    "reasonEn": "Distinctive for scholar-official residence and fortified settlement history, but geographically outside the initial core route.",
+    "standaloneDecisionZh": "单独成条。",
+    "standaloneDecisionEn": "Standalone entry."
+  },
+  {
+    "slug": "jiezhou-guandi-temple",
+    "nameZh": "解州关帝庙",
+    "nameEn": "Guandi Temple at Haizhou",
+    "cityZh": "运城市",
+    "cityEn": "Yuncheng",
+    "priority": "P1",
+    "typeZh": [
+      "关公文化",
+      "祠庙建筑",
+      "宗教礼仪"
+    ],
+    "typeEn": [
+      "Guan Yu Culture",
+      "Temple Architecture",
+      "Religious Etiquette"
+    ],
+    "reasonZh": "能补充运城和关公跨东亚文化传播，但需要更细致的宗教与历史解释。",
+    "reasonEn": "Adds Yuncheng and the trans-Asian cultural legacy of Guan Yu, but requires more nuanced religious and historical interpretation.",
+    "standaloneDecisionZh": "单独成条。",
+    "standaloneDecisionEn": "Standalone entry."
+  }
+]

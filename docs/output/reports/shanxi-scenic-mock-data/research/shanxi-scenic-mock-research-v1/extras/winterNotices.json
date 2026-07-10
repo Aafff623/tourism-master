@@ -1,0 +1,34 @@
+[
+  {
+    "spotSlug": "mount-wutai",
+    "severity": "high",
+    "titleZh": "冬季进山与低温",
+    "titleEn": "Winter Mountain Access and Severe Cold",
+    "bodyZh": "台怀镇和台顶可能出现明显温差、积雪、结冰和道路管制。不要仅根据太原或忻州市区天气出发。核验道路、景交和寺院开放，准备防风保暖层、防滑鞋和备用行程。",
+    "bodyEn": "Taihuai and the summits can differ sharply in temperature and may have snow, ice and road controls. Do not travel based only on Taiyuan or Xinzhou city forecasts. Check roads, shuttles and monastery access, and carry windproof layers, slip-resistant footwear and an alternative plan."
+  },
+  {
+    "spotSlug": "hukou-waterfall-shanxi",
+    "severity": "high",
+    "titleZh": "冰凌、水雾与道路结冰",
+    "titleEn": "Ice Formations, Mist and Icy Roads",
+    "bodyZh": "冬季冰景并不代表所有观景区都安全开放。水雾会在低温下增加结冰风险，临时关闭可能发生。确认山西侧状态并避免夜间赶路。",
+    "bodyEn": "Winter ice scenery does not mean every viewing area is safely open. Mist can increase icing risk in low temperatures, and temporary closures may occur. Confirm the Shanxi-side status and avoid rushed night driving."
+  },
+  {
+    "spotSlug": "hanging-temple",
+    "severity": "high",
+    "titleZh": "强风与栈道结冰",
+    "titleEn": "Strong Wind and Icy Walkways",
+    "bodyZh": "强风、降雪和结冰会影响登临区开放。即使景区地面区开放，登临票也可能暂停。",
+    "bodyEn": "Strong wind, snow and ice can close the climbing route. The ground area may remain open even when climbing tickets are suspended."
+  },
+  {
+    "spotSlug": "yungang-grottoes",
+    "severity": "medium",
+    "titleZh": "大同冬季寒冷与风沙",
+    "titleEn": "Cold and Wind in Datong",
+    "bodyZh": "洞窟游览仍包含较长户外步行，需防风保暖；个别洞窟可能因保护或维护轮换关闭。",
+    "bodyEn": "The grotto visit still includes substantial outdoor walking, so dress for cold and wind. Individual caves may rotate closed for conservation or maintenance."
+  }
+]

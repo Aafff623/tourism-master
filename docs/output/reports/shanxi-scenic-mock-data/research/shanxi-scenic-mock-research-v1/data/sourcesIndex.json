@@ -1,0 +1,144 @@
+[
+  {
+    "id": "src-unesco-yungang",
+    "title": "UNESCO World Heritage Centre — Yungang Grottoes",
+    "url": "https://whc.unesco.org/en/list/1039/",
+    "type": "international official",
+    "supports": [
+      "official English name",
+      "World Heritage year",
+      "cave/statue counts",
+      "heritage significance",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "src-unesco-wutai",
+    "title": "UNESCO World Heritage Centre — Mount Wutai",
+    "url": "https://whc.unesco.org/en/list/1279/",
+    "type": "international official",
+    "supports": [
+      "official English name",
+      "World Heritage status",
+      "cultural landscape significance"
+    ]
+  },
+  {
+    "id": "src-unesco-pingyao",
+    "title": "UNESCO World Heritage Centre — Ancient City of Ping Yao",
+    "url": "https://whc.unesco.org/en/list/812/",
+    "type": "international official",
+    "supports": [
+      "official English name",
+      "World Heritage status",
+      "component sites",
+      "heritage significance"
+    ]
+  },
+  {
+    "id": "src-yungang-official",
+    "title": "Yungang Grottoes official website",
+    "url": "https://www.yungang.org/",
+    "type": "attraction official",
+    "supports": [
+      "same-day notices",
+      "visitor services",
+      "opening and ticket updates"
+    ],
+    "note": "Dynamic information must be checked at implementation time."
+  },
+  {
+    "id": "src-wutai-government",
+    "title": "Mount Wutai Scenic Area Administration portal",
+    "url": "https://wts.sxxz.gov.cn/",
+    "type": "local government",
+    "supports": [
+      "traffic controls",
+      "reservations",
+      "weather and opening notices"
+    ],
+    "note": "URL availability and exact content path should be manually rechecked."
+  },
+  {
+    "id": "src-pingyao-government",
+    "title": "Pingyao County People’s Government",
+    "url": "http://www.pingyao.gov.cn/",
+    "type": "local government",
+    "supports": [
+      "heritage notices",
+      "local transport and policy",
+      "official place information"
+    ]
+  },
+  {
+    "id": "src-shanxi-culture",
+    "title": "Department of Culture and Tourism of Shanxi Province",
+    "url": "https://wlt.shanxi.gov.cn/",
+    "type": "provincial government",
+    "supports": [
+      "A-level attraction lists",
+      "tourism notices",
+      "provincial cultural information"
+    ]
+  },
+  {
+    "id": "src-mct",
+    "title": "Ministry of Culture and Tourism of the People’s Republic of China",
+    "url": "https://www.mct.gov.cn/",
+    "type": "national government",
+    "supports": [
+      "national 5A announcements",
+      "tourism policy and official registers"
+    ]
+  },
+  {
+    "id": "src-ncha",
+    "title": "National Cultural Heritage Administration",
+    "url": "https://www.ncha.gov.cn/",
+    "type": "national government",
+    "supports": [
+      "protected heritage designations",
+      "conservation information"
+    ]
+  },
+  {
+    "id": "src-taiyuan-government",
+    "title": "Taiyuan Municipal People’s Government",
+    "url": "https://www.taiyuan.gov.cn/",
+    "type": "local government",
+    "supports": [
+      "Jinci public information",
+      "Taiyuan transport and local notices"
+    ]
+  },
+  {
+    "id": "src-datong-government",
+    "title": "Datong Municipal People’s Government",
+    "url": "https://www.dt.gov.cn/",
+    "type": "local government",
+    "supports": [
+      "Yungang and Hanging Temple local notices",
+      "Datong transport"
+    ]
+  },
+  {
+    "id": "src-linfen-government",
+    "title": "Linfen Municipal People’s Government",
+    "url": "https://www.linfen.gov.cn/",
+    "type": "local government",
+    "supports": [
+      "Hukou and Ji County local notices",
+      "road and weather notices"
+    ]
+  },
+  {
+    "id": "src-commons",
+    "title": "Wikimedia Commons category pages",
+    "url": "https://commons.wikimedia.org/",
+    "type": "open media discovery",
+    "supports": [
+      "image discovery only"
+    ],
+    "note": "Each file has its own license and attribution requirements; do not treat the category URL as blanket permission."
+  }
+]

@@ -30,6 +30,9 @@
 | 用户端 | Weapp | `tourism_weapp`，UniApp 微信小程序 |
 | 后端 | API | `tourism_api`，Snowy / Spring Boot 服务 |
 | Mock 数据 | Mock Data | 无官方资料时使用的山西景区演示数据；须可替换为真实数据 |
+| 景区热点 | Home Hot Spots | 首页展示的景区推荐位；数据来自调研 `homeRecommendations`，**不是**模板 `biz_recommend`（美食住宿等） |
+| 景区 Slug | Spot Slug | 景区业务唯一键（kebab-case）；模式 A 列表/详情导航主键，见 ADR-0001 |
+| 接入模式 A/B/C | Integration Mode | A=前端 Mock 适配层；B=后端 Seed+API；C=完整内容管理 |
 
 ## 关键约束
 
@@ -39,6 +42,9 @@
 4. **密钥与本地配置不入库**：数据库密码、Redis、微信密钥等仅本地/环境变量；勿提交真实密钥。
 5. **术语一致**：Issue、PRD、代码命名、测试名使用本表词汇；缺口先补术语再写代码。
 6. **PRD 门禁**：功能开发前须有 `docs/output/reports/{theme}/prd.md` 且 `status: approved`（纯文档/初始化除外）。
+7. **模式 A 游客浏览**：景区双语主链路经本地 Repository，不强制登录；订票/评论等原 API 仍遵循模板鉴权。
+8. **导航键**：景区跳转使用 `slug`（ADR-0001）。
+9. **首页热点**：景区推荐展示为首页热点，禁止把调研景区推荐写入 `biz_recommend`。
 
 ## 技术栈（模板现状）
 

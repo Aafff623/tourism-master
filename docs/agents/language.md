@@ -44,6 +44,9 @@ Triage 角色与标签字符串映射见 `triage-labels.md`。
 | 用户端 | Weapp | `tourism_weapp` |
 | 后端 | API | `tourism_api` |
 | Mock 数据 | Mock Data | 可替换演示数据 |
+| 景区热点 | Home Hot Spots | 首页景区推荐；≠ `biz_recommend` |
+| 景区Slug | Spot Slug | 导航业务键（ADR-0001） |
+| 模式 A/B/C | Integration Mode | Mock 适配层 / Seed+API / 完整 CMS |
 
 ## 上下文（多端）
 

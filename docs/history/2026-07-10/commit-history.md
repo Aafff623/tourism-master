@@ -36,3 +36,42 @@ docs(init): scaffold agent assets and GitHub-linked project docs
 docs(mvp): add bilingual MVP feature list and scenic mock research Q&A
 
 ---
+
+## 3. scenic-mock-phase0-audit
+
+### 做了什么
+- 拷贝融合指南与 `shanxi-scenic-mock-research-v1` 调研包至 docs
+- 只读审计三端数据链路；输出 integration-audit / field-mapping / prd（draft）
+- 推荐第一阶段采用前端 Mock 适配层（模式 A）；未改业务代码
+
+### 改了哪些文件
+- `docs/output/reports/shanxi-scenic-mock-data/**`（含 research 包、指南、审计文档）
+- `docs/README.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+docs(mock): ingest scenic research pack and phase-0 integration audit
+
+---
+
+## 4. decisions-skills-deliver
+
+### 做了什么
+- 落盘用户拍板：模式 A、首页景区热点、游客浏览、详情保留订票评论、slug 导航
+- 新增 ADR-0001；PRD → approved；创建 handoff `weapp-mock-integration`
+- 自 my-blogs 迁入 Cursor `/deliver`、`/archive` skills，并同步 AGENTS/CLAUDE/CONTEXT/language
+- 实践 `/deliver`：维护 commit-history 与交付摘要（本条）；**未** commit
+
+### 改了哪些文件
+- `.cursor/skills/deliver/SKILL.md`、`.cursor/skills/archive/SKILL.md`
+- `.claude/README.md`、`AGENTS.md`、`CLAUDE.md`、`CONTEXT.md`
+- `docs/adr/0000-record-architecture-decisions.md`、`docs/adr/0001-bilingual-field-model.md`
+- `docs/agents/context.md`、`docs/agents/language.md`、`docs/contexts/weapp/CONTEXT.md`、`docs/README.md`
+- `docs/output/reports/shanxi-scenic-mock-data/**`（含 research 包、audit、mapping、prd、指南）
+- `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+docs(mock): lock mode-A decisions, add deliver skills, and approve scenic mock PRD
+
+---
