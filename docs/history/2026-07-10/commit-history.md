@@ -122,3 +122,24 @@ docs(mvp): add product PRD, secondary-dev list, and Wave-1 roadmap
 feat(weapp): add scenic mock adapter layer for Mode A bilingual data
 
 ---
+
+## 7. weapp-locale-shell
+
+### 做了什么
+- Wave 1 Phase 2：壳文案字典、Tab 中英、首页语言切换条
+- locale 持久化 + `scenic-locale-changed` 事件；App 启动应用 Tab
+- handoff → awaiting-review
+
+### 改了哪些文件
+- `tourism_weapp/services/shellCopy.js`
+- `tourism_weapp/services/locale.js`
+- `tourism_weapp/App.vue`
+- `tourism_weapp/pages/home/home.vue`
+- `docs/output/handoff/shanxi-bilingual-mvp/weapp-locale-shell.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+feat(weapp): add bilingual shell locale switch and tabBar copy
+
+---

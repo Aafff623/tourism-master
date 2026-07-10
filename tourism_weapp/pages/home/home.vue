@@ -1,8 +1,6 @@
 <template>
 	<view>
 		
-		<!-- draw.io -->
-		
 		<!-- 轮播图 -->
 		<swiper class="screen-swiper" :indicator-dots="true"
 			:circular="true" :autoplay="true" interval="3000" duration="500"
@@ -14,9 +12,26 @@
 					v-if="item.type=='video'"></video>
 			</swiper-item>
 		</swiper>
+
+		<!-- 语言切换 -->
+		<view class="locale-bar bg-white padding-sm flex align-center justify-between">
+			<text class="text-grey">{{ shell.langHint }}</text>
+			<view class="locale-switch flex">
+				<view
+					class="locale-chip"
+					:class="{ active: locale === 'zh' }"
+					@click="onSelectLocale('zh')"
+				>{{ shell.langZh }}</view>
+				<view
+					class="locale-chip"
+					:class="{ active: locale === 'en' }"
+					@click="onSelectLocale('en')"
+				>{{ shell.langEn }}</view>
+			</view>
+		</view>
 		
 		<!-- 通知 -->
-		<view class="margin-top-sm">
+		<view class="margin-top-sm" v-if="notice">
 			<uni-notice-bar show-icon scrollable color="#ffaa00" background-color="#fff" :text="notice" />
 		</view>
 		
@@ -24,19 +39,19 @@
 		<view class="nav bg-white margin-top-sm padding-sm flex align-center justify-around">
 			<view @click="gotoPage('child','/home/children/news/news')" class="nav_item flex flex-direction align-center">
 				<view class="icon">	<text class="cuIcon-hotfill"></text>	</view>
-				<text class="label">景区动态</text>
+				<text class="label">{{ shell.homeNavNews }}</text>
 			</view>
 			<view @click="gotoPage('tabbar','/spot/spot')"  class="nav_item flex flex-direction align-center">
 				<view class="icon">	<text class="cuIcon-countdownfill"></text>	</view>
-				<text class="label">景点预约</text>
+				<text class="label">{{ shell.homeNavSpot }}</text>
 			</view>
 			<view @click="gotoPage('child','/home/children/recommend/recommend')"  class="nav_item flex flex-direction align-center">
 				<view class="icon">	<text class="cuIcon-favorfill"></text>	</view>
-				<text class="label">推荐</text>
+				<text class="label">{{ shell.homeNavRecommend }}</text>
 			</view>
 			<view @click="gotoPage('child','/home/children/heritage/heritage')"  class="nav_item flex flex-direction align-center">
 				<view class="icon">	<text class="cuIcon-activity"></text>	</view>
-				<text class="label">文化遗产</text>
+				<text class="label">{{ shell.homeNavHeritage }}</text>
 			</view>
 		</view>
 	
@@ -44,7 +59,7 @@
 		<view class="card" v-if="userPlain && userPlain.status!=='已完成'">
 			<view class="flex align-center justify-between">
 				<text class="h3">{{userPlain.title}}</text>
-				<text class="text-grey" @click="toPlainDetail(userPlain.id)">详情 <text class="cuIcon-right"></text></text>
+				<text class="text-grey" @click="toPlainDetail(userPlain.id)">{{ shell.homePlanDetail }} <text class="cuIcon-right"></text></text>
 			</view>
 			<view class="step">
 				<uni-steps direction="row" :active="-1" :options="userPlain.content"></uni-steps>
@@ -55,29 +70,33 @@
 		<!-- 游玩指南 -->
 		<view class="guide_container">
 			<view @click="gotoPage('tabbar','/strategy/strategy')">
-				<text class="h3">官方攻略</text>
-				<text>最具代表性的玩法</text>
+				<text class="h3">{{ shell.homeGuideStrategy }}</text>
+				<text>{{ shell.homeGuideStrategySub }}</text>
 			</view>
 			<view @click="gotoPage('tabbar','/service/service')">
-				<text class="h3">景区服务</text>
-				<text>游玩保障到位</text>
+				<text class="h3">{{ shell.homeGuideService }}</text>
+				<text>{{ shell.homeGuideServiceSub }}</text>
 			</view>
 		</view>
 		
-		<!-- 热门景区 -->
+		<!-- 热门景区（Phase 3 将改为景区热点 Mock） -->
 		<view class="padding-sm">
+			<view class="margin-bottom-sm">
+				<text class="h3">{{ shell.homeHotSpots }}</text>
+				<text class="text-grey margin-left-sm">{{ shell.homeHotSpotsSub }}</text>
+			</view>
 			<view class="spot-list">
 				<view class="spot-item" v-for="(item,index) in getredspot" :key="index"  @click="toDetail(item.id)"> 
 					<image :src="item.cover.url" style="width: 100%;height: 130px;" />
-					<view class="bg-orange cu-tag sm" style="position: absolute;right: 0;top: 0;">{{item.rate}}分</view>
+					<view class="bg-orange cu-tag sm" style="position: absolute;right: 0;top: 0;" v-if="item.rate">{{item.rate}}</view>
 					
 					<view class="flex-sub flex flex-direction justify-between padding-sm">
 						<view class="h3 title">
-							<view class="cu-tag sm bg-red margin-right-sm">{{item.startLevel}}A</view>		
+							<view class="cu-tag sm bg-red margin-right-sm" v-if="item.startLevel">{{item.startLevel}}A</view>		
 							<text>{{ item.spotName }}</text>
 						</view>
 						<view class="margin-top-xs">
-							<text v-for="a in item.spotTags" class="cu-tag sm bg-blue light">{{a}}</text>
+							<text v-for="(a, tagIndex) in item.spotTags" :key="tagIndex" class="cu-tag sm bg-blue light">{{a}}</text>
 						</view>
 						<view class="address weaktext margin-top-xs">{{item.address}}</view>
 					</view>
@@ -91,6 +110,8 @@
 
 <script>
 	import indexApi from "@/api/indexApi.js"
+	import { getLocale, setLocale, LOCALE_CHANGED_EVENT } from "@/services/locale.js"
+	import { getShellCopy } from "@/services/shellCopy.js"
 	
 	let swiperList =  [
 		{
@@ -117,16 +138,23 @@
 	
 	export default {
 		data() {
+			const locale = getLocale()
 			return {
 				swiperList: swiperList,
 				getredspot: [],
 				userPlain: {},
-				notice: null
+				notice: null,
+				locale,
+				shell: getShellCopy(locale)
 			}
 		},
 		onShow() {
+			this.refreshShell()
 			indexApi.getredspot().then(res => {
 				this.getredspot = res.data
+			}).catch(() => {
+				// Guest / offline: keep empty until Phase 3 mock hotspots
+				this.getredspot = this.getredspot || []
 			})
 			indexApi.getnewplan().then(res => {
 				this.userPlain = res.data
@@ -134,12 +162,33 @@
 					title: item.describle,
 					desc: item.dateTime
 				}))
-			})
+			}).catch(() => {})
 			indexApi.getconfig({key: 'SNOWY_BIZ_NOTICE'}).then(res => {
 				this.notice = res.data
-			})
+			}).catch(() => {})
+		},
+		onLoad() {
+			uni.$on(LOCALE_CHANGED_EVENT, this.onLocaleChanged)
+		},
+		onUnload() {
+			uni.$off(LOCALE_CHANGED_EVENT, this.onLocaleChanged)
 		},
 		methods: {
+			refreshShell() {
+				this.locale = getLocale()
+				this.shell = getShellCopy(this.locale)
+			},
+			onLocaleChanged(nextLocale) {
+				this.locale = nextLocale
+				this.shell = getShellCopy(nextLocale)
+			},
+			onSelectLocale(nextLocale) {
+				if (nextLocale === this.locale) {
+					return
+				}
+				setLocale(nextLocale)
+				this.refreshShell()
+			},
 			gotoPage(type,path){
 				if (type==='tabbar') {
 					uni.switchTab({
@@ -177,6 +226,26 @@
 
 <style scoped lang="scss">
 	
+	.locale-bar{
+		.locale-switch{
+			gap: 8px;
+		}
+		.locale-chip{
+			min-width: 48px;
+			padding: 4px 12px;
+			text-align: center;
+			border-radius: 4px;
+			border: 1px solid #e5e5e5;
+			color: #666;
+			font-size: 13px;
+			&.active{
+				background: #00C379;
+				border-color: #00C379;
+				color: #fff;
+			}
+		}
+	}
+
 	.spot-list{
 		
 		column-count: 2; 
