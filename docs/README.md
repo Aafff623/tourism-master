@@ -22,11 +22,13 @@ docs/
 ├── contexts/           分端 CONTEXT（weapp / admin / api）
 ├── knowledge/          可迁移知识沉淀
 ├── history/            攒批 commit 记录
-├── images/readme/      README 配图
+├── images/readme/      README 配图（banner / architecture / tech-stack / workflow / structure）
 └── output/
     ├── reports/
     │   ├── archive/{theme}/
-    │   └── {theme}/            prd.md、brief
+    │   ├── readme-diagrams/           README 配图生成 brief
+    │   ├── local-backend-bootstrap/   本机后端联调阻塞简报（喂 GPT 调研）
+    │   └── {theme}/                   prd.md、brief
     ├── handoff/
     │   ├── archive/{theme}/
     │   └── {theme}/{task}.md
@@ -59,7 +61,8 @@ docs/
 | `.cursor/skills/deliver/` | Cursor `/deliver` Skill | **已迁入** |
 | `.cursor/skills/archive/` | Cursor `/archive` Skill | **已迁入** |
 | `docs/adr/0001-bilingual-field-model.md` | 双语字段与 slug 导航 | **Accepted** |
-| `docs/output/reports/shanxi-bilingual-mvp/` | 产品 PRD、二次开发清单、路线图 | **PRD approved** |
-| `docs/output/handoff/shanxi-bilingual-mvp/` | Wave 1 页面任务 handoff | **已拆分** |
+| `docs/output/reports/shanxi-bilingual-mvp/` | 产品 PRD、二次开发清单、路线图 | **PRD approved**；Wave 1/2 核心已归档 |
 | `docs/output/reports/shanxi-scenic-mock-data/` | 调研包 + 审计 + 数据 PRD | **进行中** |
-| `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md` | 模式 A 数据层 handoff | **in-progress** |
+| `docs/output/reports/local-backend-bootstrap/` | 本机缺框架 SQL / 后端无法启动问题简报 | **draft** |
+| `docs/output/reports/readme-diagrams/` | README 配图生成 brief | **已用** |
+| `docs/images/readme/` | README 终稿配图 | **已入库** |

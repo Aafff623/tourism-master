@@ -314,3 +314,17 @@ feat(weapp,admin): switch scenic data to bilingual API with mock fallback
 docs(archive): archive Wave-2 bilingual Mode B handoffs
 
 ---
+
+## 16. readme-diagrams + local DEV_URL + backend bootstrap brief
+
+### 做了什么
+- README 配图与 brief 入库；docs 索引更新
+- 小程序 DEV_URL 改为本机 WLAN IP 便于联调
+- 新增本机后端联调阻塞简报（供 GPT Pro 调研）
+
+### commit 信息（分类）
+docs(readme): add README diagrams and generation brief
+fix(weapp): point DEV_URL to local WLAN API host
+docs: add local backend bootstrap problem brief for research
+
+---
