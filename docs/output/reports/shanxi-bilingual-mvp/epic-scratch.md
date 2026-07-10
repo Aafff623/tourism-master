@@ -2,10 +2,10 @@
 
 | task | handoff | status |
 |---|---|---|
-| weapp-mock-integration | `../handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`（跨 theme 数据层） | awaiting-review → **done（已 push）** |
-| weapp-locale-shell | `weapp-locale-shell.md` | awaiting-review |
+| weapp-mock-integration | `../handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`（跨 theme 数据层） | done |
+| weapp-locale-shell | `weapp-locale-shell.md` | done |
 | weapp-spot-list-detail | `weapp-spot-list-detail.md` | in-progress（占位） |
-| weapp-home-hotspots | `weapp-home-hotspots.md` | in-progress（占位） |
+| weapp-home-hotspots | `weapp-home-hotspots.md` | awaiting-review |
 | weapp-service-phrases | `weapp-service-phrases.md` | in-progress（占位） |
 | weapp-mvp-regression | `weapp-mvp-regression.md` | in-progress（占位） |
 

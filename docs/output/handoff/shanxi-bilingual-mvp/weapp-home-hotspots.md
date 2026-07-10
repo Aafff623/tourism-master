@@ -4,29 +4,32 @@
 theme: shanxi-bilingual-mvp
 task: weapp-home-hotspots
 issue: null
-status: in-progress
+status: awaiting-review
 updated: 2026-07-10
 depends-on: weapp-mock-integration, weapp-locale-shell
 ```
 
 ## 目标
 
-首页「景区热点」承接 `homeRecommendations`；提供语言切换入口；不写入 `biz_recommend`。
+首页「景区热点」承接 `homeRecommendations`；语言切换刷新名称/推荐理由；点击以 `slug` 进详情；不写入 `biz_recommend`。
 
 ## 已完成
 
-- （待实施）
+- `home.vue` 去掉 `getredspot` API，改用 `getHomeHotspots(locale)`
+- 展示 rank、levelLabel、tags、reason；封面占位图
+- 切换中/EN 时重载热点文案
+- 跳转 `/pages/spot/detail?id={slug}`（与 ADR-0001 兼容参数名）
 
 ## 待 Review（当前交付）
 
-- 无（规划占位）
+- 热点列表中英与排序（6 条）是否正确
+- 点击进详情：当前详情页仍走旧 API，**slug 详情要等下一 phase `weapp-spot-list-detail`** 才会真正打开 Mock 内容（本 phase 只保证路由参数正确）
+- 未改 `biz_recommend` / 美食住宿推荐页
 
 ## 阻塞 / 问题
 
-- 无
+- 无（详情 Mock 为已知后续依赖，非阻塞本 phase 验收「热点展示」）
 
-## 下次
+## 下次（Review 通过并 commit 后）
 
-- 替换/覆盖原热门景区展示为热点
-- 点击跳转详情（slug）
-- 语言入口可见
+- `weapp-spot-list-detail`

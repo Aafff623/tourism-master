@@ -143,3 +143,21 @@ feat(weapp): add scenic mock adapter layer for Mode A bilingual data
 feat(weapp): add bilingual shell locale switch and tabBar copy
 
 ---
+
+## 8. weapp-home-hotspots
+
+### 做了什么
+- Wave 1 Phase 3：首页景区热点接 Mock `getHomeHotspots`；中英切换刷新；slug 跳转
+- 移除对 `getredspot` 的依赖（该区块）
+
+### 改了哪些文件
+- `tourism_weapp/pages/home/home.vue`
+- `docs/output/handoff/shanxi-bilingual-mvp/weapp-home-hotspots.md`
+- `docs/output/handoff/shanxi-bilingual-mvp/weapp-locale-shell.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+feat(weapp): show Shanxi home hotspots from scenic mock recommendations
+
+---

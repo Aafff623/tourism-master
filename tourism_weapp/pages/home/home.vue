@@ -79,29 +79,32 @@
 			</view>
 		</view>
 		
-		<!-- 热门景区（Phase 3 将改为景区热点 Mock） -->
+		<!-- 景区热点（Mock homeRecommendations，非 biz_recommend） -->
 		<view class="padding-sm">
 			<view class="margin-bottom-sm">
 				<text class="h3">{{ shell.homeHotSpots }}</text>
 				<text class="text-grey margin-left-sm">{{ shell.homeHotSpotsSub }}</text>
 			</view>
-			<view class="spot-list">
-				<view class="spot-item" v-for="(item,index) in getredspot" :key="index"  @click="toDetail(item.id)"> 
-					<image :src="item.cover.url" style="width: 100%;height: 130px;" />
-					<view class="bg-orange cu-tag sm" style="position: absolute;right: 0;top: 0;" v-if="item.rate">{{item.rate}}</view>
+			<view class="spot-list" v-if="hotspots.length">
+				<view class="spot-item" v-for="(item,index) in hotspots" :key="item.slug || index" @click="toSpotBySlug(item.slug)">
+					<image :src="item.coverUrl || (item.cover && item.cover.url)" style="width: 100%;height: 130px;" mode="aspectFill" />
+					<view class="bg-orange cu-tag sm" style="position: absolute;right: 0;top: 0;" v-if="item.rank">#{{ item.rank }}</view>
 					
 					<view class="flex-sub flex flex-direction justify-between padding-sm">
 						<view class="h3 title">
-							<view class="cu-tag sm bg-red margin-right-sm" v-if="item.startLevel">{{item.startLevel}}A</view>		
-							<text>{{ item.spotName }}</text>
+							<view class="cu-tag sm bg-red margin-right-sm" v-if="item.levelLabel">{{ item.levelLabel }}</view>
+							<view class="cu-tag sm bg-red margin-right-sm" v-else-if="item.startLevel">{{ item.startLevel }}A</view>
+							<text>{{ item.name || item.spotName }}</text>
 						</view>
-						<view class="margin-top-xs">
+						<view class="margin-top-xs" v-if="item.spotTags && item.spotTags.length">
 							<text v-for="(a, tagIndex) in item.spotTags" :key="tagIndex" class="cu-tag sm bg-blue light">{{a}}</text>
 						</view>
-						<view class="address weaktext margin-top-xs">{{item.address}}</view>
+						<view class="address weaktext margin-top-xs" v-if="item.reason">{{ item.reason }}</view>
+						<view class="address weaktext margin-top-xs" v-else>{{ item.city || item.address }}</view>
 					</view>
 				</view>
 			</view>
+			<view v-else class="padding-sm text-grey">{{ shell.emptyList }}</view>
 		</view>
 		
 		
@@ -112,6 +115,7 @@
 	import indexApi from "@/api/indexApi.js"
 	import { getLocale, setLocale, LOCALE_CHANGED_EVENT } from "@/services/locale.js"
 	import { getShellCopy } from "@/services/shellCopy.js"
+	import { getHomeHotspots } from "@/services/scenicRepository.js"
 	
 	let swiperList =  [
 		{
@@ -141,7 +145,7 @@
 			const locale = getLocale()
 			return {
 				swiperList: swiperList,
-				getredspot: [],
+				hotspots: [],
 				userPlain: {},
 				notice: null,
 				locale,
@@ -150,12 +154,7 @@
 		},
 		onShow() {
 			this.refreshShell()
-			indexApi.getredspot().then(res => {
-				this.getredspot = res.data
-			}).catch(() => {
-				// Guest / offline: keep empty until Phase 3 mock hotspots
-				this.getredspot = this.getredspot || []
-			})
+			this.loadHotspots()
 			indexApi.getnewplan().then(res => {
 				this.userPlain = res.data
 				this.userPlain.content = res.data.content.map(item=>({
@@ -178,9 +177,13 @@
 				this.locale = getLocale()
 				this.shell = getShellCopy(this.locale)
 			},
+			loadHotspots() {
+				this.hotspots = getHomeHotspots(this.locale)
+			},
 			onLocaleChanged(nextLocale) {
 				this.locale = nextLocale
 				this.shell = getShellCopy(nextLocale)
+				this.loadHotspots()
 			},
 			onSelectLocale(nextLocale) {
 				if (nextLocale === this.locale) {
@@ -188,6 +191,7 @@
 				}
 				setLocale(nextLocale)
 				this.refreshShell()
+				this.loadHotspots()
 			},
 			gotoPage(type,path){
 				if (type==='tabbar') {
@@ -200,19 +204,17 @@
 					})
 				}
 			},
-			toDetail(id){
+			toSpotBySlug(slug){
+				if (!slug) {
+					return
+				}
 				uni.navigateTo({
-					url:'/pages/spot/detail?id='+id
+					url: '/pages/spot/detail?id=' + encodeURIComponent(slug)
 				})
 			},
 			toPlainDetail(id){
 				uni.navigateTo({
 					url:'/pages/user/children/plain/detail?id='+id
-				})
-			},
-			toSpotDetail(id){
-				uni.navigateTo({
-					url:'/pages/spot/detail?id='+id
 				})
 			},
 			toStragegyDetail(id){
