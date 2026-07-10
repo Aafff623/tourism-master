@@ -18,3 +18,21 @@
 docs(init): scaffold agent assets and GitHub-linked project docs
 
 ---
+
+## 2. mvp-and-research-qa
+
+### 做了什么
+- 仓库可见性改为 public；确认 git 作者为 Aafff623 / 1012512411@qq.com
+- 撰写 MVP 功能清单与山西景区 Mock 调研 Q&A
+
+### 改了哪些文件
+- `README.md`（标注 public）
+- `docs/README.md`
+- `docs/output/reports/shanxi-bilingual-mvp/mvp-feature-list.md`
+- `docs/output/reports/shanxi-bilingual-mvp/scenic-mock-research-qa.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+docs(mvp): add bilingual MVP feature list and scenic mock research Q&A
+
+---

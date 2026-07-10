@@ -6,7 +6,7 @@
 
 | 资源 | 链接 |
 |---|---|
-| GitHub | https://github.com/Aafff623/tourism-master |
+| GitHub | https://github.com/Aafff623/tourism-master（public） |
 | 领域事实 | [`CONTEXT.md`](CONTEXT.md) · [`CONTEXT-MAP.md`](CONTEXT-MAP.md) |
 | Agent 入口 | [`AGENTS.md`](AGENTS.md) · [`CLAUDE.md`](CLAUDE.md) |
 | 文档资产 | [`docs/README.md`](docs/README.md) |

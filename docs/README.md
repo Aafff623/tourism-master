@@ -59,4 +59,5 @@ docs/
 | `.cursor/skills/deliver/` | Cursor `/deliver` Skill | 按需 |
 | `.cursor/skills/archive/` | Cursor `/archive` Skill | 按需 |
 | `docs/adr/0001-*.md` | 首个架构决策（如双语字段模型） | 待业务时写 |
-| 山西景区 Mock 调研 Q&A | 交给网页 GPT 的调研清单 | 下一阶段 |
+| 山西景区 Mock 调研 Q&A | 交给网页 GPT 的调研清单 | 见 `output/reports/shanxi-bilingual-mvp/scenic-mock-research-qa.md` |
+| MVP 功能清单 | 双语小程序 MVP 范围 | 见 `output/reports/shanxi-bilingual-mvp/mvp-feature-list.md` |
