@@ -131,11 +131,14 @@ pnpm dev
 
 ### 后端（`tourism_api`）
 
-用 IDEA 打开 `tourism_api`，配置 JDK、Maven、MySQL、Redis。库名与账号见：
+1. MySQL 8 + Redis（见 [`tourism_api/sql/README.md`](tourism_api/sql/README.md)）  
+2. 按该 README **依序导入** `00` → `01`（Snowy v2.0.0 框架）→ `02`（biz_spot）→ Wave2 Seed → `03`（业务空表）  
+3. **JDK 8** 下：`tourism_api` → `mvn clean install -DskipTests`，再进入 `snowy-web-app` 执行 `mvn spring-boot:run`（端口 **86**）  
+4. 管理端默认账号：**superAdmin** / **123456**
 
-`tourism_api/snowy-web-app/src/main/resources/application.properties`
+库名与账号见：`tourism_api/snowy-web-app/src/main/resources/application.properties`（本地示例，勿提交真实生产密钥）。
 
-本地默认配置**勿把真实生产密钥提交进库**。
+本机联调阻塞与调研记录：[`docs/output/reports/local-backend-bootstrap/`](docs/output/reports/local-backend-bootstrap/)。
 
 ### 小程序（`tourism_weapp`）
 

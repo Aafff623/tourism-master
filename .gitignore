@@ -30,6 +30,7 @@ logs/
 *.ipr
 *.log
 tmp/
+.tmp-snowy-v2/
 !DmJdbcDriver18.jar
 !kingbase8-8.6.0.jar
 

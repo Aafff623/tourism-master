@@ -12,7 +12,7 @@ ALTER TABLE `biz_spot`
   ADD COLUMN `traffice_en` TEXT NULL AFTER `traffice`,
   ADD COLUMN `city` VARCHAR(128) NULL AFTER `address`,
   ADD COLUMN `city_en` VARCHAR(128) NULL AFTER `city`,
-  ADD COLUMN `level_label` VARCHAR(64) NULL AFTER `start_level`,
+  ADD COLUMN `level_label` TEXT NULL AFTER `start_level`,
   ADD COLUMN `ticket_summary` TEXT NULL AFTER `level_label`,
   ADD COLUMN `ticket_summary_en` TEXT NULL AFTER `ticket_summary`,
   ADD COLUMN `visit_tips` TEXT NULL AFTER `ticket_summary_en`,
