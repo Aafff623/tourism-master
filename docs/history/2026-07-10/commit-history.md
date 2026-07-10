@@ -180,3 +180,21 @@ feat(weapp): show Shanxi home hotspots from scenic mock recommendations
 feat(weapp): wire spot list and detail to bilingual scenic mock
 
 ---
+
+## 10. weapp-service-phrases
+
+### 做了什么
+- Wave 1 Phase 5：服务页按分类展示 18 条通用双语话术；其他服务降权保留
+
+### 改了哪些文件
+- `tourism_weapp/pages/service/service.vue`
+- `tourism_weapp/services/shellCopy.js`
+- `docs/output/handoff/shanxi-bilingual-mvp/weapp-service-phrases.md`
+- `docs/output/handoff/shanxi-bilingual-mvp/weapp-spot-list-detail.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+feat(weapp): show categorized bilingual service phrases on service tab
+
+---
