@@ -78,4 +78,14 @@ public interface SpotService extends IService<Spot> {
     Spot getOrderByspotName(String orderId);
 
     List<Spot> spotBook(String spotname);
+
+    /**
+     * 按 slug 查询双语景区（不含逻辑删除）
+     */
+    Spot getBySlug(String slug);
+
+    /**
+     * 已配置 slug 的景区列表（P0 Seed 等）
+     */
+    List<Spot> listBilingualSpots();
 }

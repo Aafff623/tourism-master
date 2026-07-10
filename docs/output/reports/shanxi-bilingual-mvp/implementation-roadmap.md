@@ -73,6 +73,6 @@ SD-16～18；需模式 C 级 ADR/PRD。
 
 ## 下一行动（Agent）
 
-1. 用户确认本 PRD / 清单 / 路线图（或直接说「继续 Wave 1」）。  
-2. 从 **task 1 `weapp-mock-integration`** 开始改 `tourism_weapp`。  
-3. 每任务结束执行 `/deliver`，等 Review 后再 commit。
+1. Wave 1 已归档；Wave 2 进行中。  
+2. 当前交付：`api-seed-integration` → 等用户 Review。  
+3. Review 通过后 commit，再开 `weapp-api-switch`。

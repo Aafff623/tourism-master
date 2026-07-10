@@ -17,7 +17,7 @@
 
 | task | handoff | status |
 |---|---|---|
-| api-seed-integration | `handoff/shanxi-bilingual-mvp/api-seed-integration.md` | in-progress |
+| api-seed-integration | `handoff/shanxi-bilingual-mvp/api-seed-integration.md` | review |
 | weapp-api-switch | `handoff/shanxi-bilingual-mvp/weapp-api-switch.md` | pending |
 | admin-bilingual-fields | `handoff/shanxi-bilingual-mvp/admin-bilingual-fields.md` | pending |
 

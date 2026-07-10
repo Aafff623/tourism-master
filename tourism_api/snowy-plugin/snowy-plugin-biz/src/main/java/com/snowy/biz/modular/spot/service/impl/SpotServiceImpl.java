@@ -152,4 +152,21 @@ public class SpotServiceImpl extends ServiceImpl<SpotMapper, Spot> implements Sp
         return spots;
     }
 
+    @Override
+    public Spot getBySlug(String slug) {
+        if (StrUtil.isBlank(slug)) {
+            return null;
+        }
+        return this.lambdaQuery().eq(Spot::getSlug, slug).one();
+    }
+
+    @Override
+    public List<Spot> listBilingualSpots() {
+        return this.lambdaQuery()
+                .isNotNull(Spot::getSlug)
+                .ne(Spot::getSlug, "")
+                .orderByAsc(Spot::getSlug)
+                .list();
+    }
+
 }

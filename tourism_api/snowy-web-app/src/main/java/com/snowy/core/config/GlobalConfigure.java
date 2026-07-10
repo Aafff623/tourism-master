@@ -139,13 +139,16 @@ public class GlobalConfigure implements WebMvcConfigurer {
             "/biz/spot/add",
             "/biz/ticket/add",
 
-            /* 微信小程序首页无需登录 */
+            /* 微信小程序首页无需登录（模板遗留错误前缀 wx/c，保留兼容） */
             "wx/c/index/spotactivite",
             "wx/c/index/getredstrategy",
             "wx/c/index/getredspot",
             "wx/c/index/getrecommend",
             "wx/c/index/getspotbook",
             "wx/c/index/getrecommend",
+
+            /* Wave 2：双语景区游客可读 */
+            "/client/c/spot/bilingual/**",
 
 
 

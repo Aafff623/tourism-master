@@ -239,3 +239,34 @@ test(weapp): record Wave-1 bilingual MVP regression results
 docs(archive): archive Wave-1 bilingual MVP handoffs
 
 ---
+
+## 13. api-seed-integration（Wave 2）
+
+### 做了什么
+- ADR-0002 + DDL + 幂等 Seed（6 P0，含 homeRank）
+- `biz_spot` 实体/入参双语列；`getBySlug` / `listBilingualSpots`
+- 游客双语 API：`/client/c/spot/bilingual/{catalog,detail,hotspots}` + 免登录白名单
+
+### 改了哪些文件
+- `docs/adr/0002-wave2-biz-spot-bilingual-columns.md`
+- `tourism_api/sql/wave2_biz_spot_bilingual_ddl.sql`
+- `tourism_api/sql/generate_wave2_seed.py`
+- `tourism_api/sql/wave2_biz_spot_bilingual_seed.sql`
+- `tourism_api/.../spot/entity/Spot.java`
+- `tourism_api/.../spot/param/SpotAddParam.java`
+- `tourism_api/.../spot/param/SpotEditParam.java`
+- `tourism_api/.../spot/service/SpotService.java`
+- `tourism_api/.../spot/service/impl/SpotServiceImpl.java`
+- `tourism_api/.../wxspot/controller/WxSpotBilingualController.java`
+- `tourism_api/.../wxspot/service/SpotBilingualService.java`
+- `tourism_api/.../wxspot/result/BilingualSpotView.java`
+- `tourism_api/.../config/GlobalConfigure.java`
+- `docs/output/handoff/shanxi-bilingual-mvp/api-seed-integration.md`
+- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/output/reports/shanxi-bilingual-mvp/implementation-roadmap.md`
+- `docs/history/2026-07-10/commit-history.md`
+
+### commit 信息
+feat(api): add bilingual biz_spot seed and guest spot APIs
+
+---

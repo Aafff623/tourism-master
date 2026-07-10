@@ -27,6 +27,14 @@ public class SpotAddParam {
     @ApiModelProperty(value = "景区名称", position = 4)
     private String spotName;
 
+    /** 英文名称 */
+    @ApiModelProperty(value = "英文名称", position = 4)
+    private String spotNameEn;
+
+    /** 业务唯一键 slug */
+    @ApiModelProperty(value = "景区 slug", position = 3)
+    private String slug;
+
     /** 经纬度 */
     @ApiModelProperty(value = "经纬度", position = 5)
     private Double longitude;
@@ -39,15 +47,39 @@ public class SpotAddParam {
     @ApiModelProperty(value = "景点所在地点", position = 7)
     private String address;
 
+    /** 城市中文 */
+    @ApiModelProperty(value = "城市中文", position = 7)
+    private String city;
+
+    /** 城市英文 */
+    @ApiModelProperty(value = "城市英文", position = 7)
+    private String cityEn;
+
 
     /** 经营时间 */
     @ApiModelProperty(value = "经营时间", position = 9)
     private String openingTime;
 
+    /** 经营时间英文 */
+    @ApiModelProperty(value = "经营时间英文", position = 9)
+    private String openingTimeEn;
+
 
     /** 景点描述 */
     @ApiModelProperty(value = "景点描述", position = 11)
     private String description;
+
+    /** 景点描述英文 */
+    @ApiModelProperty(value = "景点描述英文", position = 11)
+    private String descriptionEn;
+
+    /** 摘要中文 */
+    @ApiModelProperty(value = "摘要中文", position = 11)
+    private String summary;
+
+    /** 摘要英文 */
+    @ApiModelProperty(value = "摘要英文", position = 11)
+    private String summaryEn;
 
 
     /** 景区类型 */
@@ -89,9 +121,41 @@ public class SpotAddParam {
     @ApiModelProperty(value = "星级", position = 21)
     private Integer startLevel;
 
+    /** 等级标签 JSON 或短文案 */
+    @ApiModelProperty(value = "等级标签", position = 21)
+    private String levelLabel;
+
     /** 交通信息：json格式 */
     @ApiModelProperty(value = "交通信息：json格式", position = 22)
     private String traffice;
+
+    /** 交通信息英文 */
+    @ApiModelProperty(value = "交通信息英文", position = 22)
+    private String trafficeEn;
+
+    /** 门票概要中文 */
+    @ApiModelProperty(value = "门票概要中文", position = 23)
+    private String ticketSummary;
+
+    /** 门票概要英文 */
+    @ApiModelProperty(value = "门票概要英文", position = 23)
+    private String ticketSummaryEn;
+
+    /** 参观提示中文 */
+    @ApiModelProperty(value = "参观提示中文", position = 23)
+    private String visitTips;
+
+    /** 参观提示英文 */
+    @ApiModelProperty(value = "参观提示英文", position = 23)
+    private String visitTipsEn;
+
+    /** 适宜季节中文 */
+    @ApiModelProperty(value = "适宜季节中文", position = 23)
+    private String bestSeason;
+
+    /** 适宜季节英文 */
+    @ApiModelProperty(value = "适宜季节英文", position = 23)
+    private String bestSeasonEn;
 
 
     /** 评论数 */
@@ -101,5 +165,9 @@ public class SpotAddParam {
     /** 额外信息 */
     @ApiModelProperty(value = "额外信息", position = 25)
     private String extJson;
+
+    /** 双语扩展 JSON */
+    @ApiModelProperty(value = "双语扩展 JSON", position = 25)
+    private String bilingualJson;
 
 }
