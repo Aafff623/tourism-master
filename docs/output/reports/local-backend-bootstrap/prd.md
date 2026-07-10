@@ -87,12 +87,12 @@ Wave2 DDL 为 `ALTER … AFTER`，须先有基表 CREATE。完整基表 DDL 由�
 
 ## 验收标准
 
-- [ ] 按 `tourism_api/sql/README.md` 建库导入后，JDK 8 启动 :86 无缺表致命错误
-- [ ] `http://localhost:86/doc.html`（knife4j basic admin/123456）可开
-- [ ] 管理端 :85：`superAdmin` + 文档标明的明文密码登录成功，进入后台（非 503、非白屏）
-- [ ] `curl` bilingual catalog 返回 6 条；detail `slug=yungang-grottoes&locale=en` 有英文名
-- [ ] 文档写明：JDK 8、端口、Redis、微信「不校验合法域名」、`DEV_URL` 局域网 IP
-- [ ] 新建 SQL 尽量幂等；**明确标注**既有 `wave2_*_ddl.sql` 一次性/可跳过
+- [x] 按 `tourism_api/sql/README.md` 建库导入后，JDK 8 启动 :86 无缺表致命错误
+- [x] `http://localhost:86/doc.html`（knife4j basic admin/123456）可开（需 basic 认证）
+- [x] 管理端 :85：`superAdmin` / `123456` 登录成功，进入后台（非 503、非白屏）
+- [x] bilingual catalog 返回 6 条；detail `slug=yungang-grottoes&locale=en` 有英文名
+- [x] 文档写明：JDK 8、端口、Redis、微信「不校验合法域名」、`DEV_URL` 局域网 IP
+- [x] 新建 SQL 尽量幂等；**明确标注**既有 `wave2_*_ddl.sql` 一次性/可跳过；`04` 补 `visible`
 
 ## 产物落位
 

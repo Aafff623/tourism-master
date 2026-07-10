@@ -23,12 +23,13 @@
 ## 本机验收（2026-07-10）
 
 - Redis Docker `tourism-redis`：OK  
-- 导入 00→01→02→seed→03：OK（6 景区）  
+- 导入 00→01→02→seed→03→**04**：OK（6 景区）  
 - JDK 8 `mvn clean install` + `snowy-web-app` `spring-boot:run`：Started Application，端口 86  
 - `GET /client/c/spot/bilingual/catalog?locale=zh`：code 200，6 条  
-- 管理端登录：请用浏览器验证 `superAdmin` / `123456`（需 :85 前端 + :86 后端）
+- 管理端：`superAdmin` / `123456` 登录成功，进入「组织管理」等系统菜单（非白屏）
 
-## 已知噪音
+## 已知噪音 / 补丁
 
 - 缺 stub 前，调度任务会报 `biz_plan` / `biz_order` 不存在；导入 03 后应消失或减少。
+- **本仓库 `SysMenu` 比官方 v2.0.0 SQL 多 `visible` 字段**：仅导入 01 时 `/sys/userCenter/loginMenu` 会 500（`Unknown column 'visible'`）。必须执行 `04_sys_resource_visible_patch.sql`。
 - 部分业务实体字段可能比 stub 更宽；若某页 SQL 报 Unknown column，再按实体补列即可。

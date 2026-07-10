@@ -19,6 +19,7 @@ mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneD
 mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneDrive/Desktop/project/tourism-master/tourism_api/sql/02_biz_spot_full.sql"
 mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneDrive/Desktop/project/tourism-master/tourism_api/sql/wave2_biz_spot_bilingual_seed.sql"
 mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneDrive/Desktop/project/tourism-master/tourism_api/sql/03_tourism_biz_stubs.sql"
+mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneDrive/Desktop/project/tourism-master/tourism_api/sql/04_sys_resource_visible_patch.sql"
 ```
 
 | 文件 | 作用 | 幂等 |
@@ -28,6 +29,7 @@ mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneD
 | `02_biz_spot_full.sql` | 景区全量表（已含双语列） | `CREATE IF NOT EXISTS` |
 | `wave2_biz_spot_bilingual_seed.sql` | 6 个 P0 Seed | 按 slug `ON DUPLICATE KEY UPDATE` |
 | `03_tourism_biz_stubs.sql` | 模板业务空表（plan/order/ticket…） | `CREATE IF NOT EXISTS` |
+| `04_sys_resource_visible_patch.sql` | 为本仓库 `SysMenu.visible` 补列（官方 v2.0.0 SQL 无此列） | 幂等（已存在则跳过） |
 | `wave2_biz_spot_bilingual_ddl.sql` | **跳过**（空库用 02 即可；对旧库补列时一次性执行） | **非幂等** |
 
 ## 启动后端
