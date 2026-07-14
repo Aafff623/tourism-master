@@ -31,14 +31,22 @@ docs/（资产库）
 ├── agents/            Agent 消费规则 + 任务流
 ├── adr/               架构决策（Matt Pocock）
 ├── knowledge/         ★ 可迁移知识（本文件夹）
-├── images/readme/     README 终稿配图
 └── output/            任务产物（PRD、handoff、archive、decks）
+
+assets/（媒体与备份收录）
+├── backup/            上游 zip / 原版只读备份
+├── images/readme/     README 终稿配图（原 docs/images/readme）
+├── images/{avatar,icon}/
+└── video/
 
 仓库外
 └── GitHub Issues      任务真相：Epic + 子 Issue
 ```
 
 **不建** `.cursor/`、`.claude/`：约束写在 `AGENTS.md` + `CLAUDE.md`，跨工具可读。
+
+根入口含 **`LANGUAGES.md`**（共享词汇）与 **`CONTEXT.md`**（领域事实）。  
+**不要**再维护 `docs/agents/language.md` / `docs/agents/context.md`（与根文件重复）。
 
 ---
 
@@ -47,14 +55,13 @@ docs/（资产库）
 | 资产 | 路径 | 职责 |
 |---|---|---|
 | 领域事实 | `CONTEXT.md` | 术语表、约束、目录（source of truth） |
-| 共享语言 | `docs/agents/language.md` | 命名词汇速查 |
-| 文档地图 | `docs/agents/context.md` | 读什么、放哪 |
+| 共享语言入口 | 根 `LANGUAGES.md` | 命名词汇速查（Agent 输出必须用） |
 | 领域消费规则 | `docs/agents/domain.md` | Matt Pocock 模板 |
-| Issue 约定 | `docs/agents/issue-tracker.md` | GitHub + `gh` CLI |
+| Issue 约定 | `docs/agents/issue-tracker.md` | GitHub + `gh` CLI 或本地 `.scratch/` |
 | Triage 标签 | `docs/agents/triage-labels.md` | 五种 canonical 角色 |
 | 架构决策 | `docs/adr/000N-*.md` | 已接受的技术决策 |
 
-**原则**：Agent 输出用 `language.md` 词汇；与 ADR 冲突须显式标注。
+**原则**：Agent 输出用 `LANGUAGES.md` 词汇；与 ADR 冲突须显式标注。
 
 ---
 
@@ -77,27 +84,27 @@ docs/（资产库）
 
 ```
 docs/output/
-├── reports/
+├── prd/
 │   ├── archive/{theme}/
-│   └── {theme}/prd.md          # PRD + brief
+│   └── {theme}/prd.md          # PRD + 调研（原 reports/）
 ├── handoff/
 │   ├── archive/{theme}/{task}.md
 │   └── {theme}/{task}.md       # 一任务一文件，原地迭代
-└── decks/
+└── ppt/                        # 或 decks/
 ```
 
-- `{theme}`：`reports` 与 `handoff` **同名**
+- `{theme}`：`prd` 与 `handoff` **同名**
 - `{task}`：kebab-case，对应一个子 Issue
 - **不用** 01/02 版本号；同一任务持续改同一文件
 
 ### 5.2 流程
 
 ```
-Issue(Epic) → 沟通 → reports/{theme}/prd.md (draft)
+Issue(Epic) → 沟通 → prd/{theme}/prd.md (draft)
   → 用户确认 (approved)
   → 拆子 Issue + handoff/{theme}/{task}.md
   → 实施 → awaiting-review → 【停，等用户 Review】
-  → 通过 → handoff/archive/ → 主题完 → reports/archive/
+  → 通过 → handoff/archive/ → 主题完 → prd/archive/
 ```
 
 ### 5.3 三层职责
@@ -105,7 +112,7 @@ Issue(Epic) → 沟通 → reports/{theme}/prd.md (draft)
 | 层 | 位置 | 管什么 |
 |---|---|---|
 | 规划 | GitHub Issues + PRD | 做什么、验收标准 |
-| 产物 | `reports/{theme}/` | PRD 正文、brief |
+| 产物 | `prd/{theme}/` | PRD 正文、调研 brief |
 | 接力 | `handoff/{theme}/{task}.md` | 做到哪、待 Review 什么 |
 
 Handoff ≠ 任务定义；是**执行记忆**，通过 Issue 号与 PRD 关联。
@@ -123,12 +130,13 @@ Handoff ≠ 任务定义；是**执行记忆**，通过 Issue 号与 PRD 关联�
 
 | 路径 | 用途 |
 |---|---|
-| `docs/images/readme/` | README 引用的终稿图（banner、架构图） |
+| `assets/images/readme/` | README 引用的终稿图（banner、架构图；原 `docs/images/readme/`） |
+| `assets/backup/` | 上游 zip / 原版只读备份 |
 | `prototypes/` | HTML 探索原型，不进构建 |
 | `src/` | 应用源码 |
 | `public/` | 站点 CMS 静态内容 |
 
-Brief 类小产物（如配图说明）可只建 `reports/{theme}/`，不走完整 PRD/handoff。
+Brief 类小产物（如配图说明）可只建 `prd/{theme}/`，不走完整 PRD/handoff。
 
 ---
 

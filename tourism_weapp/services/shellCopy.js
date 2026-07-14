@@ -52,7 +52,12 @@ export const SHELL_COPY = {
 		detailHighlights: '看点',
 		commonDo: '建议',
 		commonDont: '避免',
-		emptyList: '暂无数据'
+		emptyList: '暂无数据',
+		introTitle: '山西文旅概况',
+		introStayHint: '行程建议已含在正文中',
+		heritageTitle: '文化遗产',
+		heritageRuleTitle: '列表说明',
+		heritageOpenSpot: '查看景区'
 	},
 	[LOCALE_EN]: {
 		tabHome: 'Home',
@@ -101,7 +106,12 @@ export const SHELL_COPY = {
 		detailHighlights: 'Highlights',
 		commonDo: 'Do',
 		commonDont: "Don't",
-		emptyList: 'No data'
+		emptyList: 'No data',
+		introTitle: 'Shanxi overview',
+		introStayHint: 'Stay-length tips are included above',
+		heritageTitle: 'Heritage',
+		heritageRuleTitle: 'How this list works',
+		heritageOpenSpot: 'Open attraction'
 	}
 }
 

@@ -5,6 +5,7 @@
 | 文件 | 内容 |
 |---|---|
 | [`ai-coding-asset-design.md`](ai-coding-asset-design.md) | 资产目录与流程设计的精炼总结（主文档） |
+| [`project-init.md`](project-init.md) | 接手/新建仓库的体系化初始化（含主 Prompt） |
 | [`deliver-workflow.md`](deliver-workflow.md) | `/deliver` 交付层：设计思路、创新点、跨工具说明 |
 
 ## 维护规则

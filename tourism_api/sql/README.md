@@ -20,6 +20,7 @@ mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneD
 mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneDrive/Desktop/project/tourism-master/tourism_api/sql/wave2_biz_spot_bilingual_seed.sql"
 mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneDrive/Desktop/project/tourism-master/tourism_api/sql/03_tourism_biz_stubs.sql"
 mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneDrive/Desktop/project/tourism-master/tourism_api/sql/04_sys_resource_visible_patch.sql"
+mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneDrive/Desktop/project/tourism-master/tourism_api/sql/05_local_admin_account.sql"
 ```
 
 | 文件 | 作用 | 幂等 |
@@ -30,6 +31,7 @@ mysql -uroot -p123456 tourism --default-character-set=utf8mb4 -e "source D:/OneD
 | `wave2_biz_spot_bilingual_seed.sql` | 6 个 P0 Seed | 按 slug `ON DUPLICATE KEY UPDATE` |
 | `03_tourism_biz_stubs.sql` | 模板业务空表（plan/order/ticket…） | `CREATE IF NOT EXISTS` |
 | `04_sys_resource_visible_patch.sql` | 为本仓库 `SysMenu.visible` 补列（官方 v2.0.0 SQL 无此列） | 幂等（已存在则跳过） |
+| `05_local_admin_account.sql` | 本机登录账号改为 **admin**（密码仍为 123456） | 幂等 |
 | `wave2_biz_spot_bilingual_ddl.sql` | **跳过**（空库用 02 即可；对旧库补列时一次性执行） | **非幂等** |
 
 ## 启动后端
@@ -48,7 +50,7 @@ mvn spring-boot:run -DskipTests
 ## 管理端登录
 
 - 前端：http://localhost:85/（`tourism_admin` → `npm run dev`）
-- 账号：**superAdmin**
+- 账号：**admin**（由 `05_local_admin_account.sql` 从官方 `superAdmin` 改名；角色码仍为 `superAdmin`）
 - 密码：**123456**（Snowy v2.0.0 官方 seed；库内为 SM3 哈希）
 
 ## 验收 curl（PowerShell）

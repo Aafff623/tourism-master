@@ -27,7 +27,7 @@ Wave 1 用前端 Mock 交付双语闭环。Wave 2 需把 6 个 P0 景区落入 `
    - `bilingual_json` LONGTEXT — 存放 highlights、culturalNotes、services、verificationNotice、unverifiedFields 等结构化扩展（JSON）
 2. **幂等 Seed**：以 `slug` 为业务唯一键；重复执行 UPDATE 或跳过已存在行。
 3. **游客 API**：新增 `/client/c/spot/bilingual/*`，并加入 `NO_LOGIN_PATH_ARR`（修正模板中错误的 `wx/c/...` 白名单前缀问题，至少覆盖双语接口）。
-4. **小程序**：Repository 优先调双语 API，失败回退本地 Mock（`weapp-api-switch` 任务）。
+4. **小程序**：Repository 在 Mode B 联调时可「API 优先、Mock 回退」。**同学演示阶段**默认改为 Mock-only（见 **ADR-0003**），本条运行时优先级被冻结，实现代码保留。
 
 ## Consequences
 

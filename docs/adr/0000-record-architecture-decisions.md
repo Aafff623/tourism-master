@@ -15,6 +15,8 @@ Accepted
 后续已裁定决策：
 
 - ADR-0001：双语成对字段 + `slug` 导航；模式 A 先行
+- ADR-0002：Wave 2 `biz_spot` 双语列与游客 API（实现保留）
+- ADR-0003：同学演示阶段 **Mock-only**；Mode B 运行时冻结，真数据换接另开分支
 
 ## Consequences
 

@@ -27,8 +27,9 @@ docs/
     ├── reports/
     │   ├── archive/{theme}/
     │   ├── readme-diagrams/           README 配图生成 brief
-    │   ├── local-backend-bootstrap/   本机后端联调阻塞简报（喂 GPT 调研）
-    │   └── {theme}/                   prd.md、brief
+│   ├── local-backend-bootstrap/   本机后端联调（演示后置；见 ADR-0003）
+│   ├── mock-demo-freeze/          同学演示 Mock 冻结 PRD
+│   └── {theme}/                   prd.md、brief
     ├── handoff/
     │   ├── archive/{theme}/
     │   └── {theme}/{task}.md

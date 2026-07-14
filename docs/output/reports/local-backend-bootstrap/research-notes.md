@@ -1,6 +1,7 @@
-# research-notes — local-backend-bootstrap
+## 演示冻结说明（2026-07-10）
 
-## 方案结论
+同学演示改为 **Mock-only**（[ADR-0003](../../../adr/0003-mock-first-demo-freeze.md)）。  
+本目录 SQL / 启动步骤对**个人后续 Mode B 分支**仍有效，**不是**同学演示的前置条件。
 
 采用 **A（Snowy v2.0.0 官方 SQL）+ B（本仓库 biz_spot 全量 CREATE）+ 模板业务 stub 表**。
 
@@ -10,7 +11,7 @@
 | 钉死版本 | tag **`v2.0.0`**（commit `ec9ef0c4…`） |
 | 禁止 | 直接使用当前 master（已升级 Spring Boot 3，与本仓库 2.5 / snowy 2.0.0 不兼容） |
 | 框架 SQL 入库 | `tourism_api/sql/01_snowy_v2.0.0_framework.sql`（自 `_sql/snowy_mysql.sql` 复制） |
-| 超管 | 账号 `superAdmin`，明文密码 **`123456`**，库内 password 为 SM3 哈希 `207cf410532f92a47dee245ce9b11ff71f578ebd763eb3bbea44ebd043d018fb` |
+| 超管 | 账号 `admin`（`05_local_admin_account.sql` 自 `superAdmin` 改名），明文密码 **`123456`**，库内 password 为 SM3 哈希 `207cf410532f92a47dee245ce9b11ff71f578ebd763eb3bbea44ebd043d018fb`；角色码仍为 `superAdmin` |
 | 登录算法 | 前端 SM2 加密 → 后端 SM2 解密 → SM3 → 比对（`CommonCryptogramUtil`） |
 
 ## 裁剪说明

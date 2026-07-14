@@ -1,6 +1,7 @@
 /**
- * Scenic data access: Mode B API first, Mode A mock fallback.
- * Pages should await async getters; sync mock helpers remain for smoke tests.
+ * Scenic data access.
+ * Demo default (ADR-0003): Mock-only via scenicDataSource.USE_SCENIC_MOCK.
+ * Mode B branch: set USE_SCENIC_MOCK=false → API first, Mock fallback.
  */
 import spotCatalog from '../mock/scenic/spotCatalog.json'
 import spots from '../mock/scenic/spots.json'
@@ -9,11 +10,14 @@ import serviceItems from '../mock/scenic/serviceItems.json'
 import spotServiceLinks from '../mock/scenic/spotServiceLinks.json'
 import barrierTypes from '../mock/scenic/barrierTypes.json'
 import qualityCompliance from '../mock/scenic/qualityCompliance.json'
+import provinceIntro from '../mock/scenic/provinceIntro.json'
+import heritageStrategy from '../mock/scenic/heritageStrategy.json'
 import {
 	fetchBilingualCatalog,
 	fetchBilingualDetail,
 	fetchBilingualHotspots
 } from '../api/scenicBilingualApi.js'
+import { isScenicMockOnly } from './scenicDataSource.js'
 import { getLocale } from './locale.js'
 import {
 	adaptCatalogItem,
@@ -157,9 +161,12 @@ export function getHomeHotspotsSync(locale) {
 		.map((row) => adaptHomeHotspot(row, loc, spotBySlug))
 }
 
-/** Async: API first, mock fallback. */
+/** Async: Mock-only when USE_SCENIC_MOCK; else API first, mock fallback. */
 export async function getSpotCatalog(locale, options = {}) {
 	const loc = resolveLocale(locale)
+	if (isScenicMockOnly()) {
+		return getSpotCatalogSync(loc, options)
+	}
 	try {
 		const response = await fetchBilingualCatalog(loc)
 		const list = unwrapList(response)
@@ -176,6 +183,9 @@ export async function getSpotDetail(slug, locale) {
 	const loc = resolveLocale(locale)
 	if (!slug) {
 		return null
+	}
+	if (isScenicMockOnly()) {
+		return getSpotDetailSync(slug, loc)
 	}
 	try {
 		const response = await fetchBilingualDetail(slug, loc)
@@ -200,12 +210,18 @@ export async function getSpotDetailByIdOrSlug(idOrSlug, locale) {
 	if (found) {
 		return getSpotDetail(found.slug, locale)
 	}
+	if (isScenicMockOnly()) {
+		return null
+	}
 	// May be a DB numeric/string id unknown to mock — try API with value as slug first
 	return getSpotDetail(idOrSlug, locale)
 }
 
 export async function getHomeHotspots(locale) {
 	const loc = resolveLocale(locale)
+	if (isScenicMockOnly()) {
+		return getHomeHotspotsSync(loc)
+	}
 	try {
 		const response = await fetchBilingualHotspots(loc)
 		const list = unwrapList(response)
@@ -247,6 +263,64 @@ export function getVerificationNotice(locale) {
 
 export function getQualityCompliance() {
 	return qualityCompliance
+}
+
+/** Province overview copy (SD-15). Mock-only for now. */
+export function getProvinceIntro(locale) {
+	const loc = resolveLocale(locale)
+	const body =
+		loc === 'en'
+			? (provinceIntro && (provinceIntro.en || provinceIntro.zh)) || ''
+			: (provinceIntro && (provinceIntro.zh || provinceIntro.en)) || ''
+	return {
+		locale: loc,
+		body: body
+	}
+}
+
+/**
+ * Heritage list via heritageStrategy (SD-15): reference spotSlug, no duplicated body.
+ * Enriches cover/name from catalog / spots when available.
+ */
+export function getHeritageList(locale) {
+	const loc = resolveLocale(locale)
+	const catalogBySlug = Object.create(null)
+	;(spotCatalog || []).forEach((row) => {
+		catalogBySlug[row.slug] = row
+	})
+	const items = ((heritageStrategy && heritageStrategy.items) || [])
+		.map((row) => {
+			const slug = row.spotSlug
+			const catalog = catalogBySlug[slug]
+			const spot = spotBySlug[slug]
+			const adapted = catalog
+				? adaptCatalogItem(catalog, loc, spotBySlug)
+				: spot
+					? adaptSpotListItem(spot, loc)
+					: null
+			return {
+				slug: slug,
+				heritageLabel:
+					loc === 'en'
+						? row.heritageLabelEn || row.heritageLabelZh
+						: row.heritageLabelZh || row.heritageLabelEn,
+				name: adapted ? adapted.name : slug,
+				city: adapted ? adapted.city : '',
+				coverUrl: adapted ? adapted.coverUrl : '',
+				tags: adapted ? adapted.tags || [] : [],
+				hasDetail: !!adapted
+			}
+		})
+		.filter((item) => item.slug)
+	const rule =
+		loc === 'en'
+			? (heritageStrategy && (heritageStrategy.ruleEn || heritageStrategy.ruleZh)) || ''
+			: (heritageStrategy && (heritageStrategy.ruleZh || heritageStrategy.ruleEn)) || ''
+	return {
+		locale: loc,
+		rule: rule,
+		items: items
+	}
 }
 
 /**
@@ -311,5 +385,7 @@ export default {
 	getBarrierTypes,
 	getVerificationNotice,
 	getQualityCompliance,
+	getProvinceIntro,
+	getHeritageList,
 	validateScenicMockIntegrity
 }

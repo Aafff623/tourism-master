@@ -1,0 +1,38 @@
+{
+  "titleZh": "文化遗产列表与景区列表去重策略",
+  "titleEn": "Deduplication Strategy for Heritage and Attraction Lists",
+  "items": [
+    {
+      "spotSlug": "yungang-grottoes",
+      "heritageLabelZh": "世界文化遗产",
+      "heritageLabelEn": "World Heritage"
+    },
+    {
+      "spotSlug": "mount-wutai",
+      "heritageLabelZh": "世界文化遗产·文化景观",
+      "heritageLabelEn": "World Heritage Cultural Landscape"
+    },
+    {
+      "spotSlug": "ancient-city-pingyao",
+      "heritageLabelZh": "世界文化遗产（含双林寺、镇国寺）",
+      "heritageLabelEn": "World Heritage, including Shuanglin and Zhenguo Temples"
+    },
+    {
+      "spotSlug": "jinci-temple",
+      "heritageLabelZh": "全国重点文物保护相关古建筑群",
+      "heritageLabelEn": "Nationally protected historic architectural complex"
+    },
+    {
+      "spotSlug": "hanging-temple",
+      "heritageLabelZh": "全国重点文物保护单位",
+      "heritageLabelEn": "Nationally protected heritage site"
+    },
+    {
+      "spotSlug": "yingxian-wooden-pagoda",
+      "heritageLabelZh": "全国重点文物保护单位",
+      "heritageLabelEn": "Nationally protected heritage site"
+    }
+  ],
+  "ruleZh": "景区列表保存唯一实体；文化遗产页只保存 spotSlug、遗产级别、入选理由和专题排序，通过引用展示同一详情页，不复制景区正文。平遥的双林寺、镇国寺可先作为 relatedComponents，后续内容足够时再升级为独立 spot。",
+  "ruleEn": "Keep one canonical attraction entity. The heritage page stores only spotSlug, designation, heritage rationale and thematic ranking, linking to the same detail page rather than duplicating text. Shuanglin and Zhenguo Temples may begin as relatedComponents and become standalone spots when enough content is available."
+}

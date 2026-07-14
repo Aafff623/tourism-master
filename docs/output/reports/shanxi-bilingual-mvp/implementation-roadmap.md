@@ -71,8 +71,15 @@ mvp-regression (SD-10)
 
 SD-16～18；需模式 C 级 ADR/PRD。
 
+## 演示冻结（2026-07-10，ADR-0003）
+
+同学演示阶段：**Mock-only**。Mode B 实现保留，运行时不作为演示前置。
+
+- 主题：[`../mock-demo-freeze/prd.md`](../mock-demo-freeze/prd.md)（draft，待确认）
+- 个人真数据换接：演示后**另开分支**，不在本路线图 Wave 内强推。
+
 ## 下一行动（Agent）
 
-1. Wave 2 核心三任务已 commit 并归档 handoff。  
-2. `reports/shanxi-bilingual-mvp/` 保留；SD-15（概况/遗产）另开任务。  
-3. 有库环境执行 DDL → Seed 后联调小程序双语 API。
+1. `mock-demo-freeze` 已批准并实施 Mock-only；handoff 待用户按 `weapp-demo-smoke` 点验。  
+2. 用户 Review 通过后可 commit；演示后 Mode B 另开分支。  
+3. 不主动推进云主机 / Vercel / 权限加固。
