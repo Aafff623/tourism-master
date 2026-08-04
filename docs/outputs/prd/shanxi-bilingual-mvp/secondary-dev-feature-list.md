@@ -106,10 +106,10 @@
 
 | 功能编号 | handoff |
 |---|---|
-| SD-01,02 | `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md` |
-| SD-03 | `docs/output/handoff/shanxi-bilingual-mvp/weapp-locale-shell.md` |
-| SD-04,05,08,09 | `docs/output/handoff/shanxi-bilingual-mvp/weapp-spot-list-detail.md` |
-| SD-06 | `docs/output/handoff/shanxi-bilingual-mvp/weapp-home-hotspots.md` |
-| SD-07 | `docs/output/handoff/shanxi-bilingual-mvp/weapp-service-phrases.md` |
-| SD-10 | `docs/output/handoff/shanxi-bilingual-mvp/weapp-mvp-regression.md` |
+| SD-01,02 | `docs/outputs/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md` |
+| SD-03 | `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-locale-shell.md` |
+| SD-04,05,08,09 | `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-spot-list-detail.md` |
+| SD-06 | `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-home-hotspots.md` |
+| SD-07 | `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-service-phrases.md` |
+| SD-10 | `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-mvp-regression.md` |
 | SD-11+ | 后置，未建 handoff |

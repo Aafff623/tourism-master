@@ -1,7 +1,7 @@
 # tourism-master — README 配图生成说明
 
 > **用途**：将本文档整份（或下方「逐图 Prompt」）拖给 GPT-4o / GPT Image，按规格生成 Banner 与信息图。  
-> **本文档路径**：`docs/output/reports/readme-diagrams/readme-diagram-brief.md`  
+> **本文档路径**：`docs/outputs/prd/readme-diagrams/readme-diagram-brief.md`  
 > **输出目录**：`docs/images/readme/`，文件名必须与下表一致，README 会按文件名引用。
 
 ---
@@ -45,7 +45,7 @@
 | `workflow.png` | 用户主链路流程 16:9 | 「为什么 / 演示」旁或架构下 |
 | `structure.png` | 仓库目录结构 16:9 | 「架构」目录说明 |
 
-截图类（真机 / 模板）不在本 brief 生成范围内，仍用 `images/` 或后续补 `docs/images/readme/*.jpg`。
+截图类（真机 / 模板）不在本 brief 生成范围内，仍用 `assets/images/legacy-template/` 或后续补 `docs/images/readme/*.jpg`。
 
 ---
 
@@ -295,7 +295,7 @@ Highlight these paths:
 - tourism_weapp/ (主演示端)
 - tourism_admin/ · tourism_api/
 - docs/adr/ · docs/images/readme/ (README 配图输出目录)
-- docs/output/reports/ · docs/output/handoff/
+- docs/outputs/prd/ · docs/outputs/handoff/
 - root docs: README · AGENTS · CLAUDE · CONTEXT · CONTEXT-MAP
 - images/ = 模板演示截图（非山西正式内容）
 

@@ -72,4 +72,4 @@ Invoke-RestMethod "http://127.0.0.1:86/client/c/spot/bilingual/hotspots?locale=z
 ## 来源
 
 - 框架 SQL：`xiaonuobase/snowy` tag **`v2.0.0`** → `_sql/snowy_mysql.sql`
-- 详见 [`docs/output/reports/local-backend-bootstrap/research-notes.md`](../../docs/output/reports/local-backend-bootstrap/research-notes.md)
+- 详见 [`docs/outputs/prd/local-backend-bootstrap/research-notes.md`](../../docs/outputs/prd/local-backend-bootstrap/research-notes.md)

@@ -21,5 +21,5 @@
 
 > `reports/shanxi-bilingual-mvp/` **未整夹归档**：SD-15（概况/遗产）仍可沿用同 theme。
 
-PRD：`docs/output/reports/shanxi-bilingual-mvp/prd.md`  
+PRD：`docs/outputs/prd/shanxi-bilingual-mvp/prd.md`  
 路线图：`implementation-roadmap.md`

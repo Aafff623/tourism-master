@@ -203,7 +203,7 @@ Agent 修改数据时必须检查：
 建议将原始研究包保存到：
 
 ```text
-docs/output/reports/shanxi-scenic-mock-data/
+docs/outputs/prd/shanxi-scenic-mock-data/
 ├── prd.md
 ├── integration-audit.md
 ├── field-mapping.md
@@ -214,14 +214,14 @@ docs/output/reports/shanxi-scenic-mock-data/
 也可以保留原 ZIP：
 
 ```text
-docs/output/reports/shanxi-scenic-mock-data/research/
+docs/outputs/prd/shanxi-scenic-mock-data/research/
 └── shanxi-scenic-mock-research-v1.zip
 ```
 
 ### Windows PowerShell 解压示例
 
 ```powershell
-$target = ".\docs\output\reports\shanxi-scenic-mock-data\research\shanxi-scenic-mock-research-v1"
+$target = ".\docs\outputs\prd\shanxi-scenic-mock-data\research\shanxi-scenic-mock-research-v1"
 New-Item -ItemType Directory -Force -Path $target | Out-Null
 Expand-Archive `
   -Path ".\shanxi-scenic-mock-research-v1.zip" `
@@ -232,9 +232,9 @@ Expand-Archive `
 ### macOS / Linux 示例
 
 ```bash
-mkdir -p docs/output/reports/shanxi-scenic-mock-data/research
+mkdir -p docs/outputs/prd/shanxi-scenic-mock-data/research
 unzip shanxi-scenic-mock-research-v1.zip \
-  -d docs/output/reports/shanxi-scenic-mock-data/research/shanxi-scenic-mock-research-v1
+  -d docs/outputs/prd/shanxi-scenic-mock-data/research/shanxi-scenic-mock-research-v1
 ```
 
 运行时数据放在哪里，必须在完成源码审计后决定，不能仅凭本指南发明路径。
@@ -250,7 +250,7 @@ unzip shanxi-scenic-mock-research-v1.zip \
 Agent 应输出：
 
 ```text
-docs/output/reports/shanxi-scenic-mock-data/
+docs/outputs/prd/shanxi-scenic-mock-data/
 ├── integration-audit.md
 └── field-mapping.md
 ```
@@ -552,8 +552,8 @@ tourism_weapp、tourism_admin、tourism_api 三端。
 - 不得猜测不存在的目录、表或 API。
 
 输出：
-1. docs/output/reports/shanxi-scenic-mock-data/integration-audit.md
-2. docs/output/reports/shanxi-scenic-mock-data/field-mapping.md
+1. docs/outputs/prd/shanxi-scenic-mock-data/integration-audit.md
+2. docs/outputs/prd/shanxi-scenic-mock-data/field-mapping.md
 3. 推荐采用：前端 Mock、后端 Seed，还是完整内容管理
 4. 第一阶段最小改动清单
 5. 风险、未验证项和需要用户拍板的问题
@@ -842,7 +842,7 @@ Aafff623/tourism-master 项目。
 第一阶段：
 
 ```text
-docs/output/reports/shanxi-scenic-mock-data/
+docs/outputs/prd/shanxi-scenic-mock-data/
 ├── prd.md
 ├── integration-audit.md
 └── field-mapping.md
@@ -851,7 +851,7 @@ docs/output/reports/shanxi-scenic-mock-data/
 实施阶段：
 
 ```text
-docs/output/handoff/shanxi-scenic-mock-data/
+docs/outputs/handoff/shanxi-scenic-mock-data/
 ├── weapp-mock-integration.md
 ├── api-seed-integration.md
 └── admin-content-integration.md

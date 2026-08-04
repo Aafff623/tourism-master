@@ -25,10 +25,10 @@
 
 ## 与本地 docs 的映射
 
-| Issue 角色 | 新主题 | 历史主题 |
-|---|---|---|
-| Epic（主题） | `docs/outputs/prd/{theme}/prd.md` | `docs/output/reports/{theme}/prd.md` |
-| 子 Issue（任务） | `docs/outputs/handoff/{theme}/{task}.md` | `docs/output/handoff/{theme}/{task}.md` |
-| 完结 | 对应 `archive/{theme}/` | 同左（历史路径下） |
+| Issue 角色 | 本地路径 |
+|---|---|
+| Epic（主题） | `docs/outputs/prd/{theme}/prd.md` |
+| 子 Issue（任务） | `docs/outputs/handoff/{theme}/{task}.md` |
+| 完结 | 对应 `archive/{theme}/` |
 
 任务流详见 [`workflow.md`](workflow.md)。用词见根 [`LANGUAGES.md`](../../LANGUAGES.md)。

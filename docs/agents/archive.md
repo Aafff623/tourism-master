@@ -53,8 +53,8 @@ Review 通过后的**归档层**操作规范。Cursor 中通过 `/archive` 触�
 **命令示例**（Agent 用文件操作或 shell）：
 
 ```bash
-mkdir -p docs/output/handoff/archive/{theme}
-git mv docs/output/handoff/{theme}/{task}.md docs/output/handoff/archive/{theme}/{task}.md
+mkdir -p docs/outputs/handoff/archive/{theme}
+git mv docs/outputs/handoff/{theme}/{task}.md docs/outputs/handoff/archive/{theme}/{task}.md
 ```
 
 ## 主题归档（reports）
@@ -70,8 +70,8 @@ git mv docs/output/handoff/{theme}/{task}.md docs/output/handoff/archive/{theme}
 ```
 
 ```bash
-mkdir -p docs/output/reports/archive
-git mv docs/output/reports/{theme} docs/output/reports/archive/{theme}
+mkdir -p docs/outputs/prd/archive
+git mv docs/outputs/prd/{theme} docs/outputs/prd/archive/{theme}
 ```
 
 ## Brief 主题（无 handoff）

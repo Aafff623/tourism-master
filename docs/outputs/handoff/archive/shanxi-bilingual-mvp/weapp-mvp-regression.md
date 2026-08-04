@@ -15,7 +15,7 @@ depends-on: weapp-spot-list-detail, weapp-home-hotspots, weapp-service-phrases
 
 ## 已完成
 
-- 运行 `docs/output/reports/shanxi-bilingual-mvp/wave1-regression-check.py`
+- 运行 `docs/outputs/prd/shanxi-bilingual-mvp/wave1-regression-check.py`
 - 结果：`SUMMARY spots=6 p0=6 home=6 services=18 links=18`，`ERRORS 0`，`OK`
 - 覆盖检查：
   - 引用完整性（home / links / services id）

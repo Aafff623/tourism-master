@@ -91,7 +91,7 @@ goal: 补齐本地可启动的后端数据库与启动文档，使管理端登�
 | 景区实体（含双语列） | `.../biz/modular/spot/entity/Spot.java` |
 | 双语游客 API | `.../wxspot/controller/WxSpotBilingualController.java` |
 | 免登录白名单 | `GlobalConfigure.NO_LOGIN_PATH_ARR` → `/client/c/spot/bilingual/**` |
-| 产品 PRD | `docs/output/reports/shanxi-bilingual-mvp/prd.md` |
+| 产品 PRD | `docs/outputs/prd/shanxi-bilingual-mvp/prd.md` |
 | Mock 数据（模式 A） | `tourism_weapp/mock/scenic/` |
 
 ### 2.4 本地配置快照（模板默认，非生产）

@@ -34,7 +34,7 @@ Review 层（用户看 diff + 摘要）
 | 已有机制 | Deliver 如何衔接 |
 |---|---|
 | `workflow.md` handoff | T3 交付时 → `awaiting-review` |
-| `docs/history/` 攒批 | T0 横切，所有 Agent 改动都记一笔 |
+| `docs/outputs/commit-history/archive/legacy-date-based/` 攒批 | T0 横切，所有 Agent 改动都记一笔 |
 | `AGENTS.md` Review 门禁 | deliver 后必须停止 |
 | `knowledge/` | T8，仅用户要求时写入 |
 
@@ -94,6 +94,6 @@ Review 层（用户看 diff + 摘要）
 ### 延伸阅读
 
 - [`ai-coding-asset-design.md`](ai-coding-asset-design.md) — 资产目录总设计
-- [`docs/history/README.md`](../history/README.md) — commit-history 模板
+- [`docs/outputs/commit-history/archive/legacy-date-based/README.md`](../history/README.md) — commit-history 模板
 - [`docs/agents/archive.md`](../agents/archive.md) — 归档层：物理移动与 reports↔handoff
 - [`docs/agents/workflow.md`](../agents/workflow.md) — Issue → PRD → handoff → archive

@@ -28,9 +28,9 @@ docs(init): scaffold agent assets and GitHub-linked project docs
 ### 改了哪些文件
 - `README.md`（标注 public）
 - `docs/README.md`
-- `docs/output/reports/shanxi-bilingual-mvp/mvp-feature-list.md`
-- `docs/output/reports/shanxi-bilingual-mvp/scenic-mock-research-qa.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/mvp-feature-list.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/scenic-mock-research-qa.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 docs(mvp): add bilingual MVP feature list and scenic mock research Q&A
@@ -45,9 +45,9 @@ docs(mvp): add bilingual MVP feature list and scenic mock research Q&A
 - 推荐第一阶段采用前端 Mock 适配层（模式 A）；未改业务代码
 
 ### 改了哪些文件
-- `docs/output/reports/shanxi-scenic-mock-data/**`（含 research 包、指南、审计文档）
+- `docs/outputs/prd/shanxi-scenic-mock-data/**`（含 research 包、指南、审计文档）
 - `docs/README.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 docs(mock): ingest scenic research pack and phase-0 integration audit
@@ -67,9 +67,9 @@ docs(mock): ingest scenic research pack and phase-0 integration audit
 - `.claude/README.md`、`AGENTS.md`、`CLAUDE.md`、`CONTEXT.md`
 - `docs/adr/0000-record-architecture-decisions.md`、`docs/adr/0001-bilingual-field-model.md`
 - `docs/agents/context.md`、`docs/agents/language.md`、`docs/contexts/weapp/CONTEXT.md`、`docs/README.md`
-- `docs/output/reports/shanxi-scenic-mock-data/**`（含 research 包、audit、mapping、prd、指南）
-- `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/prd/shanxi-scenic-mock-data/**`（含 research 包、audit、mapping、prd、指南）
+- `docs/outputs/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 docs(mock): lock mode-A decisions, add deliver skills, and approve scenic mock PRD
@@ -84,15 +84,15 @@ docs(mock): lock mode-A decisions, add deliver skills, and approve scenic mock P
 - 早期 mvp-feature-list 标为 superseded
 
 ### 改了哪些文件
-- `docs/output/reports/shanxi-bilingual-mvp/prd.md`
-- `docs/output/reports/shanxi-bilingual-mvp/secondary-dev-feature-list.md`
-- `docs/output/reports/shanxi-bilingual-mvp/implementation-roadmap.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
-- `docs/output/reports/shanxi-bilingual-mvp/mvp-feature-list.md`
-- `docs/output/handoff/shanxi-bilingual-mvp/*.md`
-- `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/prd.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/secondary-dev-feature-list.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/implementation-roadmap.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/mvp-feature-list.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/*.md`
+- `docs/outputs/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
 - `docs/README.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 docs(mvp): add product PRD, secondary-dev list, and Wave-1 roadmap
@@ -112,11 +112,11 @@ docs(mvp): add product PRD, secondary-dev list, and Wave-1 roadmap
 - `tourism_weapp/services/scenicAdapter.js`
 - `tourism_weapp/services/scenicRepository.js`
 - `tourism_weapp/services/scenicMockSmoke.js`
-- `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
-- `docs/output/reports/shanxi-scenic-mock-data/field-mapping.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
+- `docs/outputs/prd/shanxi-scenic-mock-data/field-mapping.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
 - `docs/contexts/weapp/CONTEXT.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 feat(weapp): add scenic mock adapter layer for Mode A bilingual data
@@ -135,9 +135,9 @@ feat(weapp): add scenic mock adapter layer for Mode A bilingual data
 - `tourism_weapp/services/locale.js`
 - `tourism_weapp/App.vue`
 - `tourism_weapp/pages/home/home.vue`
-- `docs/output/handoff/shanxi-bilingual-mvp/weapp-locale-shell.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-locale-shell.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 feat(weapp): add bilingual shell locale switch and tabBar copy
@@ -152,10 +152,10 @@ feat(weapp): add bilingual shell locale switch and tabBar copy
 
 ### 改了哪些文件
 - `tourism_weapp/pages/home/home.vue`
-- `docs/output/handoff/shanxi-bilingual-mvp/weapp-home-hotspots.md`
-- `docs/output/handoff/shanxi-bilingual-mvp/weapp-locale-shell.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-home-hotspots.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-locale-shell.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 feat(weapp): show Shanxi home hotspots from scenic mock recommendations
@@ -171,10 +171,10 @@ feat(weapp): show Shanxi home hotspots from scenic mock recommendations
 ### 改了哪些文件
 - `tourism_weapp/pages/spot/spot.vue`
 - `tourism_weapp/pages/spot/detail.vue`
-- `docs/output/handoff/shanxi-bilingual-mvp/weapp-spot-list-detail.md`
-- `docs/output/handoff/shanxi-bilingual-mvp/weapp-home-hotspots.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-spot-list-detail.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-home-hotspots.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 feat(weapp): wire spot list and detail to bilingual scenic mock
@@ -189,10 +189,10 @@ feat(weapp): wire spot list and detail to bilingual scenic mock
 ### 改了哪些文件
 - `tourism_weapp/pages/service/service.vue`
 - `tourism_weapp/services/shellCopy.js`
-- `docs/output/handoff/shanxi-bilingual-mvp/weapp-service-phrases.md`
-- `docs/output/handoff/shanxi-bilingual-mvp/weapp-spot-list-detail.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-service-phrases.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-spot-list-detail.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 feat(weapp): show categorized bilingual service phrases on service tab
@@ -206,14 +206,14 @@ feat(weapp): show categorized bilingual service phrases on service tab
 - 勾选产品 PRD 验收标准；输出回归 handoff
 
 ### 改了哪些文件
-- `docs/output/reports/shanxi-bilingual-mvp/wave1-regression-check.py`
-- `docs/output/reports/shanxi-bilingual-mvp/prd.md`
-- `docs/output/reports/shanxi-scenic-mock-data/prd.md`
-- `docs/output/handoff/shanxi-bilingual-mvp/weapp-mvp-regression.md`
-- `docs/output/handoff/shanxi-bilingual-mvp/weapp-service-phrases.md`
-- `docs/output/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/wave1-regression-check.py`
+- `docs/outputs/prd/shanxi-bilingual-mvp/prd.md`
+- `docs/outputs/prd/shanxi-scenic-mock-data/prd.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-mvp-regression.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-service-phrases.md`
+- `docs/outputs/handoff/shanxi-scenic-mock-data/weapp-mock-integration.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 test(weapp): record Wave-1 bilingual MVP regression results
@@ -228,12 +228,12 @@ test(weapp): record Wave-1 bilingual MVP regression results
 - 更新 epic-scratch
 
 ### 改了哪些文件
-- `docs/output/handoff/archive/shanxi-bilingual-mvp/*`
-- `docs/output/handoff/archive/shanxi-scenic-mock-data/weapp-mock-integration.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
-- `docs/output/handoff/shanxi-bilingual-mvp/.gitkeep`
-- `docs/output/handoff/shanxi-scenic-mock-data/.gitkeep`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/handoff/archive/shanxi-bilingual-mvp/*`
+- `docs/outputs/handoff/archive/shanxi-scenic-mock-data/weapp-mock-integration.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/.gitkeep`
+- `docs/outputs/handoff/shanxi-scenic-mock-data/.gitkeep`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 docs(archive): archive Wave-1 bilingual MVP handoffs
@@ -261,10 +261,10 @@ docs(archive): archive Wave-1 bilingual MVP handoffs
 - `tourism_api/.../wxspot/service/SpotBilingualService.java`
 - `tourism_api/.../wxspot/result/BilingualSpotView.java`
 - `tourism_api/.../config/GlobalConfigure.java`
-- `docs/output/handoff/shanxi-bilingual-mvp/api-seed-integration.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
-- `docs/output/reports/shanxi-bilingual-mvp/implementation-roadmap.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/api-seed-integration.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/implementation-roadmap.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 feat(api): add bilingual biz_spot seed and guest spot APIs
@@ -287,10 +287,10 @@ feat(api): add bilingual biz_spot seed and guest spot APIs
 - `tourism_weapp/pages/spot/spot.vue`
 - `tourism_weapp/pages/spot/detail.vue`
 - `tourism_admin/src/views/biz/spot/form.vue`
-- `docs/output/handoff/shanxi-bilingual-mvp/weapp-api-switch.md`
-- `docs/output/handoff/shanxi-bilingual-mvp/admin-bilingual-fields.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/weapp-api-switch.md`
+- `docs/outputs/handoff/shanxi-bilingual-mvp/admin-bilingual-fields.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 feat(weapp,admin): switch scenic data to bilingual API with mock fallback
@@ -304,11 +304,11 @@ feat(weapp,admin): switch scenic data to bilingual API with mock fallback
 - `reports/shanxi-bilingual-mvp/` 保留（SD-15 可选）
 
 ### 改了哪些文件
-- `docs/output/handoff/archive/shanxi-bilingual-mvp/api-seed-integration.md`
-- `docs/output/handoff/archive/shanxi-bilingual-mvp/weapp-api-switch.md`
-- `docs/output/handoff/archive/shanxi-bilingual-mvp/admin-bilingual-fields.md`
-- `docs/output/reports/shanxi-bilingual-mvp/epic-scratch.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/handoff/archive/shanxi-bilingual-mvp/api-seed-integration.md`
+- `docs/outputs/handoff/archive/shanxi-bilingual-mvp/weapp-api-switch.md`
+- `docs/outputs/handoff/archive/shanxi-bilingual-mvp/admin-bilingual-fields.md`
+- `docs/outputs/prd/shanxi-bilingual-mvp/epic-scratch.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 docs(archive): archive Wave-2 bilingual Mode B handoffs
@@ -333,19 +333,19 @@ docs: add local backend bootstrap problem brief for research
 
 ### 做了什么
 - 按精修仓结构打磨 `README.md`（为什么 / 功能 / 演示 / 快速开始 / 架构 / 路线图 / 文档）
-- 新增配图生成 brief：`docs/output/reports/readme-diagrams/readme-diagram-brief.md`
+- 新增配图生成 brief：`docs/outputs/prd/readme-diagrams/readme-diagram-brief.md`
 - 入库 5 张 README 配图并挂引用：banner / architecture / tech-stack / workflow / structure
 
 ### 改了哪些文件
 - `README.md`
 - `docs/README.md`
-- `docs/output/reports/readme-diagrams/readme-diagram-brief.md`
+- `docs/outputs/prd/readme-diagrams/readme-diagram-brief.md`
 - `docs/images/readme/banner.png`
 - `docs/images/readme/architecture.png`
 - `docs/images/readme/tech-stack.png`
 - `docs/images/readme/workflow.png`
 - `docs/images/readme/structure.png`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 docs(readme): polish README and add premium diagram assets
@@ -359,7 +359,7 @@ docs(readme): polish README and add premium diagram assets
 
 ### 改了哪些文件
 - `docs/images/readme/features.png`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 docs(readme): add features module diagram asset
@@ -381,10 +381,10 @@ docs(readme): add features module diagram asset
 - `preview-readme-en.html`
 - `preview-readme.css`
 - `preview-readme.js`
-- `docs/output/reports/readme-diagrams/readme-diagram-brief.md`
+- `docs/outputs/prd/readme-diagrams/readme-diagram-brief.md`
 - `docs/adr/0003-mock-first-demo-freeze.md`
-- `docs/output/reports/mock-demo-freeze/prd.md`
-- `docs/history/2026-07-10/commit-history.md`
+- `docs/outputs/prd/mock-demo-freeze/prd.md`
+- `docs/outputs/commit-history/archive/legacy-date-based/2026-07-10/commit-history.md`
 
 ### commit 信息
 docs(readme): add English README and bilingual preview pages

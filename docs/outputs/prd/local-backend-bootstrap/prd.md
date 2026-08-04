@@ -101,7 +101,7 @@ Wave2 DDL 为 `ALTER … AFTER`，须先有基表 CREATE。完整基表 DDL 由�
 | 框架 SQL（可大文件） | `tourism_api/sql/01_snowy_v2.0.0_framework.sql`（或分卷 + 来源说明） |
 | biz_spot | `tourism_api/sql/02_biz_spot_full.sql` |
 | 文档 | `tourism_api/sql/README.md`、`research-notes.md` |
-| handoff | `docs/output/handoff/local-backend-bootstrap/` |
+| handoff | `docs/outputs/handoff/local-backend-bootstrap/` |
 
 ## 风险
 

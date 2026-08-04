@@ -9,9 +9,9 @@
 
 | 项 | 路径 |
 |---|---|
-| 融合指南 | `docs/output/reports/shanxi-scenic-mock-data/LOCAL-AGENT-INTEGRATION-GUIDE.md` |
-| ZIP | `docs/output/reports/shanxi-scenic-mock-data/research/shanxi-scenic-mock-research-v1.zip` |
-| 解压内容 | `docs/output/reports/shanxi-scenic-mock-data/research/shanxi-scenic-mock-research-v1/` |
+| 融合指南 | `docs/outputs/prd/shanxi-scenic-mock-data/LOCAL-AGENT-INTEGRATION-GUIDE.md` |
+| ZIP | `docs/outputs/prd/shanxi-scenic-mock-data/research/shanxi-scenic-mock-research-v1.zip` |
+| 解压内容 | `docs/outputs/prd/shanxi-scenic-mock-data/research/shanxi-scenic-mock-research-v1/` |
 | P0 景区数 | 6（`data/spots.json`） |
 | 候选目录 | 12（`data/spotCatalog.json`） |
 

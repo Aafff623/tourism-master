@@ -54,4 +54,4 @@ Accepted（2026-07-10，用户确认：同学演示优先 Mock；真数据换接
 
 - ADR-0001（模式 A、slug、游客浏览）
 - ADR-0002（Mode B 列与 API；本 ADR 冻结其默认运行时优先级）
-- PRD：`docs/output/reports/mock-demo-freeze/prd.md`
+- PRD：`docs/outputs/prd/mock-demo-freeze/prd.md`

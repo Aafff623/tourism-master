@@ -38,6 +38,6 @@ updated: 2026-07-10
 
 ## 关联
 
-- 产品 PRD：`docs/output/reports/shanxi-bilingual-mvp/prd.md`
+- 产品 PRD：`docs/outputs/prd/shanxi-bilingual-mvp/prd.md`
 - 二次开发：SD-01 / SD-02
 - 路线图 Wave 1 第 1 步

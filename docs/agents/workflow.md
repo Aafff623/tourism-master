@@ -4,8 +4,6 @@
 
 ## 1. 目录结构
 
-### 规范路径（新主题）
-
 ```
 docs/outputs/
 ├── report/{theme}/                 # 调研分析（可选，先于 PRD）
@@ -16,19 +14,12 @@ docs/outputs/
 └── commit-history/
     ├── {branch}/YYYY-MM-DD.md
     └── archive/
-```
-
-### 历史兼容（既有主题勿擅自搬迁）
-
-```
-docs/output/
-├── reports/{theme}/                # 含 archive/
-├── handoff/{theme}/                # 含 archive/
-└── decks/
-docs/history/{YYYY-MM-DD}/          # 旧 commit 攒批
+        └── legacy-date-based/      # 旧 docs/history 迁入
 ```
 
 **命名**：`{theme}`、`{task}` 用 kebab-case 英文。`prd/{theme}/` 与 `handoff/{theme}/` **必须同名**。
+
+> **迁移说明（2026-08-04）**：历史 `docs/output/` 与 `docs/history/` 已整体迁入本树。禁止再新建 `docs/output/`。若外链仍写旧路径，以本文件为准改链。
 
 ---
 
@@ -60,8 +51,8 @@ docs/history/{YYYY-MM-DD}/          # 旧 commit 攒批
 
 ## 3. PRD 规范
 
-路径（新）：`docs/outputs/prd/{theme}/prd.md`  
-路径（历史示例）：`docs/output/reports/shanxi-bilingual-mvp/prd.md`
+路径：`docs/outputs/prd/{theme}/prd.md`  
+示例：`docs/outputs/prd/shanxi-bilingual-mvp/prd.md`
 
 ```markdown
 ---
@@ -107,7 +98,7 @@ status: draft | approved | archived
 
 ---
 
-## 7. 本仓加速约定
+## 7. 本仓约定
 
 - 三端 monorepo：**根治理即可**，子包不重复 AGENTS/CONTEXT。
 - 演示默认 Mock-only（ADR-0003）。

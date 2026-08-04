@@ -135,9 +135,9 @@ docs/
 
 ```text
 Issue（GitHub 或 Local Markdown）
-  → docs/output/prd/{theme}/prd.md      # 调研 + 需求
+  → docs/outputs/prd/{theme}/prd.md      # 调研 + 需求
   → 拆解 To-Do / 子任务
-  → docs/output/handoff/{theme}/{task}.md
+  → docs/outputs/handoff/{theme}/{task}.md
   → 实施 → Review → archive
 ```
 
@@ -170,7 +170,7 @@ assets/
 - [ ] `setup-matt-pocock-skills` 决策已落盘；`## Agent skills` 路径真实  
 - [ ] 根：`AGENTS` / `CLAUDE` / `CONTEXT` / `LANGUAGES` /（`CONTEXT-MAP`）  
 - [ ] `docs/agents` **无** `language.md`、`context.md`  
-- [ ] `docs/output/prd` · `handoff` · `docs/commit-history` · `adr` · `knowledge`  
+- [ ] `docs/outputs/prd` · `handoff` · `docs/commit-history` · `adr` · `knowledge`  
 - [ ] `assets/` + `assets/README.md`；外部资产已融合或迁移清单已关闭  
 - [ ] ADR-0000（或等价）已说明采用 ADR  
 - [ ] 无密钥入库；无本机绝对路径作唯一说明  
@@ -189,7 +189,7 @@ assets/
 | Skill | **`readme-polish`** |
 | 产品向范文 | [xianghai-yuntu](https://github.com/Aafff623/xianghai-yuntu) · [ResumeWise](https://github.com/Aafff623/ResumeWise) · [civil-service-exam-tracker](https://github.com/Aafff623/civil-service-exam-tracker) · [web3career-study-track](https://github.com/Aafff623/web3career-study-track) |
 | 含金量标杆 | [agent-cfo](https://github.com/San-Y108/agent-cfo)（黑客松 README 范式） |
-| 配图 brief | `docs/output/prd/readme-diagrams/readme-diagram-brief.md`（或等价 theme 名） |
+| 配图 brief | `docs/outputs/prd/readme-diagrams/readme-diagram-brief.md`（或等价 theme 名） |
 | 终稿图目录 | **`assets/images/readme/`** |
 
 ### 3.2 README Polish 覆盖范围
@@ -272,7 +272,7 @@ assets/
 2. 范文：xianghai-yuntu / ResumeWise / web3career-study-track / civil-service-exam-tracker；
    含金量标杆：agent-cfo。按本仓领域改写，禁止照抄。
 3. 覆盖：结构 · 样式 · 配图 · Showcase（可占位）。
-4. brief → docs/output/prd/readme-diagrams/；图 → assets/images/readme/。
+4. brief → docs/outputs/prd/readme-diagrams/；图 → assets/images/readme/。
 5. 我负责出图；你负责 Prompt、落盘路径与 README 引用。
 
 ## 门禁
@@ -285,9 +285,9 @@ assets/
 ## 5. 日常业务流（init 完成之后）
 
 ```text
-Issue(Epic) → docs/output/prd/{theme}/prd.md (draft)
+Issue(Epic) → docs/outputs/prd/{theme}/prd.md (draft)
   → 你 approved
-  → docs/output/handoff/{theme}/{task}.md
+  → docs/outputs/handoff/{theme}/{task}.md
   → 实施 → awaiting-review【停】
   → 你通过 → commit / docs/commit-history / archive
 ```
@@ -304,7 +304,7 @@ Issue(Epic) → docs/output/prd/{theme}/prd.md (draft)
 - [ ] `setup-matt-pocock-skills` 完成并写盘  
 - [ ] 根：`AGENTS` / `CLAUDE` / `CONTEXT` / `LANGUAGES` /（`CONTEXT-MAP`）  
 - [ ] `docs/agents` 无 language.md、无 context.md  
-- [ ] `docs/output/prd` · `handoff` · `docs/commit-history`  
+- [ ] `docs/outputs/prd` · `handoff` · `docs/commit-history`  
 - [ ] `assets/` 就绪；外部资产已融合或迁移关闭  
 - [ ] 分端 CONTEXT（若需要）  
 
@@ -331,8 +331,8 @@ Issue(Epic) → docs/output/prd/{theme}/prd.md (draft)
 | 共享词汇 | 根 `LANGUAGES.md` |
 | 领域事实 | 根 `CONTEXT.md` |
 | 任务流 | `docs/agents/workflow.md` |
-| PRD / 调研 | `docs/output/prd/{theme}/` |
-| Handoff | `docs/output/handoff/{theme}/` |
+| PRD / 调研 | `docs/outputs/prd/{theme}/` |
+| Handoff | `docs/outputs/handoff/{theme}/` |
 | Commit 攒批 | `docs/commit-history/` |
 | 配图输出 | `assets/images/readme/` |
 | 上游备份 | `assets/backup/` |
@@ -347,7 +347,7 @@ Issue(Epic) → docs/output/prd/{theme}/prd.md (draft)
 |---|---|
 | Phase B + Phase C | 合并为 **Phase B · README Polish** |
 | `docs/agents/language.md` · `context.md` | **删除**；只用根 `LANGUAGES.md` · `CONTEXT.md` |
-| `docs/history/` | `docs/commit-history/` |
-| `docs/output/reports/` | `docs/output/prd/` |
+| `docs/outputs/commit-history/archive/legacy-date-based/` | `docs/commit-history/` |
+| `docs/outputs/prd/` | `docs/outputs/prd/` |
 | `docs/images/readme/` | `assets/images/readme/` |
 | README 与 Showcase 分两阶段叙述 | 同属 README Polish |

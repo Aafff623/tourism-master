@@ -1,8 +1,8 @@
 # tourism-master — README 出图 Prompt（执行层）
 
 > 契约图**已落盘** `assets/images/readme/`（banner / features / architecture / tech-stack / workflow / structure）。  
-> 本文件供补图或重制时投喂 GPT image-to-image；加速 init **不重生图**。  
-> 历史 brief：`docs/output/reports/readme-diagrams/readme-diagram-brief.md`
+> 本文件供补图或重制时投喂 GPT image-to-image；**已有完整配图勿重复生成**。  
+> 契约 brief：同目录 [`readme-diagram-brief.md`](readme-diagram-brief.md)。
 
 ## §0 全局规范
 

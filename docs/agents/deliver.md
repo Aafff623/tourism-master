@@ -39,17 +39,17 @@
 | **T7** ADR | 架构决策 | `docs/adr/000N-*.md` |
 | **T8** 知识沉淀 | 用户要求写 knowledge | `docs/knowledge/`（须用户明示或 Review 通过） |
 | **T9** 资产 / 原型 | 配图、原型 | `docs/images/readme/`、`prototypes/` |
-| **T0** 横切 | 凡 Agent 改动的 repo 内文件 | `docs/history/{date}/commit-history.md` |
+| **T0** 横切 | 凡 Agent 改动的 repo 内文件 | `docs/outputs/commit-history/archive/legacy-date-based/{date}/commit-history.md` |
 
 同一对话可含多个单元：分别判定、分别维护。
 
 ## T0：commit-history 规则
 
-- 路径：`docs/history/{YYYY-MM-DD}/commit-history.md`（不存在则新建）
+- 路径：`docs/outputs/commit-history/archive/legacy-date-based/{YYYY-MM-DD}/commit-history.md`（不存在则新建）
 - **新任务** → 末尾追加 `## N. {slug}`
 - **同 slug 继续改** → 原地更新该块，不新增编号
 - **只记本轮 Agent 改动的文件**；用户 `/write` 改的 `src/`、`public/blogs/` 等 **不写入、不 commit**
-- 模板 → [`docs/history/README.md`](../history/README.md)
+- 模板 → [`docs/outputs/commit-history/archive/legacy-date-based/README.md`](../history/README.md)
 
 ## 各类型 deliver 要点
 

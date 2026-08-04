@@ -13,7 +13,7 @@ disable-model-invocation: true
 1. [`AGENTS.md`](../../AGENTS.md) — Commit 攒批、Review 门禁、文件边界
 2. [`docs/agents/deliver.md`](../../docs/agents/deliver.md) — **本流程唯一操作手册**
 3. [`docs/agents/workflow.md`](../../docs/agents/workflow.md) — handoff / PRD / archive
-4. [`docs/history/README.md`](../../docs/history/README.md) — commit-history 模板
+4. [`docs/outputs/commit-history/archive/legacy-date-based/README.md`](../../docs/outputs/commit-history/archive/legacy-date-based/README.md) — commit-history 模板
 
 ## 执行
 

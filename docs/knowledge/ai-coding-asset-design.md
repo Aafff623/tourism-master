@@ -83,7 +83,7 @@ assets/（媒体与备份收录）
 ### 5.1 目录
 
 ```
-docs/output/
+docs/outputs/
 ├── prd/
 │   ├── archive/{theme}/
 │   └── {theme}/prd.md          # PRD + 调研（原 reports/）
@@ -179,7 +179,7 @@ Brief 类小产物（如配图说明）可只建 `prd/{theme}/`，不走完整 P
 □ CONTEXT.md（领域事实）
 □ docs/agents/{workflow,context,language,domain,issue-tracker,triage-labels}.md
 □ docs/adr/
-□ docs/output/{reports,handoff}/archive/
+□ docs/outputs/{reports,handoff}/archive/
 □ docs/knowledge/ai-coding-asset-design.md（本文件）
 □ GitHub Issues 作为 Issue tracker
 ```
