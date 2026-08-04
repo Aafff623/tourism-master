@@ -1,45 +1,52 @@
 # AGENTS.md
 
+> **Output Style**: `humanizer-output-style` skill — 统一语气风格与去 AI 味配置。加载路径：`skills/humanizer-output-style/SKILL.md`  
+> **Windows Rules**: `.cursor/rules/windows-path-discipline.mdc` · `windows-shell-discipline.mdc`  
+> **Answer Format**: `.cursor/rules/answer-format.mdc`（含白话 Mermaid）  
+> **Commit History**: `.cursor/rules/commit-history.mdc`  
+> **项目语气**: [`docs/agents/voice.md`](docs/agents/voice.md)
+
 跨 Agent 工具的项目入口。**流程规范 → [`docs/agents/workflow.md`](docs/agents/workflow.md)。**
 
 ## 速览
 
 - 仓库：[`Aafff623/tourism-master`](https://github.com/Aafff623/tourism-master)
-- 产品：山西文旅景区介绍与双语服务小程序（模板二次开发）
-- 任务流程：[`docs/agents/workflow.md`](docs/agents/workflow.md)
+- 产品：山西文旅景区介绍与双语服务小程序（模板二次开发 · 三端 monorepo）
+- 共享用词：[`LANGUAGES.md`](LANGUAGES.md)
 - 领域上下文：[`CONTEXT.md`](CONTEXT.md) · 地图 [`CONTEXT-MAP.md`](CONTEXT-MAP.md)
 - 文档索引：[`docs/README.md`](docs/README.md)
-- 可迁移知识：[`docs/knowledge/ai-coding-asset-design.md`](docs/knowledge/ai-coding-asset-design.md)
 - 交付总结：Cursor `/deliver` · 规范 [`docs/agents/deliver.md`](docs/agents/deliver.md)
 - 归档：Cursor `/archive` · 规范 [`docs/agents/archive.md`](docs/agents/archive.md)
 
 ## 任务流（硬约束）
 
 ```
-Issue(Epic) → reports/{theme}/prd.md → 用户确认
-  → 子 Issue + handoff/{theme}/{task}.md
+Issue(Epic) → docs/outputs/prd/{theme}/prd.md → 用户确认
+  → 子 Issue + docs/outputs/handoff/{theme}/{task}.md
   → 实施 → awaiting-review → 用户 Review 通过
-  → handoff/archive/ + reports/archive/
+  → archive + commit-history
 ```
 
 | 规则 | 说明 |
 |---|---|
-| 一任务一 handoff | `handoff/{theme}/{task}.md` 原地迭代，**不用** 01/02 版本号 |
+| 一任务一 handoff | 覆盖式更新，**不用** 01/02 版本号；旧文件直接删除 |
 | Review 门禁 | 交付后 `status: awaiting-review`，**停止**；用户确认后才继续 |
-| **Review 说明** | 交付前**必须**向用户说明：做了什么、改了哪些文件、**Review 重点** |
+| **Review 说明** | 交付前**必须**说明：做了什么、改了哪些文件、**Review 重点** |
 | PRD 门禁 | `prd.md` 为 `approved` 前，禁止拆任务写功能代码 |
-| 主题同名 | `reports/{theme}/` ↔ `handoff/{theme}/` |
+| 主题同名 | `prd/{theme}/` ↔ `handoff/{theme}/` |
+| 根治理优先 | 三端子包**不必**重复整套 AGENTS/CONTEXT；分端细节进 `docs/contexts/*` |
 
 ## 产物归位
 
-| 产物 | 路径 |
-|---|---|
-| PRD / brief | `docs/output/reports/{theme}/` |
-| 任务 handoff | `docs/output/handoff/{theme}/{task}.md` |
-| 已完结 | `docs/output/{reports,handoff}/archive/{theme}/` |
-| 改动记录（攒批） | `docs/history/{YYYY-MM-DD}/commit-history.md` |
-| README 配图 | `docs/images/readme/` |
-| 分端 CONTEXT | `docs/contexts/{weapp,admin,api}/CONTEXT.md` |
+| 产物 | 规范路径（新） | 历史兼容 |
+|---|---|---|
+| PRD / brief / 调研 | `docs/outputs/prd/{theme}/` · `docs/outputs/report/{theme}/` | `docs/output/reports/{theme}/` |
+| 任务 handoff | `docs/outputs/handoff/{theme}/{task}.md` | `docs/output/handoff/{theme}/` |
+| Commit 攒批 | `docs/outputs/commit-history/{branch}/YYYY-MM-DD.md` | `docs/history/{date}/` |
+| README 配图 | `assets/images/readme/` | （旧 `docs/images/readme/` 已迁出） |
+| 分端 CONTEXT | `docs/contexts/{weapp,admin,api}/CONTEXT.md` | — |
+
+> 既有主题（如 `shanxi-bilingual-mvp`、`mock-demo-freeze`）仍读历史路径；**新主题**一律写 `docs/outputs/`。
 
 ## Commit 攒批（硬约束）
 
@@ -47,21 +54,17 @@ Issue(Epic) → reports/{theme}/prd.md → 用户确认
 
 ```
 Agent 完成任务
-  → 在 docs/history/{YYYY-MM-DD}/commit-history.md 末尾追加条目
+  → 写/更新 docs/outputs/commit-history/{branch}/YYYY-MM-DD.md
   → 进入 Review，停止
-  → 用户明确同意（「通过 / commit / 合并」）后
-  → Agent 生成 commit，并维护 history 文件
+  → 用户明确同意后 → git commit
 ```
 
 | 规则 | 说明 |
 |---|---|
-| Review 先于 commit | 任务做完**先写 history 条目**，**禁止**未经用户同意自动 `git commit` |
-| 一天一文件 | 同一天多个任务追加到同一个 `commit-history.md` |
-| 只管自己改的 | Agent **只提交本轮对话自己改动的文件**；其它工作树变更不代提、不混合 |
+| Review 先于 commit | **禁止**未经用户同意自动 `git commit`（用户显式要求的 init/交付除外） |
+| 只管自己改的 | Agent **只提交本轮对话自己改动的文件** |
 
 ## Review 说明（全局硬约束）
-
-交付 Review 前，Agent **必须先输出 Review 说明**，再停止等待确认：
 
 ```
 做了什么（要点列表）
@@ -71,19 +74,18 @@ Review 重点（用户应重点看什么、怎么验、有何风险/未决项）
 
 ## 会话开始
 
-1. 本文件
+1. 本文件 + `LANGUAGES.md`
 2. 用户给的 **theme + task** 或 **Issue 号**
 3. `workflow.md` 规定的 PRD + handoff
-4. 按需 `CONTEXT.md`、`CONTEXT-MAP.md`、相关分端 CONTEXT、ADR
+4. 按需 `CONTEXT.md`、`CONTEXT-MAP.md`、分端 CONTEXT、ADR
 
 ## 会话结束
 
 | 条件 | 动作 |
 |---|---|
 | 有交付待 Review | handoff → `awaiting-review`，**停止**；或执行 `/deliver` |
-| Review 已通过 | **物理移动** handoff → `archive/`；主题完结移 reports |
-| 新规范 | 追加 `CLAUDE.md` §已归档偏好 |
-| 可迁移知识 | **仅用户要求**；草稿 → Review → 写入 `docs/knowledge/` |
+| Review 已通过 | 归档 handoff；主题完结归档 PRD |
+| 可迁移知识 | **仅用户要求**；草稿 → Review → `docs/knowledge/` |
 
 ## Agent skills
 
@@ -106,6 +108,4 @@ Issues 以 GitHub Issues 跟踪（`gh` CLI）。详见 [`docs/agents/issue-track
 | `/deliver` | [`.cursor/skills/deliver/`](.cursor/skills/deliver/) | [`docs/agents/deliver.md`](docs/agents/deliver.md) |
 | `/archive` | [`.cursor/skills/archive/`](.cursor/skills/archive/) | [`docs/agents/archive.md`](docs/agents/archive.md) |
 
-`.cursor/` **仅允许**上述 skills；其它约束写在本文件与 `CLAUDE.md`。
-
-详细维护协议 → [`CLAUDE.md`](CLAUDE.md)。
+项目规则资产：`.cursor/rules/` 五份 MDC（`alwaysApply: true`）。详细维护协议 → [`CLAUDE.md`](CLAUDE.md)。

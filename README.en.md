@@ -14,7 +14,7 @@ Built for inbound visitors and Chinese users alike, Tourism Master delivers **sc
 </div>
 
 <p align="center">
-  <img src="docs/images/readme/banner.png" alt="Tourism Master Banner" width="100%">
+  <img src="assets/images/readme/banner.png" alt="Tourism Master Banner" width="100%">
 </p>
 
 <p align="center">
@@ -64,7 +64,7 @@ Tourism Master therefore focuses on: **scenic introduction, cultural interpretat
 ## Features
 
 <p align="center">
-  <img src="docs/images/readme/features.png" alt="Tourism Master core feature modules" width="80%">
+  <img src="assets/images/readme/features.png" alt="Tourism Master core feature modules" width="80%">
 </p>
 
 | Feature | Description |
@@ -203,7 +203,7 @@ Open `tourism_weapp` in HBuilderX and preview in WeChat DevTools once dependenci
 ## Architecture
 
 <p align="center">
-  <img src="docs/images/readme/architecture.png" alt="System architecture" width="80%">
+  <img src="assets/images/readme/architecture.png" alt="System architecture" width="80%">
 </p>
 
 - **`tourism_weapp`**: UniApp mini program; Locale switching, scenic browsing, Mock Repository / API Adapter; booking and comments keep Token auth
@@ -214,7 +214,7 @@ Open `tourism_weapp` in HBuilderX and preview in WeChat DevTools once dependenci
 ### Tech stack
 
 <p align="center">
-  <img src="docs/images/readme/tech-stack.png" alt="Tech stack layers" width="80%">
+  <img src="assets/images/readme/tech-stack.png" alt="Tech stack layers" width="80%">
 </p>
 
 | Layer | Stack | Path |
@@ -226,7 +226,7 @@ Open `tourism_weapp` in HBuilderX and preview in WeChat DevTools once dependenci
 ### Visitor journey
 
 <p align="center">
-  <img src="docs/images/readme/workflow.png" alt="Visitor journey flow" width="80%">
+  <img src="assets/images/readme/workflow.png" alt="Visitor journey flow" width="80%">
 </p>
 
 **Implementation notes:**
@@ -238,7 +238,7 @@ Open `tourism_weapp` in HBuilderX and preview in WeChat DevTools once dependenci
 ### Repository layout
 
 <p align="center">
-  <img src="docs/images/readme/structure.png" alt="Repository structure" width="80%">
+  <img src="assets/images/readme/structure.png" alt="Repository structure" width="80%">
 </p>
 
 ---

@@ -14,7 +14,7 @@
 </div>
 
 <p align="center">
-  <img src="docs/images/readme/banner.png" alt="Tourism Master Banner" width="100%">
+  <img src="assets/images/readme/banner.png" alt="Tourism Master Banner" width="100%">
 </p>
 
 <p align="center">
@@ -27,13 +27,14 @@
 </p>
 
 <p align="center">
-  <a href="#为什么需要本系统">🏯 为什么</a> ·
-  <a href="#功能">✨ 功能</a> ·
-  <a href="#演示">📱 演示</a> ·
-  <a href="#快速开始">🚀 快速开始</a> ·
-  <a href="#架构">🏗️ 架构</a> ·
-  <a href="#路线图">🗺️ 路线图</a> ·
-  <a href="#文档">📚 文档</a> ·
+  <a href="#为什么需要本系统">为什么</a> ·
+  <a href="#功能">功能</a> ·
+  <a href="#演示--showcase">演示</a> ·
+  <a href="#preview">Preview</a> ·
+  <a href="#快速开始">快速开始</a> ·
+  <a href="#架构">架构</a> ·
+  <a href="#路线图">路线图</a> ·
+  <a href="#文档">文档</a> ·
   <a href="#license">License</a>
 </p>
 
@@ -64,7 +65,7 @@ Tourism Master 因此将产品主线收敛为：**景区介绍、文化解读与
 ## 功能
 
 <p align="center">
-  <img src="docs/images/readme/features.png" alt="Tourism Master 核心功能模块" width="80%">
+  <img src="assets/images/readme/features.png" alt="Tourism Master 核心功能模块" width="80%">
 </p>
 
 | 功能 | 说明 |
@@ -81,7 +82,7 @@ Tourism Master 因此将产品主线收敛为：**景区介绍、文化解读与
 
 ---
 
-## 演示
+## 演示 / Showcase
 
 ### 推荐演示路径
 
@@ -94,28 +95,26 @@ Tourism Master 因此将产品主线收敛为：**景区介绍、文化解读与
 
 ### Showcase
 
-山西主题小程序的真机与管理端截图将在应用启动、内容替换和视觉验收完成后补充 📸，本节暂时保留展示位。
+真机截图待视觉验收后补充至 `assets/images/readme/showcase-*.png`（建议：首页热点 · 景区详情 · 双语服务）。
 
-<!--
-后续建议使用三列相册：
+模板原始界面参考（非终稿视觉）见根目录 [`images/`](images/)。
 
-1. 首页 / 景区热点
-2. 景区详情 / 文化解读
-3. 双语服务 / 管理端表单
--->
+---
 
-<details>
-<summary>查看原始模板界面参考</summary>
+## Preview
 
-> 以下截图仅用于说明现有工程骨架与基础交互，不代表 Tourism Master 的最终视觉与山西正式内容。
+本仓是**单产品三端应用**，不单独建资产 Gallery Preview 站；用 Showcase + README 本地预览壳即可。
 
-| 管理端登录 | 小程序首页 | 文化遗产列表 |
-|---|---|---|
-| [查看截图](images/1.png) | [查看截图](images/shortcut-20250727-095547.png) | [查看截图](images/shortcut-20250727-095606.png) |
+### README 本地预览壳
 
-更多参考截图见 [`images/`](images/)。
+| 项 | 值 |
+|---|---|
+| 启动 | 仓库根：`python -m http.server 8080` |
+| URL | http://127.0.0.1:8080/preview-readme.html |
+| 英文 | http://127.0.0.1:8080/preview-readme-en.html |
+| 文件 | `preview-readme.html` · `preview-readme.css` · `preview-readme.js` |
 
-</details>
+须用 HTTP 打开（`file://` 无法 `fetch` README）。无 port-registry，端口 **8080** 为本仓约定。
 
 ### 首批景区（Mock / Seed）
 
@@ -184,26 +183,23 @@ pnpm dev
 
 **演示默认**：景区主链路走本地 Mock（ADR-0003）。订票 / 评论等模板入口可保留，不纳入演示验收。
 
-<details>
-<summary>新成员阅读顺序</summary>
+### 新成员阅读顺序
 
 | 顺序 | 路径 | 目的 |
 |---|---|---|
 | 1 | `README.md` | 定位、跑起来、边界 |
-| 2 | `CONTEXT.md` · `CONTEXT-MAP.md` | 术语与多端地图 |
+| 2 | `CONTEXT.md` · `LANGUAGES.md` · `CONTEXT-MAP.md` | 术语、用词与多端地图 |
 | 3 | `AGENTS.md` · `CLAUDE.md` | 任务流与 Agent 纪律 |
-| 4 | `docs/output/reports/shanxi-bilingual-mvp/prd.md` | 产品验收真相源 |
+| 4 | `docs/output/reports/shanxi-bilingual-mvp/prd.md` | 产品验收真相源（历史路径） |
 | 5 | `docs/adr/0001-bilingual-field-model.md` | 双语字段与 `slug` 导航 |
 | 6 | 对应端源码 + `docs/contexts/*/CONTEXT.md` | 实施 |
-
-</details>
 
 ---
 
 ## 架构
 
 <p align="center">
-  <img src="docs/images/readme/architecture.png" alt="系统架构图" width="80%">
+  <img src="assets/images/readme/architecture.png" alt="系统架构图" width="80%">
 </p>
 
 - **`tourism_weapp`**：UniApp 小程序；Locale 切换、景区浏览、Mock Repository / API Adapter；订票与评论沿用 Token 鉴权
@@ -214,7 +210,7 @@ pnpm dev
 ### 技术栈
 
 <p align="center">
-  <img src="docs/images/readme/tech-stack.png" alt="技术栈分层图" width="80%">
+  <img src="assets/images/readme/tech-stack.png" alt="技术栈分层图" width="80%">
 </p>
 
 | 层级 | 技术 | 路径 |
@@ -226,7 +222,7 @@ pnpm dev
 ### 游客主链路
 
 <p align="center">
-  <img src="docs/images/readme/workflow.png" alt="游客主链路流程图" width="80%">
+  <img src="assets/images/readme/workflow.png" alt="游客主链路流程图" width="80%">
 </p>
 
 **实现要点：**
@@ -238,8 +234,19 @@ pnpm dev
 ### 目录结构
 
 <p align="center">
-  <img src="docs/images/readme/structure.png" alt="仓库目录结构图" width="80%">
+  <img src="assets/images/readme/structure.png" alt="仓库目录结构图" width="80%">
 </p>
+
+```
+/
+├── AGENTS.md · CLAUDE.md · CONTEXT.md · CONTEXT-MAP.md · LANGUAGES.md
+├── README.md · preview-readme.*
+├── assets/images/readme/          # README 契约配图
+├── docs/agents/ · adr/ · contexts/ · outputs/ · output/
+├── tourism_weapp/                 # UniApp 小程序
+├── tourism_admin/                 # Vue3 管理端
+└── tourism_api/                   # Spring Boot / Snowy
+```
 
 ---
 
@@ -262,15 +269,17 @@ pnpm dev
 | 文档 | 说明 |
 |---|---|
 | [`CONTEXT.md`](CONTEXT.md) | 产品域事实、术语、约束 |
+| [`LANGUAGES.md`](LANGUAGES.md) | 共享用词入口 |
 | [`CONTEXT-MAP.md`](CONTEXT-MAP.md) | 多端上下文地图 |
 | [`AGENTS.md`](AGENTS.md) · [`CLAUDE.md`](CLAUDE.md) | Agent 入口与维护协议 |
 | [`docs/README.md`](docs/README.md) | 文档资产索引 |
+| [`assets/README.md`](assets/README.md) | 媒体约定 |
 | [`docs/output/reports/shanxi-bilingual-mvp/prd.md`](docs/output/reports/shanxi-bilingual-mvp/prd.md) | 产品 PRD（approved） |
 | [`docs/adr/0001-bilingual-field-model.md`](docs/adr/0001-bilingual-field-model.md) | 双语字段与导航键 |
 | [`docs/contexts/`](docs/contexts/) | weapp / admin / api 分端 CONTEXT |
-| [`docs/output/reports/readme-diagrams/readme-diagram-brief.md`](docs/output/reports/readme-diagrams/readme-diagram-brief.md) | README 配图生成说明 |
+| [`docs/output/reports/readme-diagrams/readme-diagram-brief.md`](docs/output/reports/readme-diagrams/readme-diagram-brief.md) | README 配图 brief |
 
-任务流：GitHub Issues + `docs/output/handoff/`；完结归档见 `docs/output/*/archive/`。
+任务流：GitHub Issues + `docs/outputs/`（新）/ `docs/output/`（历史）；规范见 [`docs/agents/workflow.md`](docs/agents/workflow.md)。
 
 ---
 

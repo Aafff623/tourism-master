@@ -1,32 +1,34 @@
-# 共享语言
+# LANGUAGES.md
 
-Agent 输出（issue 标题、重构名、测试名、注释）必须使用下表词汇。  
-完整定义见根目录 `CONTEXT.md` §领域术语表。  
-若根目录已建 `LANGUAGES.md`，以该文件为**用词入口**（与本文件同义，避免双源漂移）。
+共享用词入口。Agent 输出（Issue 标题、重构名、测试名、注释、handoff）必须使用本表词汇。  
+完整领域定义见根 [`CONTEXT.md`](CONTEXT.md) §领域术语表。
+
+> **禁止**再维护 `docs/agents/language.md`（已废弃，避免双源漂移）。
 
 ## Issue tracker
 
 | 术语 | 定义 | 避免 |
 |---|---|---|
-| **Issue tracker** | 本仓库的 GitHub Issues | backlog manager、ticket 系统 |
+| **Issue tracker** | 本仓库 GitHub Issues（`Aafff623/tourism-master`） | backlog manager、ticket 系统 |
 | **Issue** | tracker 中的单条工作单元 | ticket（除非引用外部系统原文） |
 | **Triage role** | issue 上的 canonical 状态角色 | 自定义状态名 |
 
-Triage 角色与标签字符串映射见 `triage-labels.md`。
+Triage 角色与标签字符串映射见 [`docs/agents/triage-labels.md`](docs/agents/triage-labels.md)。
 
 ## 任务流
 
 | 术语 | 定义 |
 |---|---|
-| **主题** | theme；一个 Epic / 倡议，`reports/{theme}/` 与 `handoff/{theme}/` 同名 |
+| **主题** | theme；一个 Epic / 倡议，`prd/{theme}/` 与 `handoff/{theme}/` 同名 |
 | **任务** | task；PRD 拆分后的工作单元，对应子 Issue + `handoff/{theme}/{task}.md` |
-| **PRD** | 需求文档；`reports/{theme}/prd.md`，用户确认前 `draft` |
-| **Handoff** | 任务接力文件；一任务一文件，持续更新 |
+| **PRD** | 需求文档；`docs/outputs/prd/{theme}/prd.md`（历史主题仍在 `docs/output/reports/{theme}/`） |
+| **Handoff** | 任务接力文件；一任务一文件，覆盖式更新 |
 | **Review** | 用户确认交付；通过前 Agent 停止 |
-| **Archive** | `reports/archive/`、`handoff/archive/`；已确认完结 |
+| **Archive** | 已确认完结的 handoff / PRD 归档目录 |
 | **Knowledge** | `docs/knowledge/`；跨项目可迁移经验；写入须用户 Review |
+| **Commit-history** | `docs/outputs/commit-history/{branch}/YYYY-MM-DD.md` |
 
-流程详见 `workflow.md`。Knowledge 详见 `docs/knowledge/README.md`。
+流程详见 [`docs/agents/workflow.md`](docs/agents/workflow.md)。
 
 ## 领域（山西文旅双语）
 
@@ -48,7 +50,7 @@ Triage 角色与标签字符串映射见 `triage-labels.md`。
 | Mock 数据 | Mock Data | 可替换演示数据 |
 | 景区热点 | Home Hot Spots | 首页景区推荐；≠ `biz_recommend` |
 | 景区Slug | Spot Slug | 导航业务键（ADR-0001） |
-| 模式 A/B/C | Integration Mode | Mock 适配层 / Seed+API / 完整 CMS |
+| 模式 A/B/C | Integration Mode | Mock 适配层 / Seed+API / 完整 CMS；演示默认 A（ADR-0003） |
 
 ## 上下文（多端）
 

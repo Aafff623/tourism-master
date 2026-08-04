@@ -4,27 +4,31 @@
 
 ## 1. 目录结构
 
+### 规范路径（新主题）
+
+```
+docs/outputs/
+├── report/{theme}/                 # 调研分析（可选，先于 PRD）
+├── prd/{theme}/
+│   └── prd.md                      # PRD（用户确认前 status: draft）
+├── handoff/{theme}/
+│   └── {task}.md                   # 一任务一文件，覆盖式更新
+└── commit-history/
+    ├── {branch}/YYYY-MM-DD.md
+    └── archive/
+```
+
+### 历史兼容（既有主题勿擅自搬迁）
+
 ```
 docs/output/
-├── reports/
-│   ├── archive/                    # 已确认、已完结的主题
-│   │   └── {theme}/
-│   │       └── prd.md
-│   └── {theme}/                    # 进行中的主题（与 Issue Epic 同名）
-│       ├── prd.md                  # PRD（用户确认前 status: draft）
-│       └── …                       # brief 等附属文档
-├── handoff/
-│   ├── archive/                    # Review 通过并已完结的任务
-│   │   └── {theme}/
-│   │       └── {task}.md
-│   └── {theme}/                    # 进行中的主题
-│       └── {task}.md               # 一任务一文件，持续更新（不用序号版本）
+├── reports/{theme}/                # 含 archive/
+├── handoff/{theme}/                # 含 archive/
 └── decks/
+docs/history/{YYYY-MM-DD}/          # 旧 commit 攒批
 ```
 
-**命名**：`{theme}`、`{task}` 用 kebab-case 英文，与 GitHub Issue 标题语义一致（如 `multi-cover`、`covers-editor`）。
-
-`reports/{theme}/` 与 `handoff/{theme}/` **必须同名**，便于 Agent 定位。
+**命名**：`{theme}`、`{task}` 用 kebab-case 英文。`prd/{theme}/` 与 `handoff/{theme}/` **必须同名**。
 
 ---
 
@@ -32,32 +36,36 @@ docs/output/
 
 ```
 用户想法
-  → GitHub Issue（Epic，父 Issue）
-  → 沟通需求 → reports/{theme}/prd.md（draft）
+  → GitHub Issue（Epic）
+  → （可选）docs/outputs/report/{theme}/
+  → docs/outputs/prd/{theme}/prd.md（draft）
   → 用户确认 PRD ✓
-  → 拆任务：子 Issue + handoff/{theme}/{task}.md（每个任务一个文件）
+  → 拆任务：子 Issue + handoff/{theme}/{task}.md
   → Agent 实施 → 更新 handoff → 停止，请求 Review
   → 用户 Review 通过 ✓
-  → 关闭子 Issue；handoff 移入 handoff/archive/{theme}/
-  → 主题全部完结 → reports/{theme}/ 移入 reports/archive/{theme}/
+  → 归档 handoff；主题完结归档 PRD
+  → commit-history + git commit（用户同意后）
 ```
 
 | 阶段 | 产物 | 位置 |
 |---|---|---|
 | 立项 | Epic Issue | GitHub |
-| PRD | `prd.md` | `reports/{theme}/` |
+| 调研 | report（可选） | `docs/outputs/report/{theme}/` |
+| PRD | `prd.md` | `docs/outputs/prd/{theme}/` |
 | 子任务 | 子 Issue + handoff | GitHub + `handoff/{theme}/{task}.md` |
-| 完结 | 归档 | `*/archive/{theme}/` |
+| 攒批 | commit-history | `docs/outputs/commit-history/{branch}/` |
+| 完结 | 归档 | 对应 `archive/` |
 
 ---
 
 ## 3. PRD 规范
 
-路径：`docs/output/reports/{theme}/prd.md`
+路径（新）：`docs/outputs/prd/{theme}/prd.md`  
+路径（历史示例）：`docs/output/reports/shanxi-bilingual-mvp/prd.md`
 
 ```markdown
 ---
-theme: multi-cover
+theme: example-theme
 epic-issue: 42
 status: draft | approved | archived
 ---
@@ -65,177 +73,42 @@ status: draft | approved | archived
 # PRD — {标题}
 
 ## 背景
-…
-
 ## 目标
-…
-
 ## 范围（做 / 不做）
-…
-
 ## 验收标准
-…
-
 ## 任务拆分
-| task | Issue | handoff |
-|---|---|---|
-| covers-editor | #43 | handoff/multi-cover/covers-editor.md |
-| list-carousel | #44 | handoff/multi-cover/list-carousel.md |
 ```
-
-- `status: draft` — 与用户沟通中，**禁止**拆任务写代码
-- `status: approved` — 用户书面确认后，Agent 才可拆任务
-- 主题完结后整目录移入 `reports/archive/{theme}/`
 
 ---
 
 ## 4. Handoff 规范
 
-路径：`docs/output/handoff/{theme}/{task}.md`（**一任务一文件，原地迭代，不用 01/02 版本号**）
-
-```markdown
----
-theme: multi-cover
-task: covers-editor
-issue: 43
-status: in-progress | awaiting-review | done
-updated: 2026-07-05
----
-
-# covers-editor
-
-## 目标
-（来自 PRD 或子 Issue）
-
-## 已完成
-- …
-
-## 待 Review（当前交付）
-- 改了什么、如何验证
-
-## 阻塞 / 问题
-- …
-
-## 下次（仅 Review 通过后填写）
-- …
-```
-
-### status 含义
-
-| status | 含义 | Agent 行为 |
-|---|---|---|
-| `in-progress` | 实施中 | 可继续改代码 |
-| `awaiting-review` | 已交付，等用户 | **停止**，不得开始下一任务 |
-| `done` | Review 通过 | 移入 `handoff/archive/{theme}/`，关闭 Issue |
+- 一任务一文件；**覆盖式**更新（旧日期文件直接删除）。
+- 交付后 `status: awaiting-review`，Agent **停止**。
+- 交付前必须输出 Review 说明（做了什么 / 改了哪些文件 / Review 重点）。
 
 ---
 
-## 5. Agent 拆分任务
+## 5. Review 与 Commit
 
-**前置**：`prd.md` 的 `status: approved`。
-
-1. 与用户确认任务列表（≤7 个可并行理解的单元）。
-2. 每个任务：`gh issue create` 子 Issue，父 Issue 为 Epic。
-3. 每个任务：创建 `handoff/{theme}/{task}.md`，`status: in-progress`。
-4. 在 `prd.md` §任务拆分 填 Issue 号与 handoff 路径。
-5. **一次只做一个任务**；不得跳过 Review 开启下一任务。
+1. Review 通过前禁止把「做完」当作可 commit 终点。
+2. 用户明确同意后才 `git commit`。
+3. 只提交本轮自己改动的文件。
+4. commit-history 表格格式见 `.cursor/rules/commit-history.mdc`。
 
 ---
 
-## 6. Agent 继续任务
+## 6. 交付 / 归档命令
 
-新对话开始时，用户应提供 **theme + task** 或 **Issue 号**。
-
-Agent 读取顺序：
-
-1. `AGENTS.md`
-2. `gh issue view {issue}`
-3. `reports/{theme}/prd.md`（approved）
-4. `handoff/{theme}/{task}.md`（进行中的最新内容即该文件本身）
-
-若 `handoff` 的 `status: awaiting-review`：**不得继续改代码**，除非用户明确说「继续改」或「Review 未通过，修改 xxx」。
-
----
-
-## 7. Agent ↔ 用户交互
-
-### Agent 必须停止并等待 Review 的时机
-
-- PRD 初稿完成 → 等用户确认 `approved`
-- 任务代码/文档交付 → 改 handoff 为 `awaiting-review` → 等用户
-- 用户说「通过 / OK / 继续」→ 才可标记 `done`、归档或开始下一任务
-
-### Review 说明（全局，交付前必做）
-
-进入 Review **之前**，Agent 须向用户输出：
-
-1. **做了什么** — 要点列表
-2. **改了哪些文件** — 路径（无改动则说明「无 repo 变更」）
-3. **Review 重点** — 用户应重点看什么、如何验证、风险或未决项
-
-适用于所有场景（功能、文档、PRD、规范、咨询落地）。`/deliver` 摘要、handoff §待 Review 须与此对齐。详见 [`AGENTS.md`](../../AGENTS.md) §Review 说明。
-
-### Agent 禁止
-
-- 未经 PRD 确认就拆任务或写功能代码
-- Review 未通过时自行开始下一任务
-- 跳过 Issue 直接做（除纯文档/规范类且用户明示）
-- 过度设计：PRD 范围外的功能不主动加
-
-### 用户指令速查
-
-| 用户说 | Agent 做 |
+| 命令 | 规范 |
 |---|---|
-| 「确认 PRD」 | `prd.md` → `approved`，拆任务 |
-| 「通过 / LGTM」 | handoff → `done`，归档，关 Issue |
-| 「继续 {task}」 | 读对应 handoff，`in-progress`，实施 |
-| 「改 xxx」 | 保持或回到 `in-progress`，改完再 `awaiting-review` |
+| `/deliver` | [`deliver.md`](deliver.md) |
+| `/archive` | [`archive.md`](archive.md) |
 
 ---
 
-## 8. 归档
+## 7. 本仓加速约定
 
-**归档 = 物理移动文件到 `archive/`，不是只改 frontmatter `status: done`。**
-
-| 条件 | 动作 |
-|---|---|
-| 单任务 Review 通过 | `handoff/{theme}/{task}.md` → **`handoff/archive/{theme}/{task}.md`**（移动）；`status: done`；关子 Issue |
-| 主题下全部 handoff 已 archived | **`reports/{theme}/` → `reports/archive/{theme}/`**（整目录移动）；`prd.md` → `archived`；关 Epic |
-| Brief 主题（无 handoff） | `reports/{theme}/` → `reports/archive/{theme}/` |
-
-### 单任务归档步骤
-
-1. 用户 Review 通过（「通过 / LGTM / archive {task}」或 `/archive`）
-2. 更新 handoff frontmatter：`status: done`
-3. **移动文件**：`git mv handoff/{theme}/{task}.md handoff/archive/{theme}/{task}.md`
-4. 同步 `reports/{theme}/epic-scratch.md` 或 PRD §任务拆分 中该 task → done
-5. `gh issue close {issue}`（若有）
-
-### 主题归档步骤
-
-1. 确认 `handoff/{theme}/` 下**无剩余** handoff（全部已在 `handoff/archive/{theme}/`）
-2. **移动目录**：`git mv reports/{theme} reports/archive/{theme}`
-3. `prd.md` frontmatter `status: archived`
-4. 关 Epic Issue
-
-### 常见错误
-
-| 错误 | 正确做法 |
-|---|---|
-| 只改 frontmatter 为 `done`，文件不移动 | 必须移到 `handoff/archive/{theme}/` |
-| epic-scratch 表标 done 但 handoff 仍在进行中目录 | 执行物理移动或回滚表状态 |
-| 主题未全部 archived 就移 reports | 先齐 handoff/archive，再移 reports |
-
-归档后文件**只读**，新需求开新 `{theme}`。详见 [`archive.md`](archive.md) · Cursor `/archive`。
-
----
-
-## 9. 与现有产物的关系
-
-| 已有 | 适配 |
-|---|---|
-| `reports/readme-diagrams/` | 合法 `{theme}`，无 PRD 的纯 brief 主题；可不建 handoff |
-| GitHub Issues | Epic = 主题；子 Issue = 任务 |
-| `docs/images/readme/` | README 终稿配图，brief 中指向此处 |
-
-无 PRD 的小型产物（如单份 brief）：可只建 `reports/{theme}/`，不走 handoff 流程。
+- 三端 monorepo：**根治理即可**，子包不重复 AGENTS/CONTEXT。
+- 演示默认 Mock-only（ADR-0003）。
+- 用词入口：根 [`LANGUAGES.md`](../../LANGUAGES.md)；领域事实：根 [`CONTEXT.md`](../../CONTEXT.md)。

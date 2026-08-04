@@ -2,68 +2,53 @@
 
 本目录存放**文档、决策、Agent 约定与产物**，不放应用源码。
 
-目录与流程设计参照可迁移知识 [`knowledge/ai-coding-asset-design.md`](knowledge/ai-coding-asset-design.md)（源自 my-blogs 实践）。
-
 ## 目录结构
 
 ```
 docs/
-├── README.md           ← 本文件：索引
-├── adr/                架构决策记录（ADR-0001 …）
-├── agents/             Agent 规则
-│   ├── workflow.md     ★ 任务流（Issue→PRD→handoff→Review→archive）
-│   ├── deliver.md      ★ 交付层（/deliver → commit-history + 摘要）
-│   ├── archive.md      ★ 归档层（/archive → 物理移动 archive/）
-│   ├── context.md      文档地图
-│   ├── language.md     共享词汇
-│   ├── domain.md       领域消费规则
-│   ├── issue-tracker.md
-│   └── triage-labels.md
-├── contexts/           分端 CONTEXT（weapp / admin / api）
-├── knowledge/          可迁移知识沉淀
-├── history/            攒批 commit 记录
-├── images/readme/      README 配图（banner / architecture / tech-stack / workflow / structure）
-└── output/
-    ├── reports/
-    │   ├── archive/{theme}/
-    │   ├── readme-diagrams/           README 配图生成 brief
-│   ├── local-backend-bootstrap/   本机后端联调（演示后置；见 ADR-0003）
-│   ├── mock-demo-freeze/          同学演示 Mock 冻结 PRD
-│   └── {theme}/                   prd.md、brief
-    ├── handoff/
-    │   ├── archive/{theme}/
-    │   └── {theme}/{task}.md
-    └── decks/
+├── README.md
+├── adr/                    架构决策（ADR-0000 …）
+├── agents/                 Agent 规则（无 language.md / context.md）
+│   ├── workflow.md         ★ 任务流
+│   ├── deliver.md · archive.md
+│   ├── domain.md · issue-tracker.md · triage-labels.md
+│   └── voice.md            项目语气与回答格式
+├── contexts/               分端 CONTEXT（weapp / admin / api）
+├── knowledge/ · glossary/
+├── outputs/                规范产物（新主题）
+│   ├── report/{theme}/
+│   ├── prd/{theme}/
+│   ├── handoff/{theme}/
+│   └── commit-history/{branch}/
+└── output/                 历史兼容（既有 PRD / handoff）
+    ├── reports/ · handoff/ · decks/
 ```
 
-## 仓库其他分区（非 docs）
+媒体 → 根 [`assets/`](../assets/README.md)；共享用词 → 根 [`LANGUAGES.md`](../LANGUAGES.md)。
+
+## 仓库其他分区
 
 | 路径 | 用途 |
 |---|---|
-| `/` 根目录 | 入口文档（`README.md`、`CONTEXT.md`、`CONTEXT-MAP.md`、`CLAUDE.md`、`AGENTS.md`） |
-| `tourism_weapp/` | UniApp 小程序 |
-| `tourism_admin/` | Vue3 管理端 |
-| `tourism_api/` | Spring Boot 后端 |
-| `.claude/` | Claude Code 本地说明（指向根 `CLAUDE.md`） |
-| `.scratch/` | 可选本地草稿（非 Issue 真相源；真相源为 GitHub Issues） |
+| `/` 根目录 | `README` · `CONTEXT` · `CONTEXT-MAP` · `LANGUAGES` · `AGENTS` · `CLAUDE` |
+| `assets/images/readme/` | README 契约配图 |
+| `tourism_weapp/` · `tourism_admin/` · `tourism_api/` | 三端工程 |
+| `.cursor/rules/` | 五份 alwaysApply MDC |
+| `.scratch/` | 本地草稿（Issue 真相源仍为 GitHub） |
 
-## GitHub Issues ↔ 本地 docs 映射
+## GitHub Issues ↔ 本地 docs
 
-| GitHub | 本地 |
-|---|---|
-| Epic Issue | `docs/output/reports/{theme}/prd.md` |
-| 子 Issue | `docs/output/handoff/{theme}/{task}.md` |
-| 已完结 | `docs/output/{reports,handoff}/archive/{theme}/` |
-
-## 待建清单
-
-| 路径 | 用途 | 状态 |
+| GitHub | 新主题 | 历史主题 |
 |---|---|---|
-| `.cursor/skills/deliver/` | Cursor `/deliver` Skill | **已迁入** |
-| `.cursor/skills/archive/` | Cursor `/archive` Skill | **已迁入** |
-| `docs/adr/0001-bilingual-field-model.md` | 双语字段与 slug 导航 | **Accepted** |
-| `docs/output/reports/shanxi-bilingual-mvp/` | 产品 PRD、二次开发清单、路线图 | **PRD approved**；Wave 1/2 核心已归档 |
-| `docs/output/reports/shanxi-scenic-mock-data/` | 调研包 + 审计 + 数据 PRD | **进行中** |
-| `docs/output/reports/local-backend-bootstrap/` | 本机缺框架 SQL / 后端无法启动问题简报 | **draft** |
-| `docs/output/reports/readme-diagrams/` | README 配图生成 brief | **已用** |
-| `docs/images/readme/` | README 终稿配图 | **已入库** |
+| Epic | `docs/outputs/prd/{theme}/prd.md` | `docs/output/reports/{theme}/prd.md` |
+| 子 Issue | `docs/outputs/handoff/{theme}/{task}.md` | `docs/output/handoff/{theme}/{task}.md` |
+
+## 关键主题状态（摘要）
+
+| 路径 | 状态 |
+|---|---|
+| `output/reports/shanxi-bilingual-mvp/` | PRD approved；Wave 1/2 核心已归档 |
+| `output/reports/mock-demo-freeze/` | 演示 Mock 冻结 |
+| `output/reports/local-backend-bootstrap/` | 本机后端联调（后置） |
+| `output/reports/readme-diagrams/` | README 配图 brief |
+| `assets/images/readme/` | 契约图已入库 |
