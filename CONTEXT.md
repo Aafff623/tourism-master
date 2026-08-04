@@ -12,7 +12,8 @@
 
 模板原能力（景点、攻略、订单、票务等）可保留或裁剪；**产品主线是景区介绍 + 双语服务**，非通用 OTA。
 
-> 深度分析 Canvas（加速核对源）：根目录 `tourism-master-deep-analysis.canvas.tsx`。
+> 深度分析 Canvas：根目录 `tourism-master-deep-analysis.canvas.tsx`。  
+> 五维调研报告：[`docs/outputs/report/project-init/five-dimension-research.md`](docs/outputs/report/project-init/five-dimension-research.md)。
 
 ## 领域术语表
 
@@ -45,7 +46,7 @@
 3. **数据可替换**：初期景区与文案以 Mock 为主；字段设计须支持后续替换真实数据与运营录入。
 4. **密钥与本地配置不入库**：数据库密码、Redis、微信密钥等仅本地/环境变量；勿提交真实密钥。
 5. **术语一致**：Issue、PRD、代码命名、测试名使用本表与 `LANGUAGES.md`；缺口先补术语再写代码。
-6. **PRD 门禁**：功能开发前须有 PRD 且 `status: approved`（纯文档/初始化除外）。历史主题：`docs/output/reports/{theme}/prd.md`；新主题：`docs/outputs/prd/{theme}/prd.md`。
+6. **PRD 门禁**：功能开发前须有 PRD 且 `status: approved`（纯文档/初始化除外）。路径：`docs/outputs/prd/{theme}/prd.md`。
 7. **模式 A 游客浏览**：景区双语主链路经本地 Repository，不强制登录；订票/评论等原 API 仍遵循模板鉴权。
 8. **导航键**：景区跳转使用 `slug`（ADR-0001）。
 9. **首页热点**：景区推荐展示为首页热点，禁止把调研景区推荐写入 `biz_recommend`。
@@ -80,23 +81,23 @@
 /
 ├── AGENTS.md / CLAUDE.md / CONTEXT.md / CONTEXT-MAP.md / LANGUAGES.md
 ├── README.md · preview-readme.{html,css,js}
-├── assets/images/readme/     # README 配图
+├── assets/images/
+│   ├── readme/               # README 契约配图 + Showcase
+│   └── legacy-template/      # 模板原始截图（非终稿）
 ├── docs/
 │   ├── agents/               # workflow · deliver · archive · domain · issue-tracker · triage-labels · voice
 │   ├── adr/                  # ADR-0000…0003
 │   ├── contexts/             # weapp / admin / api
 │   ├── knowledge/ · glossary/
-│   ├── outputs/              # 新主题：prd · report · handoff · commit-history
-│   └── output/               # 历史主题兼容
-├── tourism_weapp/ · tourism_admin/ · tourism_api/
-└── images/                   # 模板原始截图参考（非终稿 Showcase）
+│   └── outputs/              # report · prd · handoff · commit-history
+└── tourism_weapp/ · tourism_admin/ · tourism_api/
 ```
 
 ## 常用约定
 
 - 主题与任务目录名：`kebab-case` 英文。
 - 双语字段：`titleZh` / `titleEn` 或嵌套 `{ zh, en }`；选定后写入 ADR，三端对齐。
-- Agent 产物：新主题 → `docs/outputs/`；历史主题仍在 `docs/output/`。
+- Agent 产物一律 → `docs/outputs/`（禁止新建 `docs/output/`）。
 - Issue 真相源：GitHub Issues（`Aafff623/tourism-master`）。
 - 二次开发主战场：`tourism_weapp/services/scenic*` · `mock/scenic/` · API `WxSpotBilingualController` · admin `views/biz/spot`。
 

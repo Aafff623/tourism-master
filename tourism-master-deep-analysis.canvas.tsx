@@ -203,7 +203,7 @@ export default function TourismMasterDeepAnalysis() {
               <Text size="small">AGENTS.md / CLAUDE.md — Agent 纪律</Text>
               <Text size="small">docs/adr — ADR-0001~0003（双语、Mode B、Mock 冻结）</Text>
               <Text size="small">docs/contexts — weapp / admin / api 分端约定</Text>
-              <Text size="small">docs/output — PRD / handoff / 调研报告</Text>
+              <Text size="small">docs/outputs — report / prd / handoff / commit-history</Text>
               <Text size="small">tourism_* — 三端工程本体</Text>
             </Stack>
           </CardBody>

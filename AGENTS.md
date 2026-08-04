@@ -38,15 +38,18 @@ Issue(Epic) → docs/outputs/prd/{theme}/prd.md → 用户确认
 
 ## 产物归位
 
-| 产物 | 规范路径（新） | 历史兼容 |
-|---|---|---|
-| PRD / brief / 调研 | `docs/outputs/prd/{theme}/` · `docs/outputs/report/{theme}/` | `docs/output/reports/{theme}/` |
-| 任务 handoff | `docs/outputs/handoff/{theme}/{task}.md` | `docs/output/handoff/{theme}/` |
-| Commit 攒批 | `docs/outputs/commit-history/{branch}/YYYY-MM-DD.md` | `docs/history/{date}/` |
-| README 配图 | `assets/images/readme/` | （旧 `docs/images/readme/` 已迁出） |
-| 分端 CONTEXT | `docs/contexts/{weapp,admin,api}/CONTEXT.md` | — |
+| 产物 | 路径 |
+|---|---|
+| 调研报告 | `docs/outputs/report/{theme}/` |
+| PRD / brief | `docs/outputs/prd/{theme}/` |
+| 任务 handoff | `docs/outputs/handoff/{theme}/{task}.md` |
+| Commit 攒批 | `docs/outputs/commit-history/{branch}/YYYY-MM-DD.md` |
+| 旧日期攒批归档 | `docs/outputs/commit-history/archive/legacy-date-based/` |
+| README 配图 | `assets/images/readme/` |
+| 模板原始截图 | `assets/images/legacy-template/` |
+| 分端 CONTEXT | `docs/contexts/{weapp,admin,api}/CONTEXT.md` |
 
-> 既有主题（如 `shanxi-bilingual-mvp`、`mock-demo-freeze`）仍读历史路径；**新主题**一律写 `docs/outputs/`。
+> 2026-08-04 起禁止再建 `docs/output/` / `docs/history/` / 根 `images/`（已迁入上表）。
 
 ## Commit 攒批（硬约束）
 

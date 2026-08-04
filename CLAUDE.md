@@ -33,11 +33,11 @@
 | `docs/adr/` | 架构决策（ADR） |
 | `docs/agents/` | Agent 规则；**任务流 → `workflow.md`**（无 language.md / context.md） |
 | `docs/contexts/` | 分端 CONTEXT |
-| `docs/outputs/prd\|report\|handoff\|commit-history/` | 规范产物路径（新主题） |
-| `docs/output/` | **历史兼容**：既有 PRD / handoff 仍在此 |
+| `docs/outputs/{report,prd,handoff,commit-history}/` | 调研 / PRD / handoff / 攒批（禁止再建 `docs/output/`） |
 | `docs/knowledge/` | 可迁移知识沉淀 |
-| `docs/glossary/` | 人 ⇄ Agent 术语对齐（按需） |
-| `assets/images/readme/` | README 终稿配图 |
+| `docs/glossary/` | 人 ⇄ Agent 术语对齐（如 `frontend-ui.md`） |
+| `assets/images/readme/` | README 契约配图 + Showcase |
+| `assets/images/legacy-template/` | 模板原始截图参考 |
 | `tourism_weapp/` · `tourism_admin/` · `tourism_api/` | 三端源码 |
 | `.cursor/rules/` | 五份 alwaysApply MDC |
 | `.cursor/skills/{deliver,archive}/` | Cursor 斜杠命令入口 |
@@ -81,7 +81,7 @@ Issues 以 GitHub Issues 跟踪。详见 `docs/agents/issue-tracker.md`。
 ### 原则
 
 1. **精炼**：新 `.md` 只写必要内容；可选扩展先与用户确认。
-2. **归位**：新主题 PRD → `docs/outputs/prd/{theme}/`；handoff → `docs/outputs/handoff/`；历史主题仍读 `docs/output/`。
+2. **归位**：新主题 PRD → `docs/outputs/prd/{theme}/`；handoff → `docs/outputs/handoff/`；历史主题仍读 `docs/outputs/`。
 3. **单一来源**：任务状态以 Issue + handoff 为准；用词以 `LANGUAGES.md` 为准；领域以 `CONTEXT.md` 为准。
 4. **Review 门禁**：交付后停止，等用户确认。
 5. **Review 说明（全局）**：交付前必须说明做了什么、改了哪些文件、Review 重点。

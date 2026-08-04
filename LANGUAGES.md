@@ -21,7 +21,7 @@ Triage 角色与标签字符串映射见 [`docs/agents/triage-labels.md`](docs/a
 |---|---|
 | **主题** | theme；一个 Epic / 倡议，`prd/{theme}/` 与 `handoff/{theme}/` 同名 |
 | **任务** | task；PRD 拆分后的工作单元，对应子 Issue + `handoff/{theme}/{task}.md` |
-| **PRD** | 需求文档；`docs/outputs/prd/{theme}/prd.md`（历史主题仍在 `docs/output/reports/{theme}/`） |
+| **PRD** | 需求文档；`docs/outputs/prd/{theme}/prd.md` |
 | **Handoff** | 任务接力文件；一任务一文件，覆盖式更新 |
 | **Review** | 用户确认交付；通过前 Agent 停止 |
 | **Archive** | 已确认完结的 handoff / PRD 归档目录 |
