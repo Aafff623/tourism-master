@@ -95,10 +95,15 @@ Tourism Master 因此将产品主线收敛为：**景区介绍、文化解读与
 
 ### Showcase
 
-真机截图待视觉验收后补充至 `assets/images/readme/showcase-*.png`（建议：首页热点 · 景区详情 · 双语服务）。
+本环境无法跑 HBuilderX / 微信开发者工具截真机图；**禁止**用文生图伪造产品 UI。槽位如下，功能与视觉验收后用 Playwright / 真机替换：
 
-模板原始界面参考（非终稿视觉）见根目录 [`images/`](images/)。
+| 槽位 | 目标路径 | 演示步骤 | 状态 |
+|---|---|---|---|
+| 首页热点 | `assets/images/readme/showcase-home.png` | 语言切换 → 首页景区热点 | ⏳ 待截 |
+| 景区详情 | `assets/images/readme/showcase-spot-detail.png` | 进入详情 → 文化解读 / 专属话术 | ⏳ 待截 |
+| 双语服务 | `assets/images/readme/showcase-service.png` | 服务页浏览通用话术 | ⏳ 待截 |
 
+模板原始界面（非山西终稿视觉）见 [`assets/images/legacy-template/`](assets/images/legacy-template/)，**勿**当作 Showcase。
 ---
 
 ## Preview
@@ -139,7 +144,7 @@ Tourism Master 因此将产品主线收敛为：**景区介绍、文化解读与
 2. 勾选「不校验合法域名」（若工具提示）  
 3. 演示：语言切换、首页热点、景区列表/详情、服务话术、概况、遗产  
 
-真 API / 管理端 / 云部署见下方「本机全栈（后置）」；策略 PRD：[`docs/output/reports/mock-demo-freeze/prd.md`](docs/output/reports/mock-demo-freeze/prd.md)。
+真 API / 管理端 / 云部署见下方「本机全栈（后置）」；策略 PRD：[`docs/outputs/prd/mock-demo-freeze/prd.md`](docs/outputs/prd/mock-demo-freeze/prd.md)。
 
 ### 前置环境（全栈后置时才需要齐）
 
@@ -175,7 +180,7 @@ pnpm dev
 
 库名与账号见：`tourism_api/snowy-web-app/src/main/resources/application.properties`（本地示例，勿提交真实生产密钥）。
 
-本机联调阻塞与调研记录：[`docs/output/reports/local-backend-bootstrap/`](docs/output/reports/local-backend-bootstrap/)。
+本机联调阻塞与调研记录：[`docs/outputs/prd/local-backend-bootstrap/`](docs/outputs/prd/local-backend-bootstrap/)。
 
 ### 小程序（`tourism_weapp`）
 
@@ -190,7 +195,7 @@ pnpm dev
 | 1 | `README.md` | 定位、跑起来、边界 |
 | 2 | `CONTEXT.md` · `LANGUAGES.md` · `CONTEXT-MAP.md` | 术语、用词与多端地图 |
 | 3 | `AGENTS.md` · `CLAUDE.md` | 任务流与 Agent 纪律 |
-| 4 | `docs/output/reports/shanxi-bilingual-mvp/prd.md` | 产品验收真相源（历史路径） |
+| 4 | `docs/outputs/prd/shanxi-bilingual-mvp/prd.md` | 产品验收真相源（历史路径） |
 | 5 | `docs/adr/0001-bilingual-field-model.md` | 双语字段与 `slug` 导航 |
 | 6 | 对应端源码 + `docs/contexts/*/CONTEXT.md` | 实施 |
 
@@ -241,8 +246,9 @@ pnpm dev
 /
 ├── AGENTS.md · CLAUDE.md · CONTEXT.md · CONTEXT-MAP.md · LANGUAGES.md
 ├── README.md · preview-readme.*
-├── assets/images/readme/          # README 契约配图
-├── docs/agents/ · adr/ · contexts/ · outputs/ · output/
+├── assets/images/readme/          # 契约配图 + Showcase
+├── assets/images/legacy-template/ # 模板原始截图参考
+├── docs/agents/ · adr/ · contexts/ · outputs/
 ├── tourism_weapp/                 # UniApp 小程序
 ├── tourism_admin/                 # Vue3 管理端
 └── tourism_api/                   # Spring Boot / Snowy
@@ -260,7 +266,7 @@ pnpm dev
 | 概况 / 遗产页（SD-15） | 🔜 | 另开任务 |
 | Wave 3 内容运营（模式 C） | ⚪ | 需独立 ADR / PRD |
 
-推进节奏见 [`docs/output/reports/shanxi-bilingual-mvp/implementation-roadmap.md`](docs/output/reports/shanxi-bilingual-mvp/implementation-roadmap.md)。
+推进节奏见 [`docs/outputs/prd/shanxi-bilingual-mvp/implementation-roadmap.md`](docs/outputs/prd/shanxi-bilingual-mvp/implementation-roadmap.md)。
 
 ---
 
@@ -274,12 +280,13 @@ pnpm dev
 | [`AGENTS.md`](AGENTS.md) · [`CLAUDE.md`](CLAUDE.md) | Agent 入口与维护协议 |
 | [`docs/README.md`](docs/README.md) | 文档资产索引 |
 | [`assets/README.md`](assets/README.md) | 媒体约定 |
-| [`docs/output/reports/shanxi-bilingual-mvp/prd.md`](docs/output/reports/shanxi-bilingual-mvp/prd.md) | 产品 PRD（approved） |
+| [`docs/outputs/prd/shanxi-bilingual-mvp/prd.md`](docs/outputs/prd/shanxi-bilingual-mvp/prd.md) | 产品 PRD（approved） |
 | [`docs/adr/0001-bilingual-field-model.md`](docs/adr/0001-bilingual-field-model.md) | 双语字段与导航键 |
 | [`docs/contexts/`](docs/contexts/) | weapp / admin / api 分端 CONTEXT |
-| [`docs/output/reports/readme-diagrams/readme-diagram-brief.md`](docs/output/reports/readme-diagrams/readme-diagram-brief.md) | README 配图 brief |
+| [`docs/outputs/prd/readme-diagrams/`](docs/outputs/prd/readme-diagrams/) | README 配图 brief + prompts |
+| [`docs/outputs/report/project-init/five-dimension-research.md`](docs/outputs/report/project-init/five-dimension-research.md) | project-init 五维调研 |
 
-任务流：GitHub Issues + `docs/outputs/`（新）/ `docs/output/`（历史）；规范见 [`docs/agents/workflow.md`](docs/agents/workflow.md)。
+任务流：GitHub Issues + `docs/outputs/`；规范见 [`docs/agents/workflow.md`](docs/agents/workflow.md)。
 
 ---
 

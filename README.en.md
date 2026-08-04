@@ -27,13 +27,14 @@ Built for inbound visitors and Chinese users alike, Tourism Master delivers **sc
 </p>
 
 <p align="center">
-  <a href="#why-this-project">🏯 Why</a> ·
-  <a href="#features">✨ Features</a> ·
-  <a href="#demo">📱 Demo</a> ·
-  <a href="#quick-start">🚀 Quick Start</a> ·
-  <a href="#architecture">🏗️ Architecture</a> ·
-  <a href="#roadmap">🗺️ Roadmap</a> ·
-  <a href="#documentation">📚 Docs</a> ·
+  <a href="#why-this-project">Why</a> ·
+  <a href="#features">Features</a> ·
+  <a href="#demo--showcase">Demo</a> ·
+  <a href="#preview">Preview</a> ·
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#architecture">Architecture</a> ·
+  <a href="#roadmap">Roadmap</a> ·
+  <a href="#documentation">Docs</a> ·
   <a href="#license">License</a>
 </p>
 
@@ -94,28 +95,32 @@ Dynamic fields (opening hours, ticket prices, etc.) carry an **UNVERIFIED** disc
 
 ### Showcase
 
-Device and admin screenshots for the Shanxi-themed mini program will be added after launch prep, content replacement, and visual sign-off 📸. This section is reserved for now.
+This environment cannot capture WeChat DevTools screenshots. Do **not** fake product UI with generative images. Slots:
 
-<!--
-Suggested three-column gallery later:
+| Slot | Target path | Demo step | Status |
+|---|---|---|---|
+| Home hot spots | `assets/images/readme/showcase-home.png` | Locale switch → home hot spots | pending |
+| Spot detail | `assets/images/readme/showcase-spot-detail.png` | Open detail → cultural notes / phrases | pending |
+| Bilingual service | `assets/images/readme/showcase-service.png` | Service page shared phrases | pending |
 
-1. Home / hot spots
-2. Detail / cultural interpretation
-3. Bilingual service / admin forms
--->
+Original template UI (not final Shanxi visuals): [`assets/images/legacy-template/`](assets/images/legacy-template/). Do **not** treat as Showcase.
 
-<details>
-<summary>View original template UI (reference only)</summary>
+---
 
-> Screenshots below illustrate the existing engineering scaffold and baseline interactions. They do not represent Tourism Master’s final visuals or official Shanxi content.
+## Preview
 
-| Admin login | Mini program home | Heritage list |
-|---|---|---|
-| [View](images/1.png) | [View](images/shortcut-20250727-095547.png) | [View](images/shortcut-20250727-095606.png) |
+This repo is a **single three-end product**. There is no asset Gallery Preview site; use Showcase + the README local preview shell.
 
-More reference shots: [`images/`](images/).
+### README local preview shell
 
-</details>
+| Item | Value |
+|---|---|
+| Start | Repo root: `python -m http.server 8080` |
+| URL | http://127.0.0.1:8080/preview-readme-en.html |
+| Chinese | http://127.0.0.1:8080/preview-readme.html |
+| Files | `preview-readme.html` · `preview-readme-en.html` · `preview-readme.css` · `preview-readme.js` |
+
+Must open over HTTP (`file://` cannot `fetch` README). No port-registry; port **8080** is this repo’s convention.
 
 ### Initial scenic sites (Mock / Seed)
 
@@ -140,7 +145,7 @@ Current delivery defaults to **Mock-only** ([ADR-0003](docs/adr/0003-mock-first-
 2. Enable “Do not verify valid domains” if the DevTools prompt appears  
 3. Demo: locale switch, home hot spots, scenic list/detail, service phrases, province intro, heritage  
 
-For live API, admin, or cloud deployment, see **Full local stack (deferred)** below. Strategy PRD: [`docs/output/reports/mock-demo-freeze/prd.md`](docs/output/reports/mock-demo-freeze/prd.md).
+For live API, admin, or cloud deployment, see **Full local stack (deferred)** below. Strategy PRD: [`docs/outputs/prd/mock-demo-freeze/prd.md`](docs/outputs/prd/mock-demo-freeze/prd.md).
 
 ### Prerequisites (full stack only)
 
@@ -176,7 +181,7 @@ pnpm dev
 
 Database name and credentials: `tourism_api/snowy-web-app/src/main/resources/application.properties` (local sample only — do not commit production secrets).
 
-Local integration notes: [`docs/output/reports/local-backend-bootstrap/`](docs/output/reports/local-backend-bootstrap/).
+Local integration notes: [`docs/outputs/prd/local-backend-bootstrap/`](docs/outputs/prd/local-backend-bootstrap/).
 
 ### Mini program (`tourism_weapp`)
 
@@ -184,19 +189,16 @@ Open `tourism_weapp` in HBuilderX and preview in WeChat DevTools once dependenci
 
 **Demo default:** the scenic browsing path uses local Mock ([ADR-0003](docs/adr/0003-mock-first-demo-freeze.md)). Booking and comment entry points from the template may remain but are out of demo acceptance scope.
 
-<details>
-<summary>Onboarding reading order</summary>
+### Onboarding reading order
 
 | Order | Path | Purpose |
 |---|---|---|
 | 1 | `README.md` / `README.en.md` | Positioning, run locally, boundaries |
-| 2 | `CONTEXT.md` · `CONTEXT-MAP.md` | Terminology and multi-context map |
+| 2 | `CONTEXT.md` · `LANGUAGES.md` · `CONTEXT-MAP.md` | Terminology and multi-context map |
 | 3 | `AGENTS.md` · `CLAUDE.md` | Task flow and agent discipline |
-| 4 | `docs/output/reports/shanxi-bilingual-mvp/prd.md` | Product acceptance source of truth |
+| 4 | `docs/outputs/prd/shanxi-bilingual-mvp/prd.md` | Product acceptance source of truth |
 | 5 | `docs/adr/0001-bilingual-field-model.md` | Bilingual fields and `slug` navigation |
 | 6 | Source + `docs/contexts/*/CONTEXT.md` | Implementation |
-
-</details>
 
 ---
 
@@ -241,6 +243,18 @@ Open `tourism_weapp` in HBuilderX and preview in WeChat DevTools once dependenci
   <img src="assets/images/readme/structure.png" alt="Repository structure" width="80%">
 </p>
 
+```
+/
+├── AGENTS.md · CLAUDE.md · CONTEXT.md · CONTEXT-MAP.md · LANGUAGES.md
+├── README.md · README.en.md · preview-readme.*
+├── assets/images/readme/          # diagram assets + Showcase
+├── assets/images/legacy-template/ # original template screenshots
+├── docs/agents/ · adr/ · contexts/ · outputs/
+├── tourism_weapp/                 # UniApp mini program
+├── tourism_admin/                 # Vue3 admin
+└── tourism_api/                   # Spring Boot / Snowy
+```
+
 ---
 
 ## Roadmap
@@ -253,7 +267,7 @@ Open `tourism_weapp` in HBuilderX and preview in WeChat DevTools once dependenci
 | Province / heritage pages (SD-15) | 🔜 | Separate task |
 | Wave 3 — content ops (Mode C) | ⚪ | Requires dedicated ADR / PRD |
 
-Timeline: [`docs/output/reports/shanxi-bilingual-mvp/implementation-roadmap.md`](docs/output/reports/shanxi-bilingual-mvp/implementation-roadmap.md).
+Timeline: [`docs/outputs/prd/shanxi-bilingual-mvp/implementation-roadmap.md`](docs/outputs/prd/shanxi-bilingual-mvp/implementation-roadmap.md).
 
 ---
 
@@ -262,15 +276,18 @@ Timeline: [`docs/output/reports/shanxi-bilingual-mvp/implementation-roadmap.md`]
 | Document | Description |
 |---|---|
 | [`CONTEXT.md`](CONTEXT.md) | Product domain facts, terms, constraints |
+| [`LANGUAGES.md`](LANGUAGES.md) | Shared vocabulary |
 | [`CONTEXT-MAP.md`](CONTEXT-MAP.md) | Multi-context map |
 | [`AGENTS.md`](AGENTS.md) · [`CLAUDE.md`](CLAUDE.md) | Agent entry and maintenance protocol |
 | [`docs/README.md`](docs/README.md) | Documentation index |
-| [`docs/output/reports/shanxi-bilingual-mvp/prd.md`](docs/output/reports/shanxi-bilingual-mvp/prd.md) | Product PRD (approved) |
+| [`assets/README.md`](assets/README.md) | Media conventions |
+| [`docs/outputs/prd/shanxi-bilingual-mvp/prd.md`](docs/outputs/prd/shanxi-bilingual-mvp/prd.md) | Product PRD (approved) |
 | [`docs/adr/0001-bilingual-field-model.md`](docs/adr/0001-bilingual-field-model.md) | Bilingual fields and navigation key |
 | [`docs/contexts/`](docs/contexts/) | Per-end CONTEXT (weapp / admin / api) |
-| [`docs/output/reports/readme-diagrams/readme-diagram-brief.md`](docs/output/reports/readme-diagrams/readme-diagram-brief.md) | README diagram generation brief |
+| [`docs/outputs/prd/readme-diagrams/`](docs/outputs/prd/readme-diagrams/) | README diagram brief + prompts |
+| [`docs/outputs/report/project-init/five-dimension-research.md`](docs/outputs/report/project-init/five-dimension-research.md) | project-init five-dimension research |
 
-Task flow: GitHub Issues + `docs/output/handoff/`; archived work under `docs/output/*/archive/`.
+Task flow: GitHub Issues + `docs/outputs/`; see [`docs/agents/workflow.md`](docs/agents/workflow.md).
 
 ---
 
